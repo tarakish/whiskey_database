@@ -42,6 +42,7 @@
 # Ignore database.yml for local
 config/database.yml
 
+
 .DS_Store
 *.rbc
 capybara-*.html
@@ -49,5 +50,6 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
+.solargraph.yml
 
 
