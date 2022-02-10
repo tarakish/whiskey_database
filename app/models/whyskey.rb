@@ -15,6 +15,9 @@
 class Whyskey < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true, uniqueness: true
+  validates :feeling_to_whiskey_with_tongue, presence: true
+  validates :flavor_strength, presence: true
+  validates :rarity, presence: true
   
 
   enum feeling_to_whiskey_with_tongue: { light: 0, a_little_light: 1, balanced: 2, a_little_rich: 3, rich: 4 }
