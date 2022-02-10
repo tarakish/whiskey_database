@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2022_02_10_095921) do
   create_table "whyskeys", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
-    t.integer "feeling_to_whiskey_with_tongue", default: 2
-    t.integer "flavor_strength", default: 2
-    t.integer "rarity", default: 0
+    t.integer "feeling_to_whiskey_with_tongue", default: 2, null: false
+    t.integer "flavor_strength", default: 2, null: false
+    t.integer "rarity", default: 0, null: false
     t.integer "reasonable_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

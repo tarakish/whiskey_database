@@ -4,10 +4,10 @@
 #
 #  id                             :bigint           not null, primary key
 #  description                    :text             not null
-#  feeling_to_whiskey_with_tongue :integer          default(2)
-#  flavor_strength                :integer          default(2)
+#  feeling_to_whiskey_with_tongue :integer          default("balanced"), not null
+#  flavor_strength                :integer          default("normal"), not null
 #  name                           :string           not null
-#  rarity                         :integer          default(0)
+#  rarity                         :integer          default("rare"), not null
 #  reasonable_price               :integer
 #  created_at                     :datetime         not null
 #  updated_at                     :datetime         not null
