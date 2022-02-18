@@ -1,0 +1,39 @@
+<%= form_with(model: whiskey) do |f| %>
+  <% if whiskey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(whiskey.errors.count, "error") %> prohibited this whiskey from being saved:</h2>
+
+      <ul>
+        <% whiskey.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :feeling_to_whiskey_with_tongue %>
+    <%= f.select :feeling_to_whiskey_with_tongue, Whiskey.feeling_to_whiskey_with_tongues_i18n.invert, {}, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :flavor_strength %>
+    <%= f.select :flavor_strength, Whiskey.flavor_strengths_i18n.invert, {}, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rarity %>
+    <%= f.select :rarity, Whiskey.rarities_i18n.invert, {}, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :reasonable_price %>
+    <%= f.number_field :reasonable_price, class: 'form-control' %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

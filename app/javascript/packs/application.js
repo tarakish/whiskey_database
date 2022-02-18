@@ -8,6 +8,13 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+// Use bootstrap 5
+import "bootstrap";
+import "../stylesheets/application";
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+// Used for Semantic UI
+require('jquery')

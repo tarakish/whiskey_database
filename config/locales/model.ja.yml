@@ -16,3 +16,20 @@ ja:
       role:
         admin: 管理者
         general: 一般
+    whiskey:
+      feeling_to_whiskey_with_tongue:
+        light: '軽め'
+        a_little_light: '少し軽め'
+        balanced: 'バランス'
+        a_little_rich: '少し重め'
+        rich: '重め'
+      flavor_strength:
+        delicate: '繊細'
+        a_little_delicate: '少し繊細'
+        normal: '中間'
+        a_little_smoky: '少し芳醇'
+        smoky: '芳醇'
+      rarity:
+        rare: 'かなり希少'
+        a_little_rare: '希少'
+        stable_supplyed: '安定供給'

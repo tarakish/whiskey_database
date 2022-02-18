@@ -301,6 +301,8 @@ GEM
     seed-fu (2.3.9)
       activerecord (>= 3.1)
       activesupport (>= 3.1)
+    semantic-ui-sass (2.4.4.0)
+      sassc
     semantic_range (3.0.0)
     sexp_processor (4.16.0)
     simplecov (0.21.2)
@@ -396,6 +398,7 @@ DEPENDENCIES
   rubocop-rspec
   sass-rails (>= 6)
   seed-fu
+  semantic-ui-sass
   simplecov
   solargraph
   sorcery

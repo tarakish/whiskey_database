@@ -35,8 +35,9 @@ gem 'seed-fu'
 gem 'banken'
 gem 'sorcery'
 
-# Use bootstrap
+# Use CSS_framework
 gem 'bootstrap', '~> 5.1.3'
+gem 'semantic-ui-sass'
 
 # i18n
 gem 'enum_help'
