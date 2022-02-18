@@ -1,26 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Whiskeys</h1>
+<div class='container'>
+  <div class='row'>
+    <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1 class='text-center'>Whiskeys</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% @whiskeys.each do |whiskey| %>
-      <tr>
-        <td><%= whiskey.name %></td>
-        <td><%= link_to 'Show', whiskey %></td>
-        <td><%= link_to 'Edit', edit_whiskey_path(whiskey) %></td>
-        <td><%= link_to 'Destroy', whiskey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% @whiskeys.each do |whiskey| %>
+            <tr>
+              <td><%= whiskey.name %></td>
+              <td><%= link_to 'Show', whiskey %></td>
+              <td><%= link_to 'Edit', edit_whiskey_path(whiskey) %></td>
+              <td><%= link_to 'Destroy', whiskey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-<br>
+      <br>
 
-<%= link_to 'New Whiskey', new_whiskey_path %>
+      <%= link_to 'New Whiskey', new_whiskey_path %>
+
+    </div>
+  </div>
+</div>
