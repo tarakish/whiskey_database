@@ -1,0 +1,17 @@
+<%= form_with(model: whiskey) do |f| %>
+  <% if whiskey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(whiskey.errors.count, "error") %> prohibited this whiskey from being saved:</h2>
+
+      <ul>
+        <% whiskey.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

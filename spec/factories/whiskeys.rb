@@ -1,23 +1,28 @@
 # == Schema Information
 #
-# Table name: whyskeys
+# Table name: whiskeys
 #
 #  id                             :bigint           not null, primary key
 #  description                    :text             not null
-#  feeling_to_whiskey_with_tongue :integer          default("balanced"), not null
-#  flavor_strength                :integer          default("normal"), not null
+#  feeling_to_whiskey_with_tongue :integer          not null
+#  flavor_strength                :integer          not null
 #  name                           :string           not null
-#  rarity                         :integer          default("rare"), not null
+#  rarity                         :integer          not null
 #  reasonable_price               :integer
 #  created_at                     :datetime         not null
 #  updated_at                     :datetime         not null
 #
+# Indexes
+#
+#  index_whiskeys_on_name  (name) UNIQUE
+#
 FactoryBot.define do
-  factory :whyskey do
-    name { "whiskey" }
-    description { "this is whiskey" }
+  factory :whiskey do
+    name { "MyString" }
+    description { "MyText" }
     feeling_to_whiskey_with_tongue { 1 }
     flavor_strength { 1 }
     rarity { 1 }
+    reasonable_price { 1 }
   end
 end

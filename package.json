@@ -2,6 +2,7 @@
   "name": "whiskey-database",
   "private": true,
   "dependencies": {
+    "@doabit/semantic-ui-sass": "^2.4.5",
     "@popperjs/core": "^2.11.2",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
