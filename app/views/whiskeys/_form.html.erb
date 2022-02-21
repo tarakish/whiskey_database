@@ -1,4 +1,4 @@
-<%= form_with(model: whiskey) do |f| %>
+<%= form_with model: whiskey, local: true do |f| %>
   <% if whiskey.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(whiskey.errors.count, "error") %> prohibited this whiskey from being saved:</h2>
@@ -34,6 +34,6 @@
     <%= f.label :reasonable_price %>
     <%= f.number_field :reasonable_price, class: 'form-control' %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'ログイン' %>
   </div>
 <% end %>
