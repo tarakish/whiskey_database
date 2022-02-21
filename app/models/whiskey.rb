@@ -18,7 +18,7 @@
 #
 class Whiskey < ApplicationRecord
   validates :name, presence: true, uniqueness: true
-  validates :description, presence: true #, uniqueness: true
+  validates :description, presence: true #, uniqueness: true 必要そうであればコメントアウトする
   validates :feeling_to_whiskey_with_tongue, presence: true
   validates :flavor_strength, presence: true
   validates :rarity, presence: true
