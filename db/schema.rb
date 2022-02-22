@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_18_090424) do
+ActiveRecord::Schema.define(version: 2022_02_21_234234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 2022_02_18_090424) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name", "detail"], name: "index_flavors_on_name_and_detail", unique: true
+  end
+
+  create_table "whiskey_flavors", force: :cascade do |t|
+    t.bigint "whiskey_id", null: false
+    t.bigint "flavor_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["flavor_id"], name: "index_whiskey_flavors_on_flavor_id"
+    t.index ["whiskey_id"], name: "index_whiskey_flavors_on_whiskey_id"
   end
 
   create_table "whiskeys", force: :cascade do |t|
@@ -36,4 +45,6 @@ ActiveRecord::Schema.define(version: 2022_02_18_090424) do
     t.index ["name"], name: "index_whiskeys_on_name", unique: true
   end
 
+  add_foreign_key "whiskey_flavors", "flavors"
+  add_foreign_key "whiskey_flavors", "whiskeys"
 end
