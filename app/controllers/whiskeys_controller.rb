@@ -66,6 +66,6 @@ class WhiskeysController < ApplicationController
     # Only allow a list of trusted parameters through.
     def whiskey_params
       # params.fetch(:whiskey, {})
-      params.require(:whiskey).permit(:name, :description, :feeling_to_whiskey_with_tongue, :flavor_strength, :rarity, :reasonable_price)
+      params.require(:whiskey).permit(:name, :description, :feeling_to_whiskey_with_tongue, :flavor_strength, :rarity, :reasonable_price, flavor_ids: [] )
     end
 end

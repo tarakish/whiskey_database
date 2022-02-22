@@ -4,7 +4,7 @@
 #
 #  id         :bigint           not null, primary key
 #  detail     :string           not null
-#  group      :integer          default(0), not null
+#  group      :integer          default("woody"), not null
 #  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -14,6 +14,9 @@
 #  index_flavors_on_name_and_detail  (name,detail) UNIQUE
 #
 class Flavor < ApplicationRecord
+  has_many :whiskey_flavors
+  has_many :whiskeys, through: :whiskey_flavors
+
   validates :name, presence: true, uniqueness: true
   validates :detail, presence: true, uniqueness: true
   validates :group, presence: true

@@ -33,6 +33,11 @@
   <div class="form-group">
     <%= f.label :reasonable_price %>
     <%= f.number_field :reasonable_price, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :flavor_id %>
+    <%= f.collection_check_boxes :flavor_ids, Flavor.all, :id, :name, class: 'form-control' %>
+  </div>
   <div class="actions">
     <%= f.submit 'ログイン' %>
   </div>
