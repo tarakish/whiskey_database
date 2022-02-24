@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_24_134535) do
+ActiveRecord::Schema.define(version: 2022_02_24_140310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,9 +51,12 @@ ActiveRecord::Schema.define(version: 2022_02_24_134535) do
     t.integer "reasonable_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "drink_way_id"
+    t.index ["drink_way_id"], name: "index_whiskeys_on_drink_way_id"
     t.index ["name"], name: "index_whiskeys_on_name", unique: true
   end
 
   add_foreign_key "whiskey_flavors", "flavors"
   add_foreign_key "whiskey_flavors", "whiskeys"
+  add_foreign_key "whiskeys", "drink_ways"
 end

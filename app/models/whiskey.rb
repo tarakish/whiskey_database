@@ -11,12 +11,19 @@
 #  reasonable_price               :integer
 #  created_at                     :datetime         not null
 #  updated_at                     :datetime         not null
+#  drink_way_id                   :bigint
 #
 # Indexes
 #
-#  index_whiskeys_on_name  (name) UNIQUE
+#  index_whiskeys_on_drink_way_id  (drink_way_id)
+#  index_whiskeys_on_name          (name) UNIQUE
+#
+# Foreign Keys
+#
+#  fk_rails_...  (drink_way_id => drink_ways.id)
 #
 class Whiskey < ApplicationRecord
+  belongs_to :drink_way
   has_many :whiskey_flavors
   has_many :flavors, through: :whiskey_flavors
 
