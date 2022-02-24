@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :flavors
   root 'staticpages#top'
+
+  resources :drink_ways
   resources :whiskeys
   resources :flavors
 end

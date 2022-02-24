@@ -6,7 +6,13 @@ ja:
       # User.human_attributes_name(:name)
       whiskey: ウイスキー
       flavor: フレーバー
+      drink_way: 飲み方
     attributes:
+      id: ID
+      created_at: 作成日時
+      updated_at: 更新日時
+      user:
+        name: 名前
       whiskey:
         name: 名称
         description: 詳細
@@ -14,15 +20,16 @@ ja:
         flavor_strength: 香りの強さ
         rarity: レア度
         reasonable_price: 適正価格
+        flavor_id: フレーバー
+        drink_way_id: 飲み方
       flavor:
         name: 名称
         detail: 詳細説明
         group: グループ
-      id: ID
-      created_at: 作成日時
-      updated_at: 更新日時
-      user:
-        name: 名前
+      drink_way:
+        name: 名称
+        how_to_make: 作り方
+        explanation: 説明
 
   enums:
     user:

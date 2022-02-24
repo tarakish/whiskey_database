@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @drink_way.name %>
+</p>
+
+<p>
+  <strong>How to make:</strong>
+  <%= @drink_way.how_to_make %>
+</p>
+
+<p>
+  <strong>Explanation:</strong>
+  <%= @drink_way.explanation %>
+</p>
+
+<%= link_to 'Edit', edit_drink_way_path(@drink_way) %> |
+<%= link_to 'Back', drink_ways_path %>
