@@ -1,0 +1,2 @@
+class DrinkWay < ApplicationRecord
+end
