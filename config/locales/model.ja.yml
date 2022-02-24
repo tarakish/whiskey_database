@@ -20,6 +20,8 @@ ja:
         flavor_strength: 香りの強さ
         rarity: レア度
         reasonable_price: 適正価格
+        flavor_id: フレーバー
+        drink_way_id: 飲み方
       flavor:
         name: 名称
         detail: 詳細説明

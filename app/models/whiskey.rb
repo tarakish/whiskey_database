@@ -28,7 +28,7 @@ class Whiskey < ApplicationRecord
   has_many :flavors, through: :whiskey_flavors
 
   validates :name, presence: true, uniqueness: true
-  validates :description, presence: true #, uniqueness: true 必要そうであればコメントアウトする
+  validates :description, presence: true #, uniqueness: true 必要そうであればコメントアウト＆DBへ定義追加
   validates :feeling_to_whiskey_with_tongue, presence: true
   validates :flavor_strength, presence: true
   validates :rarity, presence: true
