@@ -1,5 +1,5 @@
 class FlavorsController < ApplicationController
-  before_action :set_flavor, only: %i[ show edit update destroy ]
+  before_action :set_flavor, only: %i[show edit update destroy]
 
   # GET /flavors or /flavors.json
   def index
@@ -7,8 +7,7 @@ class FlavorsController < ApplicationController
   end
 
   # GET /flavors/1 or /flavors/1.json
-  def show
-  end
+  def show; end
 
   # GET /flavors/new
   def new
@@ -16,8 +15,7 @@ class FlavorsController < ApplicationController
   end
 
   # GET /flavors/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /flavors or /flavors.json
   def create
@@ -25,7 +23,7 @@ class FlavorsController < ApplicationController
 
     respond_to do |format|
       if @flavor.save
-        format.html { redirect_to flavor_url(@flavor), notice: "Flavor was successfully created." }
+        format.html { redirect_to flavor_url(@flavor), notice: 'Flavor was successfully created.' }
         format.json { render :show, status: :created, location: @flavor }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class FlavorsController < ApplicationController
   def update
     respond_to do |format|
       if @flavor.update(flavor_params)
-        format.html { redirect_to flavor_url(@flavor), notice: "Flavor was successfully updated." }
+        format.html { redirect_to flavor_url(@flavor), notice: 'Flavor was successfully updated.' }
         format.json { render :show, status: :ok, location: @flavor }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +50,20 @@ class FlavorsController < ApplicationController
     @flavor.destroy
 
     respond_to do |format|
-      format.html { redirect_to flavors_url, notice: "Flavor was successfully destroyed." }
+      format.html { redirect_to flavors_url, notice: 'Flavor was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_flavor
-      @flavor = Flavor.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def flavor_params
-      params.require(:flavor).permit(:name, :detail, :group)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_flavor
+    @flavor = Flavor.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def flavor_params
+    params.require(:flavor).permit(:name, :detail, :group)
+  end
 end

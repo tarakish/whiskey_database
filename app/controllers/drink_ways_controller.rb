@@ -1,5 +1,5 @@
 class DrinkWaysController < ApplicationController
-  before_action :set_drink_way, only: %i[ show edit update destroy ]
+  before_action :set_drink_way, only: %i[show edit update destroy]
 
   # GET /drink_ways or /drink_ways.json
   def index
@@ -7,8 +7,7 @@ class DrinkWaysController < ApplicationController
   end
 
   # GET /drink_ways/1 or /drink_ways/1.json
-  def show
-  end
+  def show; end
 
   # GET /drink_ways/new
   def new
@@ -16,8 +15,7 @@ class DrinkWaysController < ApplicationController
   end
 
   # GET /drink_ways/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /drink_ways or /drink_ways.json
   def create
@@ -25,7 +23,9 @@ class DrinkWaysController < ApplicationController
 
     respond_to do |format|
       if @drink_way.save
-        format.html { redirect_to drink_way_url(@drink_way), notice: "Drink way was successfully created." }
+        format.html do
+          redirect_to drink_way_url(@drink_way), notice: 'Drink way was successfully created.'
+        end
         format.json { render :show, status: :created, location: @drink_way }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,9 @@ class DrinkWaysController < ApplicationController
   def update
     respond_to do |format|
       if @drink_way.update(drink_way_params)
-        format.html { redirect_to drink_way_url(@drink_way), notice: "Drink way was successfully updated." }
+        format.html do
+          redirect_to drink_way_url(@drink_way), notice: 'Drink way was successfully updated.'
+        end
         format.json { render :show, status: :ok, location: @drink_way }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +54,20 @@ class DrinkWaysController < ApplicationController
     @drink_way.destroy
 
     respond_to do |format|
-      format.html { redirect_to drink_ways_url, notice: "Drink way was successfully destroyed." }
+      format.html { redirect_to drink_ways_url, notice: 'Drink way was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_drink_way
-      @drink_way = DrinkWay.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def drink_way_params
-      params.require(:drink_way).permit(:name, :how_to_make, :explanation)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_drink_way
+    @drink_way = DrinkWay.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def drink_way_params
+    params.require(:drink_way).permit(:name, :how_to_make, :explanation)
+  end
 end
