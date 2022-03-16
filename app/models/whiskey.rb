@@ -32,7 +32,6 @@ class Whiskey < ApplicationRecord
   validates :feeling_to_whiskey_with_tongue, presence: true
   validates :flavor_strength, presence: true
   validates :rarity, presence: true
-
   validates :whiskey_flavors,
             length: { maximum: 3,
                       message:
