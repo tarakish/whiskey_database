@@ -11,6 +11,7 @@ import "channels"
 // Use bootstrap 5
 import "bootstrap"
 import "../stylesheets/application"
+import "../js/shared";
 
 Rails.start()
 Turbolinks.start()
