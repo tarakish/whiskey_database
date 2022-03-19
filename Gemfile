@@ -36,7 +36,6 @@ gem 'banken'
 gem 'sorcery'
 
 # Use CSS_framework
-gem 'bootstrap', '~> 5.1.3'
 gem 'semantic-ui-sass'
 
 # i18n
@@ -63,9 +62,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   # Debug Utility
-  gem 'bullet'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'bullet'
   # Lint check
   gem 'rails_best_practices'
   gem 'rubocop', require: false

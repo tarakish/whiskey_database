@@ -13,6 +13,7 @@ AllCops:
     - 'bin/**/*'
     - 'spec/**/*'
     - 'node_modules/**/*'
+    - 'lib/tasks/auto_annotate_models.rake'
   DisplayCopNames: true
 
 # 日本語でのコメントを許可
@@ -47,7 +48,7 @@ Naming/AccessorMethodName:
 # 一行の長さは100字まで。コメントは制限しない
 Metrics/LineLength:
   Max: 100
-  IgnoredPatterns: ['\A#']
+  IgnoredPatterns: ['(\A|\s)#']
   Exclude:
     - "db/migrate/*.rb"
 
@@ -59,3 +60,15 @@ Metrics/MethodLength:
 # ABC sizeは緩めにする
 Metrics/AbcSize:
   Max: 30 # default 15
+
+# ブロック定義行の長さを35にする
+Metrics/BlockLength:
+  Max: 35 # default 25
+
+# PostgreSQLのExpression Indexesの誤検知の回避
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+  
+# 多対多の関連付けでの誤検知を回避
+Rails/HasManyOrHasOneDependent:
+  Enabled: false

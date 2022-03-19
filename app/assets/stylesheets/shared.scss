@@ -1,0 +1,10 @@
+// for header
+nav {
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+nav.scroll-nav {
+  background-color: #596E79;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
