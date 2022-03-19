@@ -36,6 +36,7 @@ class WhiskeysController < ApplicationController
   end
 
   private
+
   def set_whiskey
     @whiskey = Whiskey.find(params[:id])
   end

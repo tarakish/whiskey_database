@@ -36,6 +36,7 @@ class DrinkWaysController < ApplicationController
   end
 
   private
+
   def set_drink_way
     @drink_way = DrinkWay.find(params[:id])
   end
