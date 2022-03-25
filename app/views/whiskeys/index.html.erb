@@ -1,33 +1,79 @@
-<p id="notice"><%= notice %></p>
-
-<div class='container'>
-  <div class='row'>
-    <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-      <h1 class='text-center'>Whiskeys</h1>
-
-      <table>
-        <thead>
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @whiskeys.each do |whiskey| %>
-            <tr>
-              <td><%= whiskey.name %></td>
-              <td><%= link_to 'Show', whiskey %></td>
-              <td><%= link_to 'Edit', edit_whiskey_path(whiskey) %></td>
-              <td><%= link_to 'Destroy', whiskey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-
-      <br>
-
-      <%= link_to 'New Whiskey', new_whiskey_path %>
-
+<main>
+  <div class="py-5 bg-light">
+    <div class='container'>
+      <div class='row mb-5'>
+        <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          <h1 class='text-center'>Whiskeys</h1>
+        </div>
+      </div>
     </div>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-sm-6">
+          <label for="firstName" class="form-label">First name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+          <div class="invalid-feedback">
+            Valid first name is required.
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <label for="lastName" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+          <div class="invalid-feedback">
+            Valid last name is required.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row mb-2">
+        <div class="col-md-4">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col-auto mx-auto">
+              <a href="https://www.amazon.co.jp/GLENFIDDICH-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF-%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%A2%E3%83%AB%E3%83%88-%E3%82%A6%E3%82%A4%E3%82%B9%E3%82%AD%E3%83%BC-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF12%E5%B9%B4/dp/B001TZB0EK?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=38IO47VCUJUFG&keywords=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF&qid=1648173832&sprefix=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF%2Caps%2C334&sr=8-1&linkCode=li3&tag=akirakotira-22&linkId=e95dcd101c6fcec3c0d68fd54b2e99b0&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TZB0EK&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TZB0EK" width="1" height="1" alt="" style="border:none !important; margin:0px !important;" />
+            </div>
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">World World World</strong>
+              <h3 class="mb-0">Glenfiddich 12Y ronnn</h3>
+              <div class="mb-1 text-muted">¥3,500</div>
+              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col-auto mx-auto">
+              <a href="https://www.amazon.co.jp/GLENFIDDICH-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF-%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%A2%E3%83%AB%E3%83%88-%E3%82%A6%E3%82%A4%E3%82%B9%E3%82%AD%E3%83%BC-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF12%E5%B9%B4/dp/B001TZB0EK?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=38IO47VCUJUFG&keywords=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF&qid=1648173832&sprefix=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF%2Caps%2C334&sr=8-1&linkCode=li3&tag=akirakotira-22&linkId=e95dcd101c6fcec3c0d68fd54b2e99b0&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TZB0EK&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TZB0EK" width="1" height="1" alt="" style="border:none !important; margin:0px !important;" />
+            </div>
+            <div class="col p-4 d-flex flex-column position-static">
+              <div class="d-inline-block mb-2 text-muted">スコッチウイスキー　/　¥3,500</div>
+              <h3 class="mb-0">グレンフィディック 12Y</h3>
+              <div class="mb-1 text-muted">¥3,500</div>
+              <p class="card-text mb-auto">・オススメの飲み方：　ハイボール</p>
+              <p class="card-text mb-auto"><span class="badge rounded-pill bg-warning">バニラ</span><span class="badge rounded-pill bg-success">洋なし</span><span class="badge rounded-pill bg-success">レモン</span></p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col-auto mx-auto">
+              <a href="https://www.amazon.co.jp/GLENFIDDICH-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF-%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%A2%E3%83%AB%E3%83%88-%E3%82%A6%E3%82%A4%E3%82%B9%E3%82%AD%E3%83%BC-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF12%E5%B9%B4/dp/B001TZB0EK?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=38IO47VCUJUFG&keywords=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF&qid=1648173832&sprefix=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF%2Caps%2C334&sr=8-1&linkCode=li3&tag=akirakotira-22&linkId=e95dcd101c6fcec3c0d68fd54b2e99b0&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TZB0EK&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TZB0EK" width="1" height="1" alt="" style="border:none !important; margin:0px !important;" />
+            </div>
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">World World World</strong>
+              <h3 class="mb-0">Glenfiddich 12Y ronnn</h3>
+              <div class="mb-1 text-muted">¥3,500</div>
+              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-</div>
+</main>
