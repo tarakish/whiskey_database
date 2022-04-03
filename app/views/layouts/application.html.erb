@@ -15,8 +15,12 @@
   </head>
 
   <body>
-    <%= render 'shared/header' %>
-    <%= yield %>
-    <%= render 'shared/footer' %>
+    <div class="footerFixed">
+      <%= render 'shared/header' %>
+      <main class="pt-5">
+        <%= yield %>
+      </main>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>

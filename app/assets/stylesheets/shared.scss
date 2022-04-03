@@ -8,3 +8,53 @@ nav.scroll-nav {
   background-color: #596E79;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
+
+footer {
+  position: absolute;/* ←絶対位置 */
+  bottom: 0;
+  width: 100%;
+  background-color: #596E79;
+}
+
+.footerFixed {
+    min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
+    position: relative;/* ←相対位置 */
+    padding-bottom: 118px; /* ←フッターの高さを指定 */
+    // box-sizing: border-box;
+}
+
+footer strong {
+  color: #d86251;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+.box {
+  position: relative;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border: solid 1px #4d6e80;
+  border-radius: 0.25rem;
+}
+.box .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 14px;
+  background: #FFF;
+  color: #4d6e80;
+  font-weight: bold;
+}
+.box p {
+  margin: 0; 
+  padding: 0;
+}
+
+.card {
+  min-height: auto;
+}

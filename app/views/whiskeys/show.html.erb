@@ -1,11 +1,49 @@
-<p></p>
-<p></p>
-<p id="notice"><%= notice %></p>
-<%= @whiskey.name %>
-<%= @whiskey.description %>
-<%= @whiskey.feeling_to_whiskey_with_tongue %>
-<%= @whiskey.flavor_strength %>
-<%= @whiskey.rarity %>
-<%= @whiskey.reasonable_price %>
-<%= link_to 'Edit', edit_whiskey_path(@whiskey) %> |
-<%= link_to 'Back', whiskeys_path %>
+<!-- 主情報 -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 text-center">
+      <a href="https://www.amazon.co.jp/GLENFIDDICH-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF-%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%A2%E3%83%AB%E3%83%88-%E3%82%A6%E3%82%A4%E3%82%B9%E3%82%AD%E3%83%BC-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF12%E5%B9%B4/dp/B001TZB0EK?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=38IO47VCUJUFG&keywords=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF&qid=1648173832&sprefix=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF%2Caps%2C334&sr=8-1&linkCode=li3&tag=akirakotira-22&linkId=e95dcd101c6fcec3c0d68fd54b2e99b0&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TZB0EK&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP"></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TZB0EK" width="1" height="1" alt="" style="border:none !important; margin:0px !important;" />
+    </div>
+    <div class="col-lg-6 text-center text-lg-start">
+      <h6 class="text-muted">スコッチウイスキー</h6>
+      <h1>グレンフィデック 12年</h1>
+      <h4 class="mb-auto">
+        <span class="badge rounded-pill bg-warning mx-2">バニラ</span>
+        <span class="badge rounded-pill bg-success mx-2">洋なし</span>
+        <span class="badge rounded-pill bg-success mx-2">レモン</span>
+      </h4>
+      <h4 class="text-muted my-2">適正価格　¥3,500</h4>
+      <div class='d-flex'>
+        <div class="pie mx-3">少し軽め</div>
+        <div class="pie mx-3">繊細</div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- 副情報 -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-5 bg-dark text-white text-center">
+      <div class="my-3 py-3">
+        <p class="lead">相性のいい飲み方</p>
+        <h4 class="display-5">ハイボール</h4>
+        <h6><em>whiskey-and-soda</em></h6>
+      </div>
+      <div class="bg-light m-5 drink" style="width: 80%; height: 300px; border-radius: 21px;"></div>
+    </div>
+    <div class="col-lg-5 bg-secondary text-white text-center">
+      <div class="my-3 py-3">
+        <p class="lead">フードペアリング</p>
+        <h4 class="display-5">チョコレート</h4>
+        <h6><em>chocorate</em></h6>
+      </div>
+      <div class="bg-light m-5 pairing" style="width: 80%; height: 300px; border-radius: 21px;"></div>
+    </div>
+  </div>
+</div>
+<!-- 投稿 -->
+<div class="contianer">
+
+</div>

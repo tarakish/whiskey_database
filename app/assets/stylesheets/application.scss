@@ -1,4 +1,8 @@
 @import "semantic-ui";
 @import "shared";
-@import "custumized";
 @import "top";
+
+// bootstrapの背景色を上書き？
+body {
+  background-color: #F0ECE3 !important;
+}
