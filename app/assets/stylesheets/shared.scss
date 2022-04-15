@@ -5,15 +5,16 @@ nav {
 }
 
 nav.scroll-nav {
-  background-color: #596E79;
+  background-color: #4f7183;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
+// for footer
 footer {
   position: absolute;/* ←絶対位置 */
   bottom: 0;
   width: 100%;
-  background-color: #596E79;
+  background-color: #4f7183;
 }
 
 .footerFixed {
@@ -31,6 +32,7 @@ footer li {
   list-style-type: none;
 }
 
+// for border of flavores at whyskeys#index
 .box {
   position: relative;
   margin: 1em 0;
@@ -54,6 +56,7 @@ footer li {
   margin: 0; 
   padding: 0;
 }
+
 
 .card {
   min-height: auto;
