@@ -7,6 +7,10 @@ body {
   background-color: #F0ECE3 !important;
 }
 
+.blue {
+  color: #3a484f;
+}
+
 // 行間・文字間を開ける
 .spacing-text {
   line-height: 1.6;
@@ -61,3 +65,6 @@ body {
   }
 }
 
+.ps-0 {
+  padding-right: 0 !important;
+}
