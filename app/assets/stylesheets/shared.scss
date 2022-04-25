@@ -18,9 +18,9 @@ footer {
 }
 
 .footerFixed {
-    min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
-    position: relative;/* ←相対位置 */
-    padding-bottom: 118px; /* ←フッターの高さを指定 */
+    min-height: 100vh; // コンテンツの高さの最小値＝ブラウザの高さに指定
+    position: relative;// 相対位置
+    padding-bottom: 118px; // フッターの高さを指定
     // box-sizing: border-box;
 }
 

@@ -1,7 +1,7 @@
 <!-- 主情報 -->
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
-    <h1 class="col-auto blue">
+    <h1 class="col-auto text-muted">
       基本情報
     </h1>
   </div>
@@ -51,7 +51,7 @@
 
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
-    <h1 class="col-auto blue">
+    <h1 class="col-auto text-muted">
       最大限楽しむ
     </h1>
   </div>
@@ -61,21 +61,24 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-lg-10 row justify-content-between px-lg-5">
-      <div class="col-lg-5 col-12 bg-white text-center rounded ms-lg-5 my-5">
-        <div class="my-3 py-3">
+      <div class="col-lg-5 col-12 bg-white text-center rounded ms-lg-5 my-5 px-0 shadow">
+        <div class="my-2 py-2">
           <p class="lead text-muted">相性のいい飲み方</p>
           <h4 class="display-5">ハイボール</h4>
           <h6><em>whiskey-and-soda</em></h6>
         </div>
-        <div class="bg-light mx-auto my-3 drink rounded" style="width: 90%; height: 200px;"></div>  <!-- 画像をレスポンシブに！ -->
+        <%# <div class="bg-light mx-auto my-3 drink rounded" style="width: 90%; height: 200px;"></div>  <!-- 画像をレスポンシブに！ --> %>
+        <%= image_tag 'highball.jpg', class: 'img-fluid mt-3' %>
       </div>
-      <div class="col-lg-5 col-12 bg-white text-center rounded me-lg-5 my-5">
-        <div class="my-3 py-3">
+
+      <div class="col-lg-5 col-12 bg-white text-center rounded me-lg-5 my-5 px-0 shadow">
+        <div class="my-2 py-2">
           <p class="lead text-muted">フードペアリング</p>
           <h4 class="display-5">チョコレート</h4>
-          <h6><em>chocorate</em></h6>
+          <h6><em>chocolate</em></h6>
         </div>
-        <div class="bg-light mx-auto my-3 pairing rounded" style="width: 90%; height: 200px;"></div>
+        <%# <div class="bg-light mx-auto my-3 pairing rounded" style="width: 90%; height: 200px;"></div> %>
+        <%= image_tag 'chocolate.jpg', class: 'img-fluid mt-3' %>
       </div>
     </div>
   </div>
@@ -112,7 +115,7 @@
           チョコレート
         </h1>
         <h4><em>
-          chocorate
+          chocolate
         </em></h4>
       </div>
       <div class="col-lg-4 text-center pairing">
@@ -124,6 +127,27 @@
 
 
 <!-- 投稿 -->
-<div class="contianer">
+<div class="container mt-5 pt-5">
+  <div class="row justify-content-center">
+    <h1 class="col-auto text-muted">
+      User's Tasting Notes
+    </h1>
+  </div>
+</div>
 
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 rounded shadow bg-white pe-0">
+      <div class="row justify-content-between">
+        <h5 class="col-auto">
+          〇〇`s テイスティングノート
+        </h5>
+        <h5 class="col-auto">
+          <button>編集</button>
+          <button>削除</button>
+        </h5>
+      </div>
+      
+    </div>
+  </div>
 </div>

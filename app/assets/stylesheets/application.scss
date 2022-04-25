@@ -65,6 +65,9 @@ body {
   }
 }
 
-.ps-0 {
-  padding-right: 0 !important;
+.hover-target {
+  opacity: .8;
+  &:hover{
+    opacity: 1;
+  }
 }
