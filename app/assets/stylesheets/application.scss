@@ -5,9 +5,22 @@
 @import "top";
 
 
-// bootstrapの背景色を上書き？
+// overwrite bootstrap
 body {
   background-color: #F0ECE3 !important;
+}
+
+// background-color
+.bg-edit {
+  background-color: #716a6a !important;
+}
+
+.bg-delete {
+  background-color: #fc3317 !important;
+}
+
+.bg-navy {
+  background-color: #596E79 !important;
 }
 
 .blue {
