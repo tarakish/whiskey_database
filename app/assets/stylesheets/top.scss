@@ -6,6 +6,10 @@
   position: relative;
   height: 100vh;
   margin-bottom: 10%;
+
+  @media screen and (max-width: 767px) {
+    height: calc(64vh);
+  }
 }
 
 .mb-between-rows {
@@ -20,10 +24,12 @@ h3 small {
   font-size: 1rem;
 }
 
-footer strong {
-  color: #d86251;
+.drink {
+  background-image: image-url("highball.jpg");
+  background-size: cover;
 }
 
-footer li {
-  list-style-type: none;
+.pairing {
+  background-image: image-url("chocolate.jpg");
+  background-size: cover;
 }
