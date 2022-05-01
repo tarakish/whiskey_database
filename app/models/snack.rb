@@ -13,5 +13,9 @@
 #  index_snacks_on_name_and_description  (name,description) UNIQUE
 #
 class Snack < ApplicationRecord
-  
+  has_many :whiskeys
+
+  validates :name, presence: true, uniqueness: true
+  validates :description, presence: true, uniqueness: true
+
 end
