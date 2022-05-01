@@ -23,8 +23,13 @@ body {
   background-color: #596E79 !important;
 }
 
-.blue {
-  color: #3a484f;
+.bg-darknavy {
+  background-color: #48607f !important;
+}
+
+// font-color
+.f-yellow {
+  color: #ffce20 !important;
 }
 
 // 行間・文字間を開ける
@@ -46,7 +51,7 @@ body {
 	width: 100px;
 	height: 100px;
 	font-size: 12px;
-	background-image: radial-gradient(#fffbf0 60%, transparent 31%), conic-gradient(#FFCE20 0% 60%, #ffeebc 60% 100%);
+	background-image: radial-gradient(#fffbf0 60%, transparent 31%), conic-gradient(#ffce20 0% 60%, #ffeebc 60% 100%);
 	border-radius: 50%;
   color: #ffc805;
   font-weight: 500;
@@ -70,7 +75,6 @@ body {
 
   &:hover {
     background-color: #232f3e;
-    // box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #ff9900;
     transform: translateY(-1px);
     opacity: 1;
@@ -87,3 +91,10 @@ body {
     opacity: 1;
   }
 }
+
+.tf-y {
+  &:hover{
+    transform: translateY(-1px);
+  }
+}
+
