@@ -7,6 +7,7 @@ ja:
       whiskey: ウイスキー
       flavor: フレーバー
       drink_way: 飲み方
+      snack: おつまみ
       whyskey_flavors: ウイスキーのフレーバー
     attributes:
       id: ID
@@ -23,6 +24,7 @@ ja:
         reasonable_price: 適正価格
         flavor_id: フレーバー
         drink_way_id: 飲み方
+        snack_id: おつまみ
         whiskey_flavors: ウイスキーのフレーバー
       flavor:
         name: 名称
@@ -32,6 +34,9 @@ ja:
         name: 名称
         how_to_make: 作り方
         explanation: 説明
+      snack:
+        name: 名称
+        description: 説明
     errors:
       messages:
         a_whiskey_has_upto_three_flavors: は3つまでじゃよ。欲張りなさんな。

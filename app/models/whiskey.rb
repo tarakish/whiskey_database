@@ -12,18 +12,22 @@
 #  created_at                     :datetime         not null
 #  updated_at                     :datetime         not null
 #  drink_way_id                   :bigint
+#  snack_id                       :bigint
 #
 # Indexes
 #
 #  index_whiskeys_on_drink_way_id  (drink_way_id)
 #  index_whiskeys_on_name          (name) UNIQUE
+#  index_whiskeys_on_snack_id      (snack_id)
 #
 # Foreign Keys
 #
 #  fk_rails_...  (drink_way_id => drink_ways.id)
+#  fk_rails_...  (snack_id => snacks.id)
 #
 class Whiskey < ApplicationRecord
   belongs_to :drink_way
+  belongs_to :snack
   has_many :whiskey_flavors
   has_many :flavors, through: :whiskey_flavors
 
