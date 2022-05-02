@@ -24,6 +24,7 @@ ja:
         reasonable_price: 適正価格
         flavor_id: フレーバー
         drink_way_id: 飲み方
+        snack_id: おつまみ
         whiskey_flavors: ウイスキーのフレーバー
       flavor:
         name: 名称

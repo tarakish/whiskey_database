@@ -45,6 +45,6 @@ class WhiskeysController < ApplicationController
     # params.fetch(:whiskey, {})
     params.require(:whiskey).permit(:name, :description, :feeling_to_whiskey_with_tongue,
                                     :flavor_strength, :rarity, :reasonable_price,
-                                    :drink_way_id, flavor_ids: [])
+                                    :drink_way_id, :snack_id, flavor_ids: [])
   end
 end
