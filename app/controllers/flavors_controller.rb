@@ -2,6 +2,13 @@ class FlavorsController < ApplicationController
   before_action :set_flavor, only: %i[show edit update destroy]
 
   def index
+    @woody_flavors = Flavor.woody
+    @winy_flavors = Flavor.winy
+    @fruity_flavors = Flavor.fruity
+    @floral_flavors = Flavor.floral
+    @sereal_flavors = Flavor.sereal
+    @smoky_flavors = Flavor.smoky
+    # for admin
     @flavors = Flavor.all
   end
 

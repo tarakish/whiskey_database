@@ -21,5 +21,5 @@ class Flavor < ApplicationRecord
   validates :detail, presence: true, uniqueness: true
   validates :group, presence: true
 
-  enum group: { woody: 0, winy: 1, fruity: 2, floral: 3, sereal: 4, smoly: 5, etc: 6 }
+  enum group: { woody: 0, winy: 1, fruity: 2, floral: 3, sereal: 4, smoky: 5 }
 end
