@@ -9,81 +9,12 @@
   </div>
 </div>
 
-<div class="container mt-5 pt-5">
-  <div class="row justify-content-center">
-    <h2 class="col-lg-9 text-center bg-fruity pt-3 pb-3 mb-1 shadow-sm rounded">
-      Fruity<br>
-      <span class="fs-5">〜フルーティ〜</span>
-    </h2>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 p-0">
-      <div class="table-responsive">
-        <table class="table text-nowrap text-center bg-fruity fs-5 rounded shadow-sm">
-          <tbody class="bd-main-color">
-            <tr>
-              <td class="fs-4 text-center">バニラ</td>
-              <td>定番のお供.ビターチョコとミルクチョコを比べてみるのもオススメです。</td>
-              <td><i class="fa-solid fa-magnifying-glass"></i></td>
-            </tr>
-            <tr>
-              <td class="fs-4 text-center">ドライフルーツ</td>
-              <td>Jacob</td>
-              <td><i class="fa-solid fa-magnifying-glass"></i></td>
-            </tr>
-            <tr>
-              <td class="fs-4 text-center">メロン</td>
-              <td>Larry the Bird</td>
-              <td><i class="fa-solid fa-magnifying-glass"></i></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-5 pt-5">
-  <div class="row justify-content-center">
-    <h2 class="col-lg-9 text-center bg-fruity pt-3 pb-3 mb-1 shadow-sm rounded">
-      Fruity<br>
-      <span class="fs-5">〜フルーティ〜</span>
-    </h2>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 p-0">
-      <div class="table-responsive">
-        <table class="table text-nowrap text-center bg-fruity fs-5 rounded shadow-sm">
-          <tbody class="bd-main-color">
-            <tr>
-              <td class="fs-4 text-center">バニラ</td>
-              <td>定番のお供.ビターチョコとミルクチョコを比べてみるのもオススメです。</td>
-              <td><i class="fa-solid fa-magnifying-glass"></i></td>
-            </tr>
-            <tr>
-              <td class="fs-4 text-center">ドライフルーツ</td>
-              <td>Jacob</td>
-              <td><i class="fa-solid fa-magnifying-glass"></i></td>
-            </tr>
-            <tr>
-              <td class="fs-4 text-center">メロン</td>
-              <td>Larry the Bird</td>
-              <td><i class="fa-solid fa-magnifying-glass"></i></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+<%= render partial: 'flavors', locals: { flavors: @fruity_flavors } %>
+<%= render partial: 'flavors', locals: { flavors: @woody_flavors } %>
+<%= render partial: 'flavors', locals: { flavors: @winy_flavors } %>
+<%= render partial: 'flavors', locals: { flavors: @floral_flavors } %>
+<%= render partial: 'flavors', locals: { flavors: @sereal_flavors } %>
+<%= render partial: 'flavors', locals: { flavors: @smoky_flavors } %>
 
 
 <table>
