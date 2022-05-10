@@ -10,26 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_01_143740) do
+ActiveRecord::Schema.define(version: 2022_05_10_015214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "drink_ways", force: :cascade do |t|
     t.string "name", null: false
-    t.text "how_to_make", null: false
     t.text "explanation", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["name", "how_to_make", "explanation"], name: "index_drink_ways_on_name_and_how_to_make_and_explanation", unique: true
+    t.text "how_to_make_url", null: false
+    t.string "english_name", null: false
+    t.index ["english_name"], name: "index_drink_ways_on_english_name", unique: true
+    t.index ["explanation"], name: "index_drink_ways_on_explanation", unique: true
+    t.index ["how_to_make_url"], name: "index_drink_ways_on_how_to_make_url", unique: true
+    t.index ["name"], name: "index_drink_ways_on_name", unique: true
   end
 
   create_table "flavors", force: :cascade do |t|
     t.string "name", null: false
     t.string "detail", null: false
-    t.integer "group", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "group"
     t.index ["name", "detail"], name: "index_flavors_on_name_and_detail", unique: true
   end
 
