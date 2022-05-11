@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 row text-center rounded shadow bg-white p-0">
+      <%= image_tag 'highball.jpg', class: 'img-fluid col-lg-4 col-12 m-0 p-0' %>
+      <div class="col-lg-8 col my-2">
+        <h2 class="mt-2">
+          <%= drink_way.name %>
+        </h2>
+        <h5 class="text-muted"><em>
+          <%= drink_way.english_name %>
+        </em></h5>
+        <p class="my-3">
+          <%= simple_format(h(drink_way.explanation)) %>
+        </p>
+        <h6 class="mb-3 hover-target">
+          <i class="fa-solid fa-magnifying-glass"></i> ハイボールが合うウイスキーを探す
+        </h6>
+        <h6 class="mb-3 hover-target">
+          <%= link_to drink_way.how_to_make_url, class: 'simple-a-tag' do %>
+            <i class="fa-brands fa-youtube"></i> 作り方を見る
+          <% end %>
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>

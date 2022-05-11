@@ -69,7 +69,7 @@ end
     クラッシュドアイスが見た目にも清涼感を感じさせる。
     暑い季節にはミントと砂糖を加えたミント・ジュレップも絶品。',
     'https://youtu.be/8m1ZUxQpS_o?t=667'
-  ]
+  ],
   ['水割り',
     'whyskey-and-water',
     'ウイスキービギナーの入り口でもあり、玄人の探求対象。
@@ -77,7 +77,7 @@ end
     水割りにしても味のバランスが崩れないように作られているとか。',
     'https://youtu.be/8m1ZUxQpS_o?t=347']
 ].each do |name, english_name, explanation, how_to_make_url|
-  Flavor.create!(
+  DrinkWay.create!(
     { name: name, english_name: english_name, explanation: explanation, how_to_make_url: how_to_make_url }
   )
 

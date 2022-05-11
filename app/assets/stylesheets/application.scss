@@ -122,10 +122,20 @@ body {
   }
 }
 
+// 未ホバー時に色を薄く
 .hover-target {
   opacity: .8;
   &:hover{
     opacity: 1;
+  }
+}
+
+// リンクの装飾を無効化
+.simple-a-tag {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
   }
 }
 

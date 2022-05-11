@@ -13,52 +13,9 @@
   </div>
 </div>
 
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 row text-center rounded shadow bg-white p-0">
-      <%= image_tag 'highball.jpg', class: 'img-fluid col-lg-4 col-12 m-0 p-0' %>
-      <div class="col-lg-8 col my-2">
-        <h2 class="mt-2">
-          ハイボール
-        </h2>
-        <h5 class="text-muted"><em>
-          whiskey-and-soda
-        </em></h5>
-        <p class="my-3">アルコール感を緩和し、炭酸による香りの広がりを楽しめる飲み方。<br>食中でも楽しめるほどの飲みやすさ、爽やかさも。<br>香りやアルコールの刺激が強いウイスキーにオススメ。</p>
-        <h6 class="text-muted mb-3">
-          <i class="fa-solid fa-magnifying-glass"></i> ハイボールが合うウイスキーを探す
-        </h6>
-        <h6 class="text-muted mb-3">
-          <i class="fa-brands fa-youtube"></i> 作り方を見る
-        </h6>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render @drink_ways %>
 
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 row text-center rounded shadow bg-white p-0">
-        <%= image_tag 'on_the_rocks.jpg', class: 'img-fluid col-lg-4 col-12 m-0 p-0' %>
-      <div class="col-lg-8 col my-2">
-        <h2 class="mt-2">
-          オン・ザ・ロック
-        </h2>
-        <h5 class="text-muted"><em>
-          on-the-rocks
-        </em></h5>
-        <p class="my-3">溶ける氷による味わいの変化を楽しめる飲み方。<br>せっかくならグラスにもこだわって見た目も楽しみたい。<br>味や香りが強いもの、高アルコールのウイスキーにオススメ。</p>
-        <h6 class="text-muted mb-3">
-          <i class="fa-solid fa-magnifying-glass"></i> オンザロックが合うウイスキーを探す
-        </h6>
-        <h6 class="text-muted mb-3">
-          <i class="fa-brands fa-youtube"></i> 作り方を見る
-        </h6>
-      </div>
-    </div>
-  </div>
-</div>
-
+<!-- for admin -->
 <table class="text-center">
   <thead>
     <tr>
