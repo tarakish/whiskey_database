@@ -76,7 +76,7 @@
         <td><%= drink_way.name %></td>
         <td><%= drink_way.english_name %></td>
         <td><%= drink_way.how_to_make_url %></td>
-        <td><%= drink_way.explanation %></td>
+        <td><%= simple_format(h(drink_way.explanation)) %></td>
         <td><%= link_to 'Show', drink_way %></td>
         <td><%= link_to 'Edit', edit_drink_way_path(drink_way) %></td>
         <td><%= link_to 'Destroy', drink_way, method: :delete, data: { confirm: 'Are you sure?' } %></td>
