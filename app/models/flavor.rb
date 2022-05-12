@@ -4,7 +4,7 @@
 #
 #  id         :bigint           not null, primary key
 #  detail     :string           not null
-#  group      :integer          default("woody"), not null
+#  group      :integer
 #  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null

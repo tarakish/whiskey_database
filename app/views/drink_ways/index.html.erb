@@ -3,64 +3,27 @@
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center">
-      How to Drink<br>
+      <em>How to Drink</em><br>
       <span class="fs-3">〜飲み方一覧〜</span>
     </h1>
   </div>
-</div>
-
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 row text-center rounded shadow bg-white p-0">
-      <%= image_tag 'highball.jpg', class: 'img-fluid col-lg-4 col-12 m-0 p-0' %>
-      <div class="col-lg-8 col my-2">
-        <h2 class="mt-2">
-          ハイボール
-        </h2>
-        <h5 class="text-muted"><em>
-          whiskey-and-soda
-        </em></h5>
-        <p class="my-3">アルコール感を緩和し、炭酸による香りの広がりを楽しめる飲み方。<br>食中でも楽しめるほどの飲みやすさ、爽やかさも。<br>香りやアルコールの刺激が強いウイスキーにオススメ。</p>
-        <h6 class="text-muted mb-3">
-          <i class="fa-solid fa-magnifying-glass"></i> ハイボールが合うウイスキーを探す
-        </h6>
-        <h6 class="text-muted mb-3">
-          <i class="fa-brands fa-youtube"></i> 作り方を見る
-        </h6>
-      </div>
+  <div class="row justify-content-center mt-4">
+    <div class="col-lg-9 col-6 ui divider border-2">
     </div>
   </div>
 </div>
 
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 row text-center rounded shadow bg-white p-0">
-        <%= image_tag 'on_the_rocks.jpg', class: 'img-fluid col-lg-4 col-12 m-0 p-0' %>
-      <div class="col-lg-8 col my-2">
-        <h2 class="mt-2">
-          オン・ザ・ロック
-        </h2>
-        <h5 class="text-muted"><em>
-          on-the-rocks
-        </em></h5>
-        <p class="my-3">溶ける氷による味わいの変化を楽しめる飲み方。<br>せっかくならグラスにもこだわって見た目も楽しみたい。<br>味や香りが強いもの、高アルコールのウイスキーにオススメ。</p>
-        <h6 class="text-muted mb-3">
-          <i class="fa-solid fa-magnifying-glass"></i> オンザロックが合うウイスキーを探す
-        </h6>
-        <h6 class="text-muted mb-3">
-          <i class="fa-brands fa-youtube"></i> 作り方を見る
-        </h6>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render @drink_ways %>
 
+<!-- for admin -->
 <table class="text-center">
   <thead>
     <tr>
       <th>Name</th>
-      <th>How to make</th>
+      <th>English_name</th>
+      <th>How to make url</th>
       <th>Explanation</th>
+      <th>image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -69,8 +32,14 @@
     <% @drink_ways.each do |drink_way| %>
       <tr>
         <td><%= drink_way.name %></td>
-        <td><%= drink_way.how_to_make %></td>
-        <td><%= drink_way.explanation %></td>
+        <td><%= drink_way.english_name %></td>
+        <td><%= drink_way.how_to_make_url %></td>
+        <td><%= simple_format(h(drink_way.explanation)) %></td>
+        <td>
+          <% if drink_way.image.attached? %>
+            <%= image_tag drink_way.image.variant(resize_to_limit: [100, 100]) %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', drink_way %></td>
         <td><%= link_to 'Edit', edit_drink_way_path(drink_way) %></td>
         <td><%= link_to 'Destroy', drink_way, method: :delete, data: { confirm: 'Are you sure?' } %></td>

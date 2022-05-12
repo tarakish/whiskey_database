@@ -17,13 +17,23 @@
   </div>
 
   <div class="field">
-    <%= form.label :how_to_make %>
-    <%= form.text_area :how_to_make %>
+    <%= form.label :english_name %>
+    <%= form.text_field :english_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :how_to_make_url %>
+    <%= form.text_area :how_to_make_url %>
   </div>
 
   <div class="field">
     <%= form.label :explanation %>
     <%= form.text_area :explanation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="actions">

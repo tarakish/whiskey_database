@@ -4,8 +4,12 @@
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center">
       Flavors<br>
-      <span class="fs-3">〜フレーバ一覧〜</span>
+      <span class="fs-3">〜フレーバー一覧〜</span>
     </h1>
+  </div>
+  <div class="row justify-content-center mt-4">
+    <div class="col-lg-9 ui divider border-2">
+    </div>
   </div>
 </div>
 
@@ -16,7 +20,7 @@
 <%= render partial: 'flavors', locals: { flavors: @sereal_flavors } %>
 <%= render partial: 'flavors', locals: { flavors: @smoky_flavors } %>
 
-
+<!-- for admin -->
 <table>
   <thead>
     <tr>

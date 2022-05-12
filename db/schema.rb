@@ -10,26 +10,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_01_143740) do
+ActiveRecord::Schema.define(version: 2022_05_11_075839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.string "service_name", null: false
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "active_storage_variant_records", force: :cascade do |t|
+    t.bigint "blob_id", null: false
+    t.string "variation_digest", null: false
+    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
   create_table "drink_ways", force: :cascade do |t|
     t.string "name", null: false
-    t.text "how_to_make", null: false
     t.text "explanation", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["name", "how_to_make", "explanation"], name: "index_drink_ways_on_name_and_how_to_make_and_explanation", unique: true
+    t.text "how_to_make_url", null: false
+    t.string "english_name", null: false
+    t.index ["english_name"], name: "index_drink_ways_on_english_name", unique: true
+    t.index ["explanation"], name: "index_drink_ways_on_explanation", unique: true
+    t.index ["how_to_make_url"], name: "index_drink_ways_on_how_to_make_url", unique: true
+    t.index ["name"], name: "index_drink_ways_on_name", unique: true
   end
 
   create_table "flavors", force: :cascade do |t|
     t.string "name", null: false
     t.string "detail", null: false
-    t.integer "group", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "group"
     t.index ["name", "detail"], name: "index_flavors_on_name_and_detail", unique: true
   end
 
@@ -66,6 +98,8 @@ ActiveRecord::Schema.define(version: 2022_05_01_143740) do
     t.index ["snack_id"], name: "index_whiskeys_on_snack_id"
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "whiskey_flavors", "flavors"
   add_foreign_key "whiskey_flavors", "whiskeys"
   add_foreign_key "whiskeys", "drink_ways"
