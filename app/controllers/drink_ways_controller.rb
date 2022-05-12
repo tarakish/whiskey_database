@@ -42,6 +42,6 @@ class DrinkWaysController < ApplicationController
   end
 
   def drink_way_params
-    params.require(:drink_way).permit(:name, :english_name, :how_to_make_url, :explanation)
+    params.require(:drink_way).permit(:name, :english_name, :how_to_make_url, :explanation, :image)
   end
 end

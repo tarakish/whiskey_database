@@ -75,12 +75,11 @@ end
     'ウイスキービギナーの入り口でもあり、玄人の探求対象。
     シンプルな作り方ゆえに奥深い飲み方。ジャパニーズウイスキーは
     水割りにしても味のバランスが崩れないように作られているとか。',
-    'https://youtu.be/8m1ZUxQpS_o?t=347']
+    'https://youtu.be/8m1ZUxQpS_o?t=347'
+  ]
 ].each do |name, english_name, explanation, how_to_make_url|
   DrinkWay.create!(
     { name: name, english_name: english_name, explanation: explanation, how_to_make_url: how_to_make_url }
   )
-
-
 end
 

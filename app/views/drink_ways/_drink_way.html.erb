@@ -1,7 +1,9 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-lg-9 row text-center rounded shadow bg-white p-0">
-      <%= image_tag 'highball.jpg', class: 'img-fluid col-lg-4 col-12 m-0 p-0' %>
+      <% if drink_way.image.attached? %>
+        <%= image_tag drink_way.image, class: 'img-fluid col-lg-4 col-12 m-0 p-0' %>
+      <% end %>
       <div class="col-lg-8 col my-2">
         <h2 class="mt-2">
           <%= drink_way.name %>
