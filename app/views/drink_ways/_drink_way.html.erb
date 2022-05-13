@@ -15,10 +15,10 @@
           <%= simple_format(h(drink_way.explanation)) %>
         </p>
         <h6 class="mb-3 hover-target">
-          <i class="fa-solid fa-magnifying-glass"></i> ハイボールが合うウイスキーを探す
+          <i class="fa-solid fa-magnifying-glass"></i> <%= drink_way.name %>が合うウイスキーを探す
         </h6>
         <h6 class="mb-3 hover-target">
-          <%= link_to drink_way.how_to_make_url, class: 'simple-a-tag' do %>
+          <%= link_to drink_way.how_to_make_url, class: 'simple-a-tag', target: '_blank', rel: 'noopener noreferrer' do %>
             <i class="fa-brands fa-youtube"></i> 作り方を見る
           <% end %>
         </h6>
