@@ -11,10 +11,9 @@
         <h5 class="text-muted"><em>
           <%= snack.english_name %>
         </em></h5>
-        <p class="my-3"><%= simple_format(h(snack.description)) %></p>
-        <span>↓comming soon↓</span>
-        <h6 class="my-3 hover-target text-decoration-line-through">
-          <i class="fa-solid fa-magnifying-glass"></i> <%= snack.name %>が合うウイスキーを探す
+        <p class="my-5"><%= simple_format(h(snack.description)) %></p>
+        <h6 class="my-3 hover-target">
+          <span class="text-decoration-line-through"><i class="fa-solid fa-magnifying-glass"></i> <%= snack.name %>が合うウイスキーを探す</span> comming soon!
         </h6>
       </div>
     </div>

@@ -43,6 +43,6 @@ class SnacksController < ApplicationController
   end
 
   def snack_params
-    params.require(:snack).permit(:name, :description)
+    params.require(:snack).permit(:name, :english_name, :description, :image)
   end
 end
