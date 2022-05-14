@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 row text-center rounded shadow bg-white p-0">
+      <% if snack.image.attached? %>
+        <%= image_tag snack.image, class: 'img-fluid col-lg-4 col-12 m-0 p-0' %>
+      <% end %>
+      <div class="col-lg-8 col my-2">
+        <h2 class="mt-2">
+          <%= snack.name %>
+        </h2>
+        <h5 class="text-muted"><em>
+          <%= snack.english_name %>
+        </em></h5>
+        <p class="my-3"><%= simple_format(h(snack.description)) %></p>
+        <span>↓comming soon↓</span>
+        <h6 class="my-3 hover-target text-decoration-line-through">
+          <i class="fa-solid fa-magnifying-glass"></i> <%= snack.name %>が合うウイスキーを探す
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>

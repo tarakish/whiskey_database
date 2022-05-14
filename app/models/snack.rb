@@ -16,6 +16,7 @@
 #
 class Snack < ApplicationRecord
   has_many :whiskeys
+  has_one_attached :image
 
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true, uniqueness: true
