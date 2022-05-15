@@ -44,9 +44,9 @@ class Whiskey < ApplicationRecord
   validates :flavor_strength, presence: true
   validates :rarity, presence: true
   validates :region, presence: true
-  validates :amazon_link , presence: true, uniqueness: true
-  validates :amazon_image_link , presence: true, uniqueness: true
-  validates :amazon_impression_link , presence: true, uniqueness: true
+  validates :amazon_link, presence: true, uniqueness: true
+  validates :amazon_image_link, presence: true, uniqueness: true
+  validates :amazon_impression_link, presence: true, uniqueness: true
   validates :whiskey_flavors,
             length: { maximum: 3,
                       message:

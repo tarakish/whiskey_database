@@ -31,6 +31,22 @@
     <%= f.select :rarity, Whiskey.rarities_i18n.invert, {}, class: 'form-control' %>
   </div>
   <div class="form-group">
+    <%= f.label :region %>
+    <%= f.text_field :region, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :amazon_link %>
+    <%= f.text_area :amazon_link, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :amazon_image_link %>
+    <%= f.text_area :amazon_image_link, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :amazon_impression_link %>
+    <%= f.text_area :amazon_impression_link, class: 'form-control' %>
+  </div>
+  <div class="form-group">
     <%= f.label :reasonable_price %>
     <%= f.number_field :reasonable_price, class: 'form-control' %>
   </div>

@@ -143,8 +143,16 @@ body {
   }
 }
 
-.tf-y {
+// hover時に上方向にずらす
+.transform-y-sm {
   &:hover{
     transform: translateY(-1px);
+  }
+}
+
+.transform-y-md {
+  &:hover{
+    transform: translateY(-3px);
+    transition: 0.2s;
   }
 }
