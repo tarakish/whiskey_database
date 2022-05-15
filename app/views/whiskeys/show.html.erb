@@ -24,7 +24,6 @@
               <div class="row m-0 pie fs-6 sans-serif">繊細</div>
               <div class="mt-3">フレーバー</div>
             </div>
-          
           </div>
         </div>
       </div>
@@ -40,12 +39,16 @@
           <span class="ui brown tag label ms-2 me-4 my-1">はちみつ</span>
           <span class="ui orange tag label ms-2 me-4 my-1">ドライフルーツ</span>
         </p>
-        <div class="spacing-text mx-lg-auto m-5 ">
+        <h6 class="spacing-text mx-lg-auto m-5 ">
           <%= simple_format(h(@whiskey.description)) %>
-        </div>
-        <h4 class="text-muted my-auto ms-lg-0 ms-lg-5">
-          <span class="h6 mx-autoo sans-serif">適正価格：　¥</span><%= @whiskey.reasonable_price %>
+        </h6>
+        <h4 class="row text-muted my-auto">
+          <div class="col-auto pt-3">
+            <span class="h5 mx-auto sans-serif">適正価格 ¥</span><%= @whiskey.reasonable_price %>
+          </div>
+          <div class="col-auto">
           <button class="amazon_button ms-5 ms-xl-5 ms-lg-3 my-lg-5 my-5 my-xl-auto"><h4><i class="amazon icon"></i></h4>Find it!</button> <!-- lg幅のボタン配置要改善 -->
+          </div>
         </h4>
       </div>
     </div>
