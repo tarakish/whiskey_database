@@ -1,9 +1,10 @@
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 
-@import "semantic-ui";
-@import "shared";
-@import "top";
-
+@import '_variables';
+@import 'semantic-ui';
+@import 'shared';
+@import 'top';
+@import 'flavor';
 
 // overwrite bootstrap
 body {
@@ -32,31 +33,6 @@ body {
 
 .bg-darknavy {
   background-color: #48607f !important;
-}
-
-// bg for flavors-table
-.bg-woody {
-  background-color: #e7c798 !important;
-}
-
-.bg-winy {
-  background-color: #ce817e !important;
-}
-
-.bg-fruity {
-  background-color: #ffdc99  !important;
-}
-
-.bg-floral {
-  background-color: #e5d3ee !important;
-}
-
-.bg-sereal {
-  background-color: #c4a36f !important;
-}
-
-.bg-smoky {
-  background-color: #dfd7a9 !important;
 }
 
 // border-color

@@ -35,10 +35,10 @@
           <%= @whiskey.name %>
         </h1>
         <h6 class="my-5">
-          <span class="sans-serif ui brown tag label ms-3 me-4 my-1">バニラ</span>
-          <span class="ui brown tag label ms-2 me-4 my-1">はちみつ</span>
-          <span class="ui orange tag label ms-2 me-4 my-1">ドライフルーツ</span>
-        </p>
+          <% @whiskey.flavors.each do |flavor| %>
+            <span class="sans-serif ui text-white label-<%= flavor.group %> tag label ms-3 me-4 my-1"><%= flavor.name %></span>
+          <% end %>
+        </h6>
         <h6 class="spacing-text mx-lg-auto m-5 ">
           <%= simple_format(h(@whiskey.description)) %>
         </h6>

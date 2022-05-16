@@ -1,0 +1,51 @@
+@import '_variables';
+
+// bg for flavor-group
+.bg-woody {
+  background-color: $bg-woody !important;
+}
+
+.bg-winy {
+  background-color: $bg-winy !important;
+}
+
+.bg-fruity {
+  background-color: $bg-fruity !important;
+}
+
+.bg-floral {
+  background-color: $bg-floral !important;
+}
+
+.bg-sereal {
+  background-color: $bg-sereal !important;
+}
+
+.bg-smoky {
+  background-color: $bg-smoky !important;
+}
+
+// for lebal 
+.label-woody {
+  background-color: darken($bg-smoky, 15%) !important ;
+}
+
+.label-winy {
+  background-color: darken($bg-winy, 15%) !important;
+}
+
+.label-fruity {
+  background-color: darken($bg-fruity, 15%) !important;
+}
+
+.label-floral {
+  background-color: darken($bg-floral, 15%) !important;
+}
+
+.label-sereal {
+  background-color: darken($bg-sereal, 15%) !important;
+}
+
+.label-smoky {
+  background-color: darken($bg-smoky, 15%) !important ;
+}
