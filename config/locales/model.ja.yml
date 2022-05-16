@@ -19,7 +19,7 @@ ja:
         name: 名称
         description: 詳細
         feeling_to_whiskey_with_tongue: 飲み口
-        flavor_strength: 香りの強さ
+        flavor_strength: フレーバー
         rarity: レア度
         reasonable_price: 適正価格
         flavor_id: フレーバー
