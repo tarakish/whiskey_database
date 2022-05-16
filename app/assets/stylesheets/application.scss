@@ -4,6 +4,7 @@
 @import 'semantic-ui';
 @import 'shared';
 @import 'top';
+@import 'whiskey';
 @import 'flavor';
 
 // overwrite bootstrap
@@ -59,21 +60,6 @@ body {
 // .bg-grade {
 //   background-color: # !important;
 // }
-
-// for pie-chart
-.pie {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100px;
-	height: 100px;
-	font-size: 12px;
-	background-image: radial-gradient(#fffbf0 60%, transparent 31%), conic-gradient(#ffce20 0% 60%, #ffeebc 60% 100%);
-	border-radius: 50%;
-  color: #ffc805;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-}
 
 .amazon_button {
   width: 140px;
