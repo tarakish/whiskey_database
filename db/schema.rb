@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_13_154911) do
+ActiveRecord::Schema.define(version: 2022_05_15_090606) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,6 +95,13 @@ ActiveRecord::Schema.define(version: 2022_05_13_154911) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "drink_way_id"
     t.bigint "snack_id"
+    t.string "region", null: false
+    t.text "amazon_link", null: false
+    t.string "amazon_image_link", null: false
+    t.string "amazon_impression_link", null: false
+    t.index ["amazon_image_link"], name: "index_whiskeys_on_amazon_image_link", unique: true
+    t.index ["amazon_impression_link"], name: "index_whiskeys_on_amazon_impression_link", unique: true
+    t.index ["amazon_link"], name: "index_whiskeys_on_amazon_link", unique: true
     t.index ["drink_way_id"], name: "index_whiskeys_on_drink_way_id"
     t.index ["name"], name: "index_whiskeys_on_name", unique: true
     t.index ["snack_id"], name: "index_whiskeys_on_snack_id"

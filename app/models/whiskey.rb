@@ -3,12 +3,16 @@
 # Table name: whiskeys
 #
 #  id                             :bigint           not null, primary key
+#  amazon_image_link              :string           not null
+#  amazon_impression_link         :string           not null
+#  amazon_link                    :text             not null
 #  description                    :text             not null
 #  feeling_to_whiskey_with_tongue :integer          default("balanced"), not null
 #  flavor_strength                :integer          default("normal"), not null
 #  name                           :string           not null
 #  rarity                         :integer          default("stable_supplyed"), not null
 #  reasonable_price               :integer
+#  region                         :string           not null
 #  created_at                     :datetime         not null
 #  updated_at                     :datetime         not null
 #  drink_way_id                   :bigint
@@ -16,9 +20,12 @@
 #
 # Indexes
 #
-#  index_whiskeys_on_drink_way_id  (drink_way_id)
-#  index_whiskeys_on_name          (name) UNIQUE
-#  index_whiskeys_on_snack_id      (snack_id)
+#  index_whiskeys_on_amazon_image_link       (amazon_image_link) UNIQUE
+#  index_whiskeys_on_amazon_impression_link  (amazon_impression_link) UNIQUE
+#  index_whiskeys_on_amazon_link             (amazon_link) UNIQUE
+#  index_whiskeys_on_drink_way_id            (drink_way_id)
+#  index_whiskeys_on_name                    (name) UNIQUE
+#  index_whiskeys_on_snack_id                (snack_id)
 #
 # Foreign Keys
 #
@@ -36,6 +43,10 @@ class Whiskey < ApplicationRecord
   validates :feeling_to_whiskey_with_tongue, presence: true
   validates :flavor_strength, presence: true
   validates :rarity, presence: true
+  validates :region, presence: true
+  validates :amazon_link, presence: true, uniqueness: true
+  validates :amazon_image_link, presence: true, uniqueness: true
+  validates :amazon_impression_link, presence: true, uniqueness: true
   validates :whiskey_flavors,
             length: { maximum: 3,
                       message:

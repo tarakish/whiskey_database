@@ -15,34 +15,40 @@
           <a href="https://www.amazon.co.jp/GLENFIDDICH-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF-%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%A2%E3%83%AB%E3%83%88-%E3%82%A6%E3%82%A4%E3%82%B9%E3%82%AD%E3%83%BC-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF12%E5%B9%B4/dp/B001TZB0EK?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=38IO47VCUJUFG&keywords=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF&qid=1648173832&sprefix=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF%2Caps%2C334&sr=8-1&linkCode=li3&tag=akirakotira-22&linkId=e95dcd101c6fcec3c0d68fd54b2e99b0&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TZB0EK&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP"></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TZB0EK" width="1" height="1" alt="" style="border:none !important; margin:0px !important;" />
         </div>
         <div class="col-auto mb-3 pt-3 ms-3">
-          <div class='d-flex justify-content-center justify-content-lg-start'>
-            <div class="pie mx-4 fs-6">バランスの良い</div>
-            <div class="pie mx-4 fs-6">少し芳醇</div>
+          <div class='row-lg d-flex justify-content-center'>
+            <div class="col-lg-4 mx-3 p-lg-0 px-4">
+              <div class="row pie fs-6 sans-serif">バランスの良い</div>
+              <div class="mt-3 text-start">　 飲み口</div>
+            </div>
+            <div class="col-lg-4 mx-3 p-lg-0 px-4">
+              <div class="row m-0 pie fs-6 sans-serif">繊細</div>
+              <div class="mt-3">フレーバー</div>
+            </div>
           </div>
-        </div>
-        <div class="col-12 row my-3 justify-content-center">
-          <div class="col-lg col-auto ps-5">飲み口</div>
-          <div class="col-lg col-auto ps-5">香りの強さ</div>
         </div>
       </div>
       <div class="col-lg-7 text-lg-start ms-lg-5 my-5">
         <h5 class="text-muted mb-3">
-          スコッチウイスキー
+          <%= @whiskey.region %>
         </h5>
-        <h1 class="my-4">
-          グレンフィディック 12年
+        <h1 class="mt-4 mb-5">
+          <%= @whiskey.name %>
         </h1>
-        <p class="my-3">
-          <span class="sans-serif ui brown tag label ms-3 me-4 my-1">バニラ</span>
-          <span class="ui brown tag label ms-2 me-4 my-1">はちみつ</span>
-          <span class="ui orange tag label ms-2 me-4 my-1">ドライフルーツ</span>
-        </p>
-        <div class="mb-5 spacing-text mx-lg-auto mx-5">
-          アメリカンオーク樽とヨーロピアンシェリー樽で最低12年熟成させ、さらに後熟させたボトル。<br>甘く、フルーティーな味わいで、洋梨やレモンを感じさせる爽やかな香りが特徴です。<br>飲んだ後は、ほのかな甘みが残り、繊細で軽やかな味わいが口いっぱいに広がります。
-        </div>
-        <h4 class="text-muted my-auto ms-lg-0 ms-lg-5">
-          <span class="h6 mx-autoo sans-serif">適正価格：　¥</span>3,500
+        <h6 class="my-5">
+          <% @whiskey.flavors.each do |flavor| %>
+            <span class="sans-serif ui text-white label-<%= flavor.group %> tag label ms-3 me-4 my-1"><%= flavor.name %></span>
+          <% end %>
+        </h6>
+        <h6 class="spacing-text mx-lg-auto m-5 ">
+          <%= simple_format(h(@whiskey.description)) %>
+        </h6>
+        <h4 class="row text-muted my-auto">
+          <div class="col-auto pt-3">
+            <span class="h5 mx-auto sans-serif">適正価格 ¥</span><%= @whiskey.reasonable_price %>
+          </div>
+          <div class="col-auto">
           <button class="amazon_button ms-5 ms-xl-5 ms-lg-3 my-lg-5 my-5 my-xl-auto"><h4><i class="amazon icon"></i></h4>Find it!</button> <!-- lg幅のボタン配置要改善 -->
+          </div>
         </h4>
       </div>
     </div>
@@ -57,75 +63,68 @@
   </div>
 </div>
 
-<!-- 副情報 -->
+<!-- paring -->
+<div class="container mt-5">
+  <div class="row justify-content-center transform-y-md">
+    <div class="col-lg-9 row text-center rounded shadow bg-white p-0">
+      <%= image_tag @whiskey.drink_way.image, class: 'img-fluid col-lg-4 p-0' %>
+      <div class="col-lg-8 my-5">
+        <h5 class="text-muted mb-3">
+          相性のいい飲み方
+        </h5>
+        <h1 class="my-4">
+          <%= @whiskey.drink_way.name %>
+        </h1>
+        <h4><em>
+          <%= @whiskey.drink_way.english_name %>
+        </em></h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 row text-center rounded shadow bg-white p-0 transform-y-md">
+      <%= image_tag @whiskey.snack.image, class: 'img-fluid col-lg-4 p-0' %>
+      <div class="col-lg-8 my-5">
+        <h5 class="text-muted mb-3">
+          フードペアリング
+        </h5>
+        <h1 class="my-4">
+          <%= @whiskey.snack.name %>
+        </h1>
+        <h4><em>
+          <%= @whiskey.snack.english_name %>
+        </em></h4>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 保留
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-lg-10 row justify-content-between px-lg-5">
       <div class="col-lg-5 col-12 bg-white text-center rounded ms-lg-5 my-5 px-0 shadow">
         <div class="my-2 py-2">
           <h5 class="lead text-muted sans-serif">相性のいい飲み方</h5>
-          <h4 class="display-5">ハイボール</h4>
-          <h6><em>whiskey-and-soda</em></h6>
+          <h4 class="display-5"><%= @whiskey.drink_way.name %></h4>
+          <h6><em><%= @whiskey.drink_way.english_name %></em></h6>
         </div>
-        <%# <div class="bg-light mx-auto my-3 drink rounded" style="width: 90%; height: 200px;"></div>  <!-- 画像をレスポンシブに！ --> %>
-        <%= image_tag 'highball.jpg', class: 'img-fluid mt-2' %>
+        <%= image_tag @whiskey.drink_way.image, class: 'img-fluid mt-2' %>
       </div>
 
       <div class="col-lg-5 col-12 bg-white text-center rounded me-lg-5 my-5 px-0 shadow">
         <div class="my-2 py-2">
           <h5 class="lead text-muted">フードペアリング</h5>
-          <h4 class="display-5">チョコレート</h4>
-          <h6><em>chocolate</em></h6>
+          <h4 class="display-5"><%= @whiskey.snack.name %></h4>
+          <h6><em><%= @whiskey.snack.english_name %></em></h6>
         </div>
-        <%# <div class="bg-light mx-auto my-3 pairing rounded" style="width: 90%; height: 200px;"></div> %>
-        <%= image_tag 'chocolate.jpg', class: 'img-fluid mt-2' %>
+        <%= image_tag @whiskey.snack.image, class: 'img-fluid mt-3' %>
       </div>
     </div>
   </div>
 </div>
-
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 row text-center rounded shadow bg-white pe-0">
-      <div class="col-lg-8 my-5">
-        <h5 class="text-muted mb-3">
-          相性のいい飲み方<i class="fas fa-arrow-alt-circle-right"></i>
-        </h5>
-        <h1 class="my-4">
-          ハイボール
-        </h1>
-        <h4><em>
-          whiskey-and-soda
-        </em></h4>
-      </div>
-      <div class="col-lg-4 text-center drink">
-      </div>
-    </div>
-  </div>
-</div>
-
-<%#
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 row text-center rounded shadow bg-white pe-0">
-      <div class="col-lg-8 my-5">
-        <h5 class="text-muted mb-3">
-          相性のいいおつまみ
-        </h5>
-        <h1 class="my-4">
-          チョコレート
-        </h1>
-        <h4><em>
-          chocolate
-        </em></h4>
-      </div>
-      <div class="col-lg-4 text-center pairing">
-      </div>
-    </div>
-  </div>
-</div> %>
-
-
+-->
 
 <!-- 投稿 -->
 <div class="container mt-5 pt-5">
@@ -172,7 +171,7 @@
 
 <div class="container my-5 pt-3">
   <div class="row justify-content-center">
-    <button class="btn fs-4 bg-darknavy tf-y f-yellow hover-target col-auto">
+    <button class="btn fs-4 bg-darknavy transform-y-sm f-yellow hover-target col-auto">
       　投稿する　
     </button>
   </div>
