@@ -14,11 +14,11 @@ body {
 }
 
 * {
-  font-family: serif;
+  font-family: sans-serif;
 }
 
-.sans-serif {
-  font-family: sans-serif;
+.serif {
+  font-family: serif;
 }
 // background-color
 
@@ -113,4 +113,9 @@ body {
     transform: translateY(-3px);
     transition: 0.2s;
   }
+}
+
+// spacing
+.mt-10 {
+  margin-top: 15rem;
 }
