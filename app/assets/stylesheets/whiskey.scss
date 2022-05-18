@@ -1,3 +1,4 @@
+@import '_variables';
 // for pie-chart
 .pie {
 	display: flex;
@@ -6,9 +7,28 @@
 	width: 100px;
 	height: 100px;
 	font-size: 12px;
-	background-image: radial-gradient(#fffbf0 60%, transparent 31%), conic-gradient(#ffce20 0% 60%, #ffeebc 60% 100%);
 	border-radius: 50%;
   color: #ffc805;
   font-weight: 500;
   letter-spacing: 0.2em;
+}
+
+.pie-chart-0 {
+  background-image: $bg-pie, conic-gradient(#ffeebc 0% 100%);
+}
+
+.pie-chart-1 {
+  background-image: $bg-pie, conic-gradient(#ffce20 0% 25%, #ffeebc 25% 100%);
+}
+
+.pie-chart-2 {
+  background-image: $bg-pie, conic-gradient(#ffce20 0% 50%, #ffeebc 50% 100%);
+}
+
+.pie-chart-3 {
+  background-image: $bg-pie, conic-gradient(#ffce20 0% 75%, #ffeebc 75% 100%);
+}
+
+.pie-chart-4 {
+  background-image: $bg-pie, conic-gradient(#ffce20 0% 100%);
 }
