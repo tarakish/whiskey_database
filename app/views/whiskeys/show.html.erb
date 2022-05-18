@@ -12,7 +12,9 @@
     <div class="col-lg-9 col-auto row justify-content-center text-center rounded shadow bg-white">
       <div class="col-lg-4 text-center">
         <div class="col-12 my-5">
-          <a href="https://www.amazon.co.jp/GLENFIDDICH-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF-%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%A2%E3%83%AB%E3%83%88-%E3%82%A6%E3%82%A4%E3%82%B9%E3%82%AD%E3%83%BC-%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%82%A3%E3%83%83%E3%82%AF12%E5%B9%B4/dp/B001TZB0EK?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=38IO47VCUJUFG&keywords=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF&qid=1648173832&sprefix=%E3%81%90%E3%82%8C%E3%82%93%E3%81%B5%E3%81%83%E3%81%A7%E3%81%83%E3%81%8F+12%E5%B9%B4%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%87%E3%83%83%E3%82%AF%2Caps%2C334&sr=8-1&linkCode=li3&tag=akirakotira-22&linkId=e95dcd101c6fcec3c0d68fd54b2e99b0&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TZB0EK&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP"></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TZB0EK" width="1" height="1" alt="" style="border:none !important; margin:0px !important;" />
+          <!-- 階層を変えるとインプレッション用の画像が表示されてしまうため改行しない -->
+          <%= link_to @whiskey.amazon_link, target: '_blank' do %><%= image_tag @whiskey.amazon_image_link, class: 'border-none' %><% end %> 
+          <%= image_tag @whiskey.amazon_impression_link, alt: '', size: '1x1', style: 'border:none !important; margin:0px !important' %>
         </div>
         <div class="col-auto mb-3 pt-3 ms-3">
           <div class='row-lg d-flex justify-content-center'>
@@ -31,15 +33,15 @@
         <h5 class="text-muted mb-3">
           <%= @whiskey.region %>
         </h5>
-        <h1 class="mt-4 mb-5">
+        <h1 class="my-4">
           <%= @whiskey.name %>
         </h1>
-        <h6 class="my-5">
+        <h6 class="mb-5 mt-4">
           <% @whiskey.flavors.each do |flavor| %>
             <span class="sans-serif ui text-white label-<%= flavor.group %> tag label ms-3 me-4 my-1"><%= flavor.name %></span>
           <% end %>
         </h6>
-        <h6 class="spacing-text mx-lg-auto m-5 ">
+        <h6 class="spacing-text mx-lg-auto m-5">
           <%= simple_format(h(@whiskey.description)) %>
         </h6>
         <h4 class="row text-muted my-auto">
@@ -47,7 +49,9 @@
             <span class="h5 mx-auto sans-serif">適正価格 ¥</span><%= @whiskey.reasonable_price %>
           </div>
           <div class="col-auto">
-          <button class="amazon_button ms-5 ms-xl-5 ms-lg-3 my-lg-5 my-5 my-xl-auto"><h4><i class="amazon icon"></i></h4>Find it!</button> <!-- lg幅のボタン配置要改善 -->
+            <%= link_to @whiskey.amazon_link, target: '_blank' do %>
+              <button class="amazon_button ms-5 ms-xl-5 ms-lg-3 my-lg-5 my-5 my-xl-auto"><h4><i class="amazon icon"></i></h4>Find it!</button> <!-- lg幅のボタン配置要改善 -->
+            <% end %>
           </div>
         </h4>
       </div>
