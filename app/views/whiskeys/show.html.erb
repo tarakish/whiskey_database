@@ -70,7 +70,7 @@
 <!-- paring -->
 <div class="container mt-5">
   <div class="row justify-content-center transform-y-md">
-    <div class="col-lg-9 row text-center rounded shadow bg-white p-0">
+    <%= link_to drink_ways_path(anchor: "#{@whiskey.drink_way.english_name}"), class: 'col-lg-9 row text-center rounded shadow bg-white p-0 simple-a-tag' do %>
       <%= image_tag @whiskey.drink_way.image, class: 'img-fluid col-lg-4 p-0' %>
       <div class="col-lg-8 my-5">
         <h5 class="text-muted mb-3">
@@ -83,9 +83,10 @@
           <%= @whiskey.drink_way.english_name %>
         </em></h4>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
+
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-lg-9 row text-center rounded shadow bg-white p-0 transform-y-md">
