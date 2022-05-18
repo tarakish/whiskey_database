@@ -85,6 +85,13 @@ body {
   }
 }
 
+.hover-target-reverse {
+  opacity: 1;
+  &:hover{
+    opacity: .8;
+  }
+}
+
 // リンクの装飾を無効化
 .simple-a-tag {
   color: inherit;
