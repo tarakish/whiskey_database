@@ -37,9 +37,7 @@
           <%= @whiskey.name %>
         </h1>
         <h6 class="mb-5 mt-4">
-          <% @whiskey.flavors.each do |flavor| %>
-            <span class="sans-serif ui text-white label-<%= flavor.group %> tag label ms-3 me-4 my-1"><%= flavor.name %></span>
-          <% end %>
+          <%= render partial: 'flavor', collection: @whiskey.flavors %>
         </h6>
         <h6 class="spacing-text mx-lg-auto m-5">
           <%= simple_format(h(@whiskey.description)) %>
