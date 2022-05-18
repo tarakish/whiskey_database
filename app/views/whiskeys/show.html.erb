@@ -37,9 +37,7 @@
           <%= @whiskey.name %>
         </h1>
         <h6 class="mb-5 mt-4">
-          <% @whiskey.flavors.each do |flavor| %>
-            <span class="sans-serif ui text-white label-<%= flavor.group %> tag label ms-3 me-4 my-1"><%= flavor.name %></span>
-          <% end %>
+          <%= render partial: 'flavor', collection: @whiskey.flavors %>
         </h6>
         <h6 class="spacing-text mx-lg-auto m-5">
           <%= simple_format(h(@whiskey.description)) %>
@@ -70,7 +68,7 @@
 <!-- paring -->
 <div class="container mt-5">
   <div class="row justify-content-center transform-y-md">
-    <div class="col-lg-9 row text-center rounded shadow bg-white p-0">
+    <%= link_to drink_ways_path(anchor: "#{@whiskey.drink_way.english_name}"), class: 'col-lg-9 row text-center rounded shadow bg-white p-0 simple-a-tag' do %>
       <%= image_tag @whiskey.drink_way.image, class: 'img-fluid col-lg-4 p-0' %>
       <div class="col-lg-8 my-5">
         <h5 class="text-muted mb-3">
@@ -83,12 +81,13 @@
           <%= @whiskey.drink_way.english_name %>
         </em></h4>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
+
 <div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 row text-center rounded shadow bg-white p-0 transform-y-md">
+  <div class="row justify-content-center transform-y-md">
+    <%= link_to snacks_path(anchor: "#{@whiskey.snack.english_name}"), class: 'col-lg-9 row text-center rounded shadow bg-white p-0 simple-a-tag' do %>
       <%= image_tag @whiskey.snack.image, class: 'img-fluid col-lg-4 p-0' %>
       <div class="col-lg-8 my-5">
         <h5 class="text-muted mb-3">
@@ -101,7 +100,7 @@
           <%= @whiskey.snack.english_name %>
         </em></h4>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
 <!-- 保留
