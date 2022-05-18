@@ -88,8 +88,8 @@
 </div>
 
 <div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 row text-center rounded shadow bg-white p-0 transform-y-md">
+  <div class="row justify-content-center transform-y-md">
+    <%= link_to snacks_path(anchor: "#{@whiskey.snack.english_name}"), class: 'col-lg-9 row text-center rounded shadow bg-white p-0 simple-a-tag' do %>
       <%= image_tag @whiskey.snack.image, class: 'img-fluid col-lg-4 p-0' %>
       <div class="col-lg-8 my-5">
         <h5 class="text-muted mb-3">
@@ -102,7 +102,7 @@
           <%= @whiskey.snack.english_name %>
         </em></h4>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
 <!-- 保留
