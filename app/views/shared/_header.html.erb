@@ -1,25 +1,26 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-3 <%= separate_header %>">
     <div class="container">
-      <a class="navbar-brand" href="/">Whiskey Database</a>
-      <%= form_with url: '#', local: true, class: 'ms-15' do |f| %>
+      <a class="navbar-brand d-none d-lg-inline" href="/">Whiskey Database</a>
+      <a class="navbar-brand d-lg-none d-inline" href="/"><i class="fa-solid fa-wine-bottle fa-xl"></i></a>
+      <%= form_with url: '#', local: true, class: 'ms-lg-15' do |f| %>
         <div class="input-group">
-          <%= f.text_field :keyword, class: 'form-control-lg border-0', style: 'width: 30rem;', placeholder: '(実装中)ウイスキー名を入力' %>
-          <%= button_tag type: :submit, disabled: true, class: "btn bg-white" do %>
+          <%= f.text_field :keyword, class: 'form-control-lg border-0 rounded-left search-width', placeholder: '(実装中)ウイスキー名を入力' %>
+          <%= button_tag type: :submit, disabled: true, class: "btn bg-white rounded-right" do %>
             <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
           <% end %>
         </div>
       <% end %>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item me-2">
-            <a class="nav-link" href="#"><strong>Whiskeys</strong></a>
+            <a class="nav-link fs-5 fw-bold" href="#">Whiskey</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><strong>Login</strong></a>
+            <a class="nav-link fs-5 fw-bold" href="#">Login</a>
           </li>
         </ul>
       </div>
