@@ -1,7 +1,9 @@
 module ApplicationHelper
   def separate_header
-    if controller_name != 'staticpages'
-      return 'header-main'
+    if controller_name == 'staticpages'
+      render 'shared/top_header'
+    else
+      render 'shared/header'
     end
   end
 
