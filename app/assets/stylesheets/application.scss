@@ -26,10 +26,6 @@ body {
   background-color: #596E79 !important;
 }
 
-.bg-darknavy {
-  background-color: #48607f !important;
-}
-
 // border-color
 .bd-main-color {
   border-color: #F0ECE3 !important;
@@ -42,6 +38,10 @@ body {
 
 .f-li-gray {
   color: #f5f5f5 !important;
+}
+
+.f-navy {
+  color: #596E79;
 }
 
 // 行間・文字間を開ける
@@ -122,4 +122,13 @@ body {
 
 .mt-7 {
   margin-top: 7rem;
+}
+
+.ms-15 {
+  margin-left: 15rem;
+}
+
+.px-7 {
+  padding-left: 7rem;
+  padding-right: 7rem;
 }

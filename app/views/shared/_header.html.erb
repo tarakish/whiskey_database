@@ -1,7 +1,15 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top <%= separate_header %>">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-3 <%= separate_header %>">
     <div class="container">
       <a class="navbar-brand" href="/">Whiskey Database</a>
+      <%= form_with url: '#', local: true, class: 'ms-15' do |f| %>
+        <div class="input-group">
+          <%= f.text_field :keyword, class: 'form-control-lg border-0', style: 'width: 30rem;', placeholder: '(実装中)ウイスキー名を入力' %>
+          <%= button_tag type: :submit, disabled: true, class: "btn bg-white" do %>
+            <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
+          <% end %>
+        </div>
+      <% end %>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -13,18 +21,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#"><strong>Login</strong></a>
           </li>
-          <!-- ドロップダウン 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          -->
         </ul>
       </div>
     </div>
