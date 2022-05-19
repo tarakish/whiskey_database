@@ -1,6 +1,5 @@
 // for header
 nav {
-  background-color: transparent;
   transition: 0.5s;
 }
 
@@ -51,4 +50,12 @@ footer li {
 
 .card {
   min-height: auto;
+}
+
+.top {
+  background-color: transparent;
+}
+
+.header-main {
+  background-color: #4f7183;
 }
