@@ -1,17 +1,25 @@
-<footer class="text-center">
+<footer class="text-center text-secondary mt-5">
   <div class="container">
-      Give Me <strong>Feedback!</strong>
-  </div>
-  <div class="container">
-    <div class="navi-row">
-      <ul class="navi">
-        <li><%= link_to '利用規約', '#' %></li>
-        <li><%= link_to 'プライバシーポリシー', '#' %></li>
-        <li><%= link_to 'お問い合わせ', '#' %></li>
-      </ul>
+    <div class="row justify-content-evenly mb-5">
+      <div class="col-auto">
+        <%= link_to '利用規約', '#', class: 'simple-a-tag hover-target' %>
+      </div> 
+      <div class="col-auto">
+        <%= link_to 'プライバシポリシー', '#', class: 'simple-a-tag hover-target' %>
+      </div>
+      <div class="col-auto">
+        <%= link_to 'お問い合わせ', '#', class: 'simple-a-tag hover-target' %>
+      </div>
     </div>
   </div>
-  <div class="container">
-    <p class="copyright">Copyright &copy; whiskey 2021. All rights reserved.</p>
+  <div class="row justify-content-center mb-4">
+    <div class="col-auto">
+      ※当サイトは"amazon.co.jp"が提供するアソシエイトリンクを利用しています。
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <p class="col-auto">Copyright &copy; Whiskey Database 2022.<br>
+    All rights reserved.</p>
   </div>
 </footer>
