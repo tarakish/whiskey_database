@@ -8,8 +8,6 @@ module ApplicationHelper
   end
 
   def space_head
-    if controller_name != 'staticpages'
-      return 'mt-7'
-    end
+    return 'mt-7' if controller_name != 'staticpages'
   end
 end
