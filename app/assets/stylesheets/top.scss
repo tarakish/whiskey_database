@@ -24,17 +24,49 @@ h3 small {
   font-size: 1rem;
 }
 
-.drink {
-  background-image: image-url("highball.jpg");
-  background-size: cover;
+.inner-text {
+  position: absolute;
+  top: 40%;
+  @media screen and (min-width: 768px) {
+    top: 40%;
+  }
 }
 
-.rocks {
-  background-image: image-url("on_the_rocks.jpg");
-  background-size: cover;
+.btn-ani {
+  border: 0;
+  color: white;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(.86, .01, .15, .99);
+  background: transparent;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+  }
+  &.gradient:hover {
+    transform: translateY(-5px);
+  }
 }
 
-.pairing {
-  background-image: image-url("chocolate.jpg");
-  background-size: cover;
+.btn-left {
+  background: transparent;
+  transform: perspective(1px) translateZ(0);
+  transition: 0.4s;
+  &:before {
+    background-color: #dc4200;
+    clip-path: inset(0 100% 0 0);
+    opacity: 1;
+    transition: 0.4s;
+  }
+  &:hover::before {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.huge.ui.basic.inverted.button:hover {
+  color: #d9d9d9 !important;
 }

@@ -1,94 +1,106 @@
-<div class="container-fluid top-img">
-  <div class="top-inner-text pt-2">
-    <h1>a</h1>
-    <h1>a</h1>
-    <h1>a</h1>
-    <h1>a</h1>
-    <h1 class="text-white">Find Your Favorite Whiskey!</h1>
-  </div>
-</div>
-
-<div class="container top-flavors">
-  <div class="row text-center mb-between-rows">
-    <h1>フレーバーから探す</h1>
-  </div>
-  <div class="row">
-    <div id="carouselExampleCaptions" class="carousel slide col-md-8 offset-md-2" data-bs-ride="carousel"> <!-- リアルデータ反映後md〜lgサイズのカラム調整確認 -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
+<div class="container-fluid top-img text-white">
+  <div class="row inner-text ms-lg-3 text-center">
+    <h1 class="fw-bold col-lg-7">カジュアルに楽しむ</h1>
+    <h1 class="fw-bold col-lg-7">ウイスキー情報サービス（コピー募集中）</h1>
+    <div class="col-lg-7 row justify-content-center my-3">
+      <%= form_with url: '#', local: true, class: 'col-auto' do |f| %>
+        <div class="input-group">
+          <%= f.text_field :keyword, class: 'form-control-lg border-0 rounded-left search-width', placeholder: '(実装中)ウイスキー名を入力' %>
+          <%= button_tag type: :submit, disabled: true, class: "btn bg-white rounded-right" do %>
+            <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
+          <% end %>
         </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <% end %>
+    </div>
+    <div class="col-lg-7 mt-3">
+      <%= link_to 'さっそく見に行く', whiskeys_path, class: 'huge ui inverted button basic btn-ani btn-left rounded-pill' %>
     </div>
   </div>
 </div>
 
-<!-- another search -->
+<!-- to each index -->
+<div class="container mt-5 pt-5 mb-3">
+  <div class="row justify-content-center">
+    <h1 class="col-auto text-muted text-center">
+      こんな探し方ができます
+    </h1>
+  </div>
+  <div class="row justify-content-center mt-4">
+    <div class="col-lg-9 col-6 ui divider border-2">
+    </div>
+  </div>
+</div>
 <div class="container text-center mb-5">
-  <div class="row mb-between-rows">
-    <h1>違う探し方をしてみる？</h1>
-  </div>
   <div class="row">
-    <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <div class="col-lg-6 my-5">
+      <h3 class="mb-4">飲み方<small>から</small></h3>
+      <svg class="bd-placeholder-img rounded-3" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
         <title>Placeholder</title>
         <rect width="100%" height="100%" fill="#777"></rect>
         <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
       </svg>
-      <h3>飲み方<small>から探す</small></h3>
-      <%# <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p> %>
-      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      <p class="my-3">
+        おなじみの飲み方から、通なものまで。<br>
+        それぞれの飲み方と相性の良いウイスキーを探せます。<br>
+        作り方も記載しています。
+      </p>
+      <p><%= link_to '見に行く！', drink_ways_path, class: 'ui orange button rounded-3' %></p>
     </div>
-    <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <div class="col-lg-6 my-5">
+      <h3 class="mb-4">おつまみ<small>から</small></h3>
+      <svg class="bd-placeholder-img rounded-3" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
         <title>Placeholder</title>
         <rect width="100%" height="100%" fill="#777"></rect>
         <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
       </svg>
-      <h3>フードペアリング<small>から探す</small></h3>
-      <%# <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p> %>
-      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      <p class="my-3">
+        ウイスキーに合うと言われるおつまみから<br>
+        相性の良いボトルを探せます。<br>
+        たまにはおつまみから選んでみるのも？
+      </p>
+      <p><%= link_to '見に行く！', snacks_path, class: 'ui orange button rounded-3' %></p>
     </div>
-    <div class="col-lg-4">
-    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-      <title>Placeholder</title>
-      <rect width="100%" height="100%" fill="#777"></rect>
-      <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-    </svg>
-    <h3>テイスティングノート<small>から探す</small></h3>
-    <%# <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p> %>
-    <p><a class="btn btn-secondary" href="#">View details »</a></p>
-  </div>
+    <div class="col-lg-6 my-5">
+      <h3 class="mb-4">フレーバー<small>から</small></h3>
+      <svg class="bd-placeholder-img rounded-3" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#777"></rect>
+        <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+      </svg>
+      <p class="my-3">
+        フルーティ、ウッディなど大まかな分類と<br>
+        ピーチ、バニラ、モルトなど更に細かい要素から探せます。<br>
+        フレーバーを学ぶきっかけにも。
+      </p>
+      <p><%= link_to '見に行く！', flavors_path, class: 'ui orange button rounded-3' %></p>
+    </div>
+    <div class="col-lg-6 my-5">
+      <h3 class="mb-4">テイスティングノート<small>から</small></h3>
+      <svg class="bd-placeholder-img rounded-3" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#777"></rect>
+        <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+      </svg>
+      <p class="my-3">
+        〇〇(サービス名)ではユーザーの口コミも指標の一つ。<br>
+        参考にするも良し、メモとして投稿するのも良し、<br>
+        ぜひ一度覗いてみてください。
+      </p>
+      <p><%= link_to '実装中！', '#', class: 'ui orange button rounded-3' %></p>
+    </div>
+    <div class="col-lg-6 my-5">
+      <h3 class="mb-4">生産国<small>から</small></h3>
+      <svg class="bd-placeholder-img rounded-3" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#777"></rect>
+        <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+      </svg>
+      <p class="my-3">
+        今日はスモーキーなスコッチが欲しい。<br>
+        今は甘いバーボンの気分。<br>
+        そんな選び方もできちゃいます。
+      </p>
+      <p><%= link_to '実装中！', '#', class: 'ui orange button rounded-3' %></p>
+    </div>
   </div>
 </div>
