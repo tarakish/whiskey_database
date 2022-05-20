@@ -26,10 +26,6 @@ body {
   background-color: #596E79 !important;
 }
 
-.bg-darknavy {
-  background-color: #48607f !important;
-}
-
 // border-color
 .bd-main-color {
   border-color: #F0ECE3 !important;
@@ -42,6 +38,10 @@ body {
 
 .f-li-gray {
   color: #f5f5f5 !important;
+}
+
+.f-navy {
+  color: #596E79;
 }
 
 // 行間・文字間を開ける
@@ -116,6 +116,43 @@ body {
 }
 
 // spacing
-.mt-10 {
+.mt-15 {
   margin-top: 15rem;
+}
+
+.mt-7 {
+  margin-top: 7rem;
+}
+
+.ms-lg-15 {
+  @media screen and (min-width: 990px) {
+    margin-left: 6rem;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 12rem;
+  }
+}
+
+.px-7 {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+
+.rounded-left {
+  border-radius: 50rem 0 0 50rem !important;
+}
+
+.rounded-right {
+  border-radius: 0 50rem 50rem 0 !important;
+}
+
+.search-width {
+  width: 30vw;
+  @media screen and (max-width: 991px) {
+    width: 45vw;
+  }
+  @media screen and (max-width: 576px) {
+    width: 50vw;
+  }
 }

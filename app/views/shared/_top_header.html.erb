@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-3 header-main">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-3">
     <div class="container">
       <%= link_to '/', class: 'navbar-brand d-none d-lg-inline hover-target-reverse' do %>
         <i class="fa-solid fa-whiskey-glass fa-xl"></i> Whiskey Database
@@ -7,7 +7,7 @@
       <%= link_to '/', class: 'navbar-brand d-lg-none d-inline hover-target-reverse' do %>
         <i class="fa-solid fa-wine-bottle fa-xl"></i>
       <% end %>
-      <%= form_with url: '#', local: true, class: 'ms-lg-15' do |f| %>
+      <%= form_with url: '#', local: true, class: 'ms-lg-15 d-none', id: 'js-search-form' do |f| %>
         <div class="input-group">
           <%= f.text_field :keyword, class: 'form-control-lg border-0 rounded-left search-width', placeholder: '(実装中)ウイスキー名を入力' %>
           <%= button_tag type: :submit, disabled: true, class: "btn bg-white rounded-right" do %>
