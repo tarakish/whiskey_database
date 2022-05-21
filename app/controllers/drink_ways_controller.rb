@@ -2,7 +2,7 @@ class DrinkWaysController < ApplicationController
   before_action :set_drink_way, only: %i[show edit update destroy]
 
   def index
-    @drink_ways = DrinkWay.all
+    @drink_ways = DrinkWay.all.eager_load(image_attachment: :blob)
   end
 
   def show; end

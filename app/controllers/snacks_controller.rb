@@ -2,7 +2,7 @@ class SnacksController < ApplicationController
   before_action :set_snack, only: %i[show edit update destroy]
 
   def index
-    @snacks = Snack.all
+    @snacks = Snack.all.eager_load(image_attachment: :blob)
   end
 
   def show; end
