@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   get 'login', to: 'user_sessions#new', as: :login
   post 'login', to: 'user_sessions#create'
   post 'logout', to: 'user_sessions#destroy', as: :logout
+
+  if Rails.env.development?
+    get '/login_as/:user_id', to: 'user_sessions#login_as', as: :login_as
+  end
 end

@@ -15,7 +15,7 @@
 
 <%= render @snacks %>
 
-<% if current_user.admin? %>
+<% if logged_in? && current_user.admin? %>
   <table>
     <thead>
       <tr>

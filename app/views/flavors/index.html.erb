@@ -20,7 +20,7 @@
 <%= render partial: 'flavors', locals: { flavors: @sereal_flavors } %>
 <%= render partial: 'flavors', locals: { flavors: @smoky_flavors } %>
 
-<% if current_user.admin? %>
+<% if logged_in? && current_user.admin? %>
   <table>
     <thead>
       <tr>

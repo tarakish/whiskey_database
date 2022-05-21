@@ -15,7 +15,7 @@
 
 <%= render @drink_ways %>
 
-<% if current_user.admin? %>
+<% if logged_in? && current_user.admin? %>
   <table class="text-center">
     <thead>
       <tr>
