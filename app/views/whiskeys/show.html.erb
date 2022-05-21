@@ -19,7 +19,7 @@
         <div class="col-auto mb-3 pt-3 ms-3">
           <div class='row-lg d-flex justify-content-center'>
             <div class="col-xl-4 mx-3 p-lg-0 px-4">
-              <div class="row fs-6 pie pie-chart-<%= @whiskey.feeling_to_whiskey_with_tongue_before_type_cast %>"><%= @whiskey.feeling_to_whiskey_with_tongue_i18n %></div>
+              <div class="row fs-6 pie pie-chart-<%= @whiskey.mouth_feel_before_type_cast %>"><%= @whiskey.mouth_feel_i18n %></div>
               <div class="mt-3 text-start">　 味わい</div>
             </div>
             <div class="col-xl-4 mx-3 p-lg-0 px-4">
@@ -44,7 +44,7 @@
         </h6>
         <h4 class="row text-muted my-auto justify-content-center justify-content-lg-start">
           <div class="col-auto pt-3 my-xl-0 my-3">
-            <span class="h5 mx-auto">適正価格 ¥</span><%= @whiskey.reasonable_price %>
+            <span class="h5 mx-auto">希望小売価格 ¥</span><%= @whiskey.price %>
           </div>
           <div class="col-auto">
             <%= link_to @whiskey.amazon_link, target: '_blank' do %>
@@ -57,7 +57,7 @@
   </div>
 </div>
 
-<div class="container mt-15" data-aos="fade-up">
+<div class="container mt-15">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center">
       <em>Pairing</em><br>
@@ -135,7 +135,7 @@
 -->
 
 <!-- 投稿 -->
-<div class="container mt-15" data-aos="fade-up">
+<div class="container mt-15">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center">
       <em>Tasting Notes</em><br>
@@ -192,7 +192,7 @@
 </div>
 
 <!-- レコメンド-->
-<div class="container mt-15" data-aos="fade-up">
+<div class="container mt-15">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center">
       <em>You may also like…</em><br>

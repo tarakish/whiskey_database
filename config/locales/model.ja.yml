@@ -18,10 +18,10 @@ ja:
       whiskey:
         name: 名称
         description: 詳細
-        feeling_to_whiskey_with_tongue: 飲み口
+        mouth_feel: 飲み口
         flavor_strength: フレーバー
         rarity: レア度
-        reasonable_price: 適正価格
+        price: 適正価格
         flavor_id: フレーバー
         drink_way_id: 飲み方
         snack_id: おつまみ
@@ -48,7 +48,7 @@ ja:
         admin: 管理者
         general: 一般
     whiskey:
-      feeling_to_whiskey_with_tongue:
+      mouth_feel:
         light: 軽め
         a_little_light: 少し軽め
         balanced: バランス

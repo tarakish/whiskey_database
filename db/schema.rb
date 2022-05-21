@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_15_090606) do
+ActiveRecord::Schema.define(version: 2022_05_21_090024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,10 +87,10 @@ ActiveRecord::Schema.define(version: 2022_05_15_090606) do
   create_table "whiskeys", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
-    t.integer "feeling_to_whiskey_with_tongue", default: 2, null: false
+    t.integer "mouth_feel", default: 2, null: false
     t.integer "flavor_strength", default: 2, null: false
     t.integer "rarity", default: 2, null: false
-    t.integer "reasonable_price"
+    t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "drink_way_id"

@@ -40,85 +40,85 @@ end
 
 # DrinkWay
 [
-  ['ハイボール', 'whiskey-and-soda',
+  [1, 'ハイボール', 'whiskey-and-soda',
     'アルコール感を緩和し、炭酸による香りの広がりを楽しめる飲み方。
     食中でも楽しめるほどの飲みやすさ、爽やかさも。
     香りやアルコールの刺激が強いウイスキーにオススメ。', 
     'https://youtu.be/8m1ZUxQpS_o?t=467'
   ],
-  ['オン・ザ・ロック', 'on-the-rocks',
+  [2, 'オン・ザ・ロック', 'on-the-rocks',
     '溶ける氷による味わいの変化を楽しめる飲み方。
     せっかくならグラスにもこだわって見た目も楽しみたい。
     味や香りが強いもの、高アルコールのウイスキーにオススメ。',
     'https://youtu.be/8m1ZUxQpS_o?t=247'
   ],
-  ['ストレート', 'neat',
+  [3, 'ストレート', 'neat',
     'ウイスキーの個性を余すことなく感じられる飲み方。
     空気のとの接触による香りの変化も楽しめる。
     リフレッシュ＆酔い防止のチェイサーも忘れずに。',
     'https://youtu.be/8m1ZUxQpS_o?t=34'
   ],
-  ['トゥワイス・アップ', 'twice-up',
+  [4, 'トゥワイス・アップ', 'twice-up',
     '度数を下げて飲みやすく、風味はより豊かに感じられる飲み方。
     まずは基本の1:1で。慣れたら自分好みの割合で。
     それでも個性が強すぎる場合は、氷を入れてハーフロックにするのもおすすめ。',
     'https://youtu.be/8m1ZUxQpS_o?t=154'
   ],
-  ['ミスト', 'mist',
+  [5, 'ミスト', 'mist',
     '軽やかな口当たりとキリッとした冷たさのある飲み方。
     クラッシュドアイスが見た目にも清涼感を感じさせる。
     暑い季節にはミントと砂糖を加えたミント・ジュレップも絶品。',
     'https://youtu.be/8m1ZUxQpS_o?t=667'
   ],
-  ['水割り','whiskey-and-water',
+  [6, '水割り','whiskey-and-water',
     'ウイスキービギナーの入り口でもあり、玄人の探求対象でもある
     シンプルな作り方ゆえに奥深い飲み方。ジャパニーズウイスキーは
     水割りにしても味のバランスが崩れないように作られているとか。',
     'https://youtu.be/8m1ZUxQpS_o?t=347'
   ]
-].each do |name, english_name, explanation, how_to_make_url|
+].each do |id, name, english_name, explanation, how_to_make_url|
   DrinkWay.create!(
-    { name: name, english_name: english_name, explanation: explanation, how_to_make_url: how_to_make_url }
+    { id: id, name: name, english_name: english_name, explanation: explanation, how_to_make_url: how_to_make_url }
   )
 end
 
 # Snack
 [
-  ['チョコレート', 'chocolate',
+  [1, 'チョコレート', 'chocolate',
     'ウイスキー入りのチョコがあるのも納得の相性。
     基本的はハイカカオなものが合いやすいが、ミルクチョコを比べてみるのもオススメ。'],
-  ['ナッツ', 'nuts', 
+  [2, 'ナッツ', 'nuts', 
     '定番中の定番。ストレートで飲むウイスキーと相性◯。
     繊細なものには無塩ナッツ、香りの強いものには塩味の効いたナッツを。'],
-  ['チーズ', 'cheese',
+  [3, 'チーズ', 'cheese',
     'スモークチーズだとなお良し。
     長熟のウイスキーに長熟のチーズを合わせるなど、楽しみ方も幅広い。'],
-  ['ドライフルーツ', 'drid fruit',
+  [4, 'ドライフルーツ', 'drid fruit',
     'フルーティな印象を持つウイスキーとの相性が抜群。
     どんなドライフルーツが合うのか、食べ比べてみると新たな発見があるかも。'],
-  ['アイスクリーム', 'ice cream',
+  [5, 'アイスクリーム', 'ice cream',
     'ウイスキーをかけて食べるバニラアイスの悪魔的魅力。
     くれぐれもペースには注意してお試しあれ。'],
-  ['ソーセージ', 'sausage',
+  [6, 'ソーセージ', 'sausage',
     'ジューシーな肉汁あふれるソーセージは、
     個性強め、度数高めのマシマシなウイスキーにもよく合う。'],
-  ['フライフード', 'fried foods',
+  [7, 'フライフード', 'fried foods',
     'フライドポテト、唐揚げ、ポテトチップスなどはハイボールと抜群の相性。
     魚のフライなど淡白なものは、繊細なウイスキーでしっぽり楽しみたい。'],
-  ['野菜スティック', 'vegetable stick',
+  [8, '野菜スティック', 'vegetable stick',
     '繊細な味や軽やかな飲み口、水割りなどと相性の良いおつまみ。
     特に根拠はないけれど、罪悪感も消してくれそう。'],
-  ['ゆで卵', 'boiled egg',
+  [9, 'ゆで卵', 'boiled egg',
     'すこし風味の強いウイスキーを水割り、ハーフロックなど加水して飲む際によく合う。
     ウイスキーを強く感じたら塩を加えてみるのもオススメ。燻製卵はスモーキーなものに合わせて。'],
-  ['スモークサーモン', 'smoked salmon',
+  [10, 'スモークサーモン', 'smoked salmon',
     '魚介の風味と塩味はよく冷えたウイスキーと相性抜群。
     味付けの濃さでウイスキーを選ぶのも、楽しみ方のひとつ。'],
-  ['ガーリックシュリンプ', 'garlic shrimp',
+  [11, 'ガーリックシュリンプ', 'garlic shrimp',
     '魚介の旨味とガーリックの刺激が食欲を誘うおつまみ。
     アイラ島のスモーキーなウイスキーと合わせたい。']
-].each do |name, english_name, description|
+].each do |id, name, english_name, description|
   Snack.create!(
-    { name: name, english_name: english_name, description: description }
+    { id: id, name: name, english_name: english_name, description: description }
   )
 end

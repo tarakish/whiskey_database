@@ -2,21 +2,21 @@
 #
 # Table name: whiskeys
 #
-#  id                             :bigint           not null, primary key
-#  amazon_image_link              :string           not null
-#  amazon_impression_link         :string           not null
-#  amazon_link                    :text             not null
-#  description                    :text             not null
-#  feeling_to_whiskey_with_tongue :integer          default("balanced"), not null
-#  flavor_strength                :integer          default("normal"), not null
-#  name                           :string           not null
-#  rarity                         :integer          default("stable_supplyed"), not null
-#  reasonable_price               :integer
-#  region                         :string           not null
-#  created_at                     :datetime         not null
-#  updated_at                     :datetime         not null
-#  drink_way_id                   :bigint
-#  snack_id                       :bigint
+#  id                     :bigint           not null, primary key
+#  amazon_image_link      :string           not null
+#  amazon_impression_link :string           not null
+#  amazon_link            :text             not null
+#  description            :text             not null
+#  flavor_strength        :integer          default("normal"), not null
+#  mouth_feel             :integer          default(2), not null
+#  name                   :string           not null
+#  price                  :integer
+#  rarity                 :integer          default("stable_supplyed"), not null
+#  region                 :string           not null
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  drink_way_id           :bigint
+#  snack_id               :bigint
 #
 # Indexes
 #
@@ -40,7 +40,7 @@ class Whiskey < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true # , uniqueness: true 必要そうであればコメントアウト＆DBへ定義追加
-  validates :feeling_to_whiskey_with_tongue, presence: true
+  validates :mouth_feel, presence: true
   validates :flavor_strength, presence: true
   validates :rarity, presence: true
   validates :region, presence: true
@@ -52,7 +52,7 @@ class Whiskey < ApplicationRecord
                       message:
                       I18n.t('activerecord.errors.messages.a_whiskey_has_upto_three_flavors') }
 
-  enum feeling_to_whiskey_with_tongue: { light: 0, a_little_light: 1, balanced: 2,
+  enum mouth_feel: { light: 0, a_little_light: 1, balanced: 2,
                                          a_little_rich: 3, rich: 4 }
   enum flavor_strength: { delicate: 0, a_little_delicate: 1, normal: 2, a_little_smoky: 3,
                           smoky: 4 }
