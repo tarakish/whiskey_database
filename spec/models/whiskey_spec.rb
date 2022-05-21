@@ -2,21 +2,21 @@
 #
 # Table name: whiskeys
 #
-#  id                             :bigint           not null, primary key
-#  amazon_image_link              :string           not null
-#  amazon_impression_link         :string           not null
-#  amazon_link                    :text             not null
-#  description                    :text             not null
-#  feeling_to_whiskey_with_tongue :integer          default("balanced"), not null
-#  flavor_strength                :integer          default("normal"), not null
-#  name                           :string           not null
-#  rarity                         :integer          default("stable_supplyed"), not null
-#  reasonable_price               :integer
-#  region                         :string           not null
-#  created_at                     :datetime         not null
-#  updated_at                     :datetime         not null
-#  drink_way_id                   :bigint
-#  snack_id                       :bigint
+#  id                     :bigint           not null, primary key
+#  amazon_image_link      :string           not null
+#  amazon_impression_link :string           not null
+#  amazon_link            :text             not null
+#  description            :text             not null
+#  flavor_strength        :integer          default("normal"), not null
+#  mouth_feel             :integer          default(2), not null
+#  name                   :string           not null
+#  price                  :integer
+#  rarity                 :integer          default("stable_supplyed"), not null
+#  region                 :string           not null
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  drink_way_id           :bigint
+#  snack_id               :bigint
 #
 # Indexes
 #
