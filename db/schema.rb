@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_21_090024) do
+ActiveRecord::Schema.define(version: 2022_05_21_114047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,17 @@ ActiveRecord::Schema.define(version: 2022_05_21_090024) do
     t.string "english_name", null: false
     t.index ["english_name"], name: "index_snacks_on_english_name", unique: true
     t.index ["name", "description"], name: "index_snacks_on_name_and_description", unique: true
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "crypted_password"
+    t.string "salt"
+    t.string "name", default: "ユーザー", null: false
+    t.integer "role", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   create_table "whiskey_flavors", force: :cascade do |t|

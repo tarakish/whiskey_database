@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :whiskeys
   resources :flavors
   resources :snacks
+  resources :users
 end
