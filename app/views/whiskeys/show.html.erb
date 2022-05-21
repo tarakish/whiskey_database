@@ -74,7 +74,7 @@
 <div class="container mt-5" data-aos="fade-up">
   <div class="row justify-content-center">
     <%= link_to drink_ways_path(anchor: "#{@whiskey.drink_way.english_name}"), class: 'col-lg-9 row text-center rounded shadow bg-white p-0 transform-y-md simple-a-tag hover-target-reverse' do %>
-      <%= image_tag @whiskey.drink_way.image, class: 'img-fluid col-lg-4 p-0' if @whiskey.image.attached? %>
+      <%= image_tag @whiskey.drink_way.image, class: 'img-fluid col-lg-4 p-0' if @whiskey.drink_way.image.attached? %>
       <div class="col-lg-8 my-5">
         <h5 class="text-muted mb-3">
           相性のいい飲み方
@@ -93,7 +93,7 @@
 <div class="container mt-5" data-aos="fade-up">
   <div class="row justify-content-center">
     <%= link_to snacks_path(anchor: "#{@whiskey.snack.english_name}"), class: 'col-lg-9 row text-center rounded shadow bg-white p-0 transform-y-md simple-a-tag hover-target-reverse' do %>
-      <%= image_tag @whiskey.snack.image, class: 'img-fluid col-lg-4 p-0' if @whiskey.image.attached? %>
+      <%= image_tag @whiskey.snack.image, class: 'img-fluid col-lg-4 p-0' if @whiskey.snack.image.attached? %>
       <div class="col-lg-8 my-5">
         <h5 class="text-muted mb-3">
           フードペアリング
