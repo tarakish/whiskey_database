@@ -1,5 +1,6 @@
 class FlavorsController < ApplicationController
   before_action :set_flavor, only: %i[show edit update destroy]
+  before_action :authorize_flavor
 
   def index
     @woody_flavors = Flavor.woody
@@ -50,5 +51,9 @@ class FlavorsController < ApplicationController
 
   def flavor_params
     params.require(:flavor).permit(:name, :detail, :group)
+  end
+
+  def authorize_flavor
+    authorize Flavor, policy_class: ApplicationPolicy
   end
 end

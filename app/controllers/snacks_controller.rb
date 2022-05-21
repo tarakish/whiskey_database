@@ -1,5 +1,6 @@
 class SnacksController < ApplicationController
   before_action :set_snack, only: %i[show edit update destroy]
+  before_action :authorize_snack
 
   def index
     @snacks = Snack.all.eager_load(image_attachment: :blob)
@@ -44,5 +45,9 @@ class SnacksController < ApplicationController
 
   def snack_params
     params.require(:snack).permit(:name, :english_name, :description, :image)
+  end
+
+  def authorize_snack
+    authorize Snack, policy_class: ApplicationPolicy
   end
 end

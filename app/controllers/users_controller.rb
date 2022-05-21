@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
+  before_action :authorize_user, only: %i[index new create show]
+  before_action :authorize_self, only: %i[edit update destroy]
 
   def index
     @users = User.all
@@ -44,5 +46,13 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :role)
+  end
+
+  def authorize_user
+    authorize User
+  end
+
+  def authorize_self
+    authorize @user
   end
 end

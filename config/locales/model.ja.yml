@@ -1,9 +1,9 @@
 ja:
   activerecord:
     # User.model_name.human
+    # User.human_attributes_name(:name)
     models:
-      user:
-      # User.human_attributes_name(:name)
+      user: ユーザー
       whiskey: ウイスキー
       flavor: フレーバー
       drink_way: 飲み方
@@ -15,6 +15,10 @@ ja:
       updated_at: 更新日時
       user:
         name: 名前
+        role: 権限
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（確認）
       whiskey:
         name: 名称
         description: 詳細
