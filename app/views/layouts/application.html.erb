@@ -26,6 +26,7 @@
   <body>
     <%= separate_header %>
     <main class="mb-5 pb-5 <%= space_head %>">
+      <%= render 'shared/flash_message' %>
       <%= yield %>
     </main>
     <%= render 'shared/footer' %>

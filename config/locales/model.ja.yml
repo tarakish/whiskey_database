@@ -45,8 +45,8 @@ ja:
   enums:
     user:
       role:
-        admin: 管理者
         general: 一般
+        admin: 管理者
     whiskey:
       mouth_feel:
         light: 軽め

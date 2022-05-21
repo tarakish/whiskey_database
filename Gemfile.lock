@@ -83,8 +83,6 @@ GEM
     aws-sigv4 (1.5.0)
       aws-eventstream (~> 1, >= 1.0.2)
     backport (1.2.0)
-    banken (1.0.3)
-      activesupport (>= 3.0.0)
     bcrypt (3.1.16)
     benchmark (0.2.0)
     better_errors (2.9.1)
@@ -207,6 +205,8 @@ GEM
     public_suffix (4.0.6)
     puma (5.6.1)
       nio4r (~> 2.0)
+    pundit (2.2.0)
+      activesupport (>= 3.0.0)
     racc (1.6.0)
     rack (2.2.3)
     rack-mini-profiler (2.3.3)
@@ -389,7 +389,6 @@ PLATFORMS
 DEPENDENCIES
   annotate
   aws-sdk-s3
-  banken
   better_errors
   binding_of_caller
   bootsnap (>= 1.4.4)
@@ -403,6 +402,7 @@ DEPENDENCIES
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
+  pundit
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)
   rails-i18n (~> 6.0)

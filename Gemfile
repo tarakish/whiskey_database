@@ -33,7 +33,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'seed-fu'
 
 # Provide authentication with
-gem 'banken'
+gem 'pundit'
 gem 'sorcery'
 
 # Use CSS_framework

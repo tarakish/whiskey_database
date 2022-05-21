@@ -1,0 +1,5 @@
+<% unless action_name == 'top' %>
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+<% end %>

@@ -15,34 +15,34 @@
 
 <%= render @snacks %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @snacks.each do |snack| %>
+<% if logged_in? && current_user.admin? %>
+  <table>
+    <thead>
       <tr>
-        <td><%= snack.name %></td>
-        <td><%= snack.description %></td>
-        <td>
-          <% if snack.image.attached? %>
-            <%= image_tag snack.image.variant(resize_to_limit: [100, 100]) %>
-          <% end %>
-        </td>
-        <td><%= link_to 'Show', snack %></td>
-        <td><%= link_to 'Edit', edit_snack_path(snack) %></td>
-        <td><%= link_to 'Destroy', snack, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>image</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Snack', new_snack_path %>
+    <tbody>
+      <% @snacks.each do |snack| %>
+        <tr>
+          <td><%= snack.name %></td>
+          <td><%= snack.description %></td>
+          <td>
+            <% if snack.image.attached? %>
+              <%= image_tag snack.image.variant(resize_to_limit: [100, 100]) %>
+            <% end %>
+          </td>
+          <td><%= link_to 'Show', snack %></td>
+          <td><%= link_to 'Edit', edit_snack_path(snack) %></td>
+          <td><%= link_to 'Destroy', snack, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Snack', new_snack_path %>
+<% end %>

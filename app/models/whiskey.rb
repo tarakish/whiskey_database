@@ -8,7 +8,7 @@
 #  amazon_link            :text             not null
 #  description            :text             not null
 #  flavor_strength        :integer          default("normal"), not null
-#  mouth_feel             :integer          default(2), not null
+#  mouth_feel             :integer          default("balanced"), not null
 #  name                   :string           not null
 #  price                  :integer
 #  rarity                 :integer          default("stable_supplyed"), not null

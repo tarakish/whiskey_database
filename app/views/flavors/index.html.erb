@@ -20,31 +20,30 @@
 <%= render partial: 'flavors', locals: { flavors: @sereal_flavors } %>
 <%= render partial: 'flavors', locals: { flavors: @smoky_flavors } %>
 
-<!-- for admin -->
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Detail</th>
-      <th>Group</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @flavors.each do |flavor| %>
+<% if logged_in? && current_user.admin? %>
+  <table>
+    <thead>
       <tr>
-        <td><%= flavor.name %></td>
-        <td><%= flavor.detail %></td>
-        <td><%= flavor.group %></td>
-        <td><%= link_to 'Show', flavor %></td>
-        <td><%= link_to 'Edit', edit_flavor_path(flavor) %></td>
-        <td><%= link_to 'Destroy', flavor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Detail</th>
+        <th>Group</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Flavor', new_flavor_path %>
+    <tbody>
+      <% @flavors.each do |flavor| %>
+        <tr>
+          <td><%= flavor.name %></td>
+          <td><%= flavor.detail %></td>
+          <td><%= flavor.group %></td>
+          <td><%= link_to 'Show', flavor %></td>
+          <td><%= link_to 'Edit', edit_flavor_path(flavor) %></td>
+          <td><%= link_to 'Destroy', flavor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Flavor', new_flavor_path %>
+<% end %>
