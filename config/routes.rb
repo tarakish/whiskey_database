@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :users
 
   get 'login', to: 'user_sessions#new', as: :login
-  post 'login', to: "user_sessions#create"
-  post 'logout', to:'user_sessions#destroy', as: :logout
-
+  post 'login', to: 'user_sessions#create'
+  post 'logout', to: 'user_sessions#destroy', as: :logout
 end
