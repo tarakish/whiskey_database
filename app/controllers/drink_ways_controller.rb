@@ -1,5 +1,6 @@
 class DrinkWaysController < ApplicationController
   before_action :set_drink_way, only: %i[show edit update destroy]
+  before_action :authorize_drink_way
 
   def index
     @drink_ways = DrinkWay.all.eager_load(image_attachment: :blob)
@@ -43,5 +44,9 @@ class DrinkWaysController < ApplicationController
 
   def drink_way_params
     params.require(:drink_way).permit(:name, :english_name, :how_to_make_url, :explanation, :image)
+  end
+
+  def authorize_drink_way
+    authorize DrinkWay, policy_class: ApplicationPolicy
   end
 end

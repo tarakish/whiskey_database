@@ -1,11 +1,14 @@
 class WhiskeysController < ApplicationController
   before_action :set_whiskey, only: %i[show edit update destroy]
+  before_action :authorize_whiskey, except: :show
 
   def index
     @whiskeys = Whiskey.all
   end
 
-  def show; end
+  def show
+    authorize Whiskey
+  end
 
   def new
     @whiskey = Whiskey.new
@@ -42,10 +45,13 @@ class WhiskeysController < ApplicationController
   end
 
   def whiskey_params
-    # params.fetch(:whiskey, {})
     params.require(:whiskey).permit(:name, :description, :mouth_feel, :region,
                                     :flavor_strength, :rarity, :price,
                                     :amazon_link, :amazon_image_link, :amazon_impression_link,
                                     :drink_way_id, :snack_id, flavor_ids: [])
+  end
+
+  def authorize_whiskey
+    authorize Whiskey, policy_class: ApplicationPolicy
   end
 end
