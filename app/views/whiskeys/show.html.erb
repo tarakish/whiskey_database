@@ -118,7 +118,7 @@
           <h4 class="display-5"><%= @whiskey.drink_way.name %></h4>
           <h6><em><%= @whiskey.drink_way.english_name %></em></h6>
         </div>
-        <%= image_tag @whiskey.drink_way.image, class: 'img-fluid mt-2' %>
+        <%= image_tag @whiskey.drink_way.image, class: 'img-fluid mt-2' if @whiskey.drink_way.image.attached? %>
       </div>
 
       <div class="col-lg-5 col-12 bg-white text-center rounded me-lg-5 my-5 px-0 shadow">
@@ -127,7 +127,7 @@
           <h4 class="display-5"><%= @whiskey.snack.name %></h4>
           <h6><em><%= @whiskey.snack.english_name %></em></h6>
         </div>
-        <%= image_tag @whiskey.snack.image, class: 'img-fluid mt-3' %>
+        <%= image_tag @whiskey.snack.image, class: 'img-fluid mt-3' if @whiskey.snack.image.attached? %>
       </div>
     </div>
   </div>
