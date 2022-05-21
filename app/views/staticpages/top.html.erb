@@ -1,4 +1,7 @@
 <div class="container-fluid top-img text-white">
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %> text-center"><%= message %></div>
+  <% end %>
   <div class="row inner-text ms-lg-3 text-center">
     <h1 class="fw-bold col-lg-7">カジュアルに楽しむ</h1>
     <h1 class="fw-bold col-lg-7">ウイスキー情報サービス（コピー募集中）</h1>
