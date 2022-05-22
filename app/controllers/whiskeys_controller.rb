@@ -3,7 +3,7 @@ class WhiskeysController < ApplicationController
   before_action :authorize_whiskey, except: :show
 
   def index
-    @whiskeys = Whiskey.all
+    @whiskeys = Whiskey.all.eager_load(:whiskey_flavors, :flavors)
   end
 
   def show
