@@ -44,7 +44,7 @@
         </h6>
         <h4 class="row text-muted my-auto justify-content-center justify-content-lg-start">
           <div class="col-auto pt-3 my-xl-0 my-3">
-            <span class="h5 mx-auto">希望小売価格 ¥</span><%= @whiskey.price %>
+            <span class="h5 mx-auto">希望小売価格 ¥</span><%= @whiskey.price.to_s(:delimited) %>
           </div>
           <div class="col-auto">
             <%= link_to @whiskey.amazon_link, target: '_blank' do %>

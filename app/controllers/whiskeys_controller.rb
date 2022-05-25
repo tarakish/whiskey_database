@@ -3,7 +3,8 @@ class WhiskeysController < ApplicationController
   before_action :authorize_whiskey, except: :show
 
   def index
-    @pagy, @whiskeys = pagy(Whiskey.all.eager_load(:whiskey_flavors, :flavors))
+    result = @q.result(distinct: true).eager_load(:whiskey_flavors, :flavors)
+    @pagy, @searched_whiskeys = pagy(result)
   end
 
   def show

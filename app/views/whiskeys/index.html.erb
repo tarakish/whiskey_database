@@ -1,27 +1,36 @@
-<div class="py-5">
-  <div class='container'>
-    <div class='row mb-5'>
-      <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-        <h1 class='text-center'>Whiskeys</h1>
-      </div>
-    </div>
+<div class="container mt-5 pt-5">
+  <div class="row justify-content-center">
+    <h1 class="col-auto text-muted text-center">
+      <em>Whiskeys</em><br>
+      <span class="fs-3">〜ウイスキー一覧〜</span>
+    </h1>
   </div>
   <div class="row justify-content-center my-5">
-    <%= form_with url: '#', local: true, class: 'col-auto' do |f| %>
-        <div class="input-group">
-          <%= f.text_field :keyword, class: 'form-control-lg border-0 rounded-left search-width', placeholder: '(実装中)ウイスキー名を入力' %>
-          <%= button_tag type: :submit, disabled: true, class: "btn bg-white rounded-right" do %>
-            <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
-          <% end %>
-        </div>
-      <% end %>
+    <%= search_form_for @q, url: whiskeys_path, class: 'col-auto' do |f| %>
+      <div class="input-group">
+        <%= f.text_field :name_cont, class: 'form-control-lg border-0 rounded-left search-width', placeholder: 'ウイスキー名を入力' %>
+        <%= button_tag type: :submit, class: "btn bg-white rounded-right" do %>
+          <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
+        <% end %>
+      </div>
+    <% end %>
   </div>
+</div>
 
-  <div class="container">
-    <div class="row mb-2">
-      <%= render @whiskeys %>
+<div class="container pt-5">
+  <% if @searched_whiskeys.blank? %>
+    <div class="row mb-2 justify-content-center">
+      <div class="col-auto">
+        Sorry…条件に合うウイスキーは見つかりませんでした.
+      </div>
     </div>
+  <% else %>
+    <div class="row mb-2">
+      <%= render @searched_whiskeys %>
+    </div>
+  <% end %>
   </div>
+</div>
 
 <div class="py-5">
   <div class='container'>

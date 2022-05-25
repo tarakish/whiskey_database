@@ -9,7 +9,7 @@ module ApplicationHelper
     end
   end
 
-  def space_head
+  def space_behind_head
     return 'mt-7' if controller_name != 'staticpages'
   end
 end
