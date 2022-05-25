@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :whiskeys
   resources :flavors
   resources :snacks
-  resources :users
+  #resources :users 意図しないユーザー登録を避けるため一時退避
 
   get 'login', to: 'user_sessions#new', as: :login
   post 'login', to: 'user_sessions#create'
