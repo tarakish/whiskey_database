@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include Pagy::Frontend
+
   def separate_header
     if controller_name == 'staticpages'
       render 'shared/top_header'
