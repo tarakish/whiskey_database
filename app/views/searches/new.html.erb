@@ -1,2 +1,12 @@
-<h1>Searches#new</h1>
-<p>Find me in app/views/searches/new.html.erb</p>
+<div class="container mt-5 pt-5">
+  <div class="row justify-content-center">
+    <h1 class="col-auto text-muted text-center">
+      詳細検索<br>
+    </h1>
+  </div>
+  <div class="row justify-content-center my-5">
+    <%= search_form_for @q, url: whiskeys_path, class: 'col-auto' do |f| %>
+      <%= render 'shared/search_bar', f: f %>
+    <% end %>
+  </div>
+</div>
