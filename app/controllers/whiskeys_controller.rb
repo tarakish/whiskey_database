@@ -3,9 +3,8 @@ class WhiskeysController < ApplicationController
   before_action :authorize_whiskey, except: :show
 
   def index
-    @q = Whiskey.ransack(params[:q])
     result = @q.result(distinct: true).eager_load(:whiskey_flavors, :flavors)
-    @pagy, @whiskeys = pagy(result)
+    @pagy, @searched_whiskeys = pagy(result)
   end
 
   def show

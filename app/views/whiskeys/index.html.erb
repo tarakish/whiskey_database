@@ -7,10 +7,10 @@
     </div>
   </div>
   <div class="row justify-content-center my-5">
-    <%= form_with url: '#', local: true, class: 'col-auto' do |f| %>
+    <%= search_form_for @q, url: whiskeys_path, class: 'col-auto' do |f| %>
         <div class="input-group">
-          <%= f.text_field :keyword, class: 'form-control-lg border-0 rounded-left search-width', placeholder: '(実装中)ウイスキー名を入力' %>
-          <%= button_tag type: :submit, disabled: true, class: "btn bg-white rounded-right" do %>
+          <%= f.text_field :name_cont, class: 'form-control-lg border-0 rounded-left search-width', placeholder: 'ウイスキー名を入力' %>
+          <%= button_tag type: :submit, class: "btn bg-white rounded-right" do %>
             <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
           <% end %>
         </div>
@@ -19,7 +19,7 @@
 
   <div class="container">
     <div class="row mb-2">
-      <%= render @whiskeys %>
+      <%= render @searched_whiskeys %>
     </div>
   </div>
 
