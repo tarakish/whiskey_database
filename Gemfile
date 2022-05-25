@@ -39,6 +39,9 @@ gem 'sorcery'
 # Use CSS_framework
 gem 'semantic-ui-sass'
 
+# Use Pagenation
+gem 'pagy', '~> 5.10'
+
 # i18n
 gem 'enum_help'
 gem 'rails-i18n', '~> 6.0'
