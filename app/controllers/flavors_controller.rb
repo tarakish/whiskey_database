@@ -10,7 +10,7 @@ class FlavorsController < ApplicationController
     @sereal_flavors = Flavor.sereal.order(:id)
     @smoky_flavors = Flavor.smoky.order(:id)
     # for admin
-    @flavors = Flavor.all.order(:id)
+    @flavors = Flavor.order(:id)
   end
 
   def show; end
