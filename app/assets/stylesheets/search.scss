@@ -1,0 +1,24 @@
+.btn-search {
+  
+  box-shadow: none !important;
+  background-color: #c9c1b0 !important;
+  border: none !important;
+  opacity: .7;
+  &:hover {
+    opacity: .6;
+  }
+}
+
+label input[type="checkbox"]:checked + span {
+  opacity: 1;
+}
+
+.search-width {
+  width: 30vw;
+  @media screen and (max-width: 991px) {
+    width: 45vw;
+  }
+  @media screen and (max-width: 576px) {
+    width: 50vw;
+  }
+}

@@ -4,9 +4,58 @@
       詳細検索<br>
     </h1>
   </div>
-  <div class="row justify-content-center my-5">
-    <%= search_form_for @q, url: whiskeys_path, class: 'col-auto' do |f| %>
-      <%= render 'shared/search_bar', f: f %>
+</div>
+
+
+<%= search_form_for @q, url: whiskeys_path, class: 'container my-5' do |f| %>
+  <div class="row justify-content-center">
+    <%= f.text_field :name_cont, class: 'form-control-lg border-0 rounded-pill col-lg-4 col-md-6 col-8', placeholder: 'ウイスキー名を入力' %>
+    <%= button_tag type: :submit, class: "circular ui icon button col-auto ms-2 bg-navy" do %>
+      <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-yellow"></i>
     <% end %>
   </div>
-</div>
+
+  <div class="row justify-content-center mt-5 mb-2">
+    <%= f.label :drink_way_id, class: 'fs-5 fw-bold col-md-5 col-12 m-1 text-muted' %>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-5 col-auto">
+      <%= f.collection_check_boxes(:drink_way_id_eq_any, DrinkWay.all, :id, :name) do |t| %>
+        <%= t.label do %>
+          <%= t.check_box class: 'btn-check' %>
+          <span class='btn btn-secondary btn-search m-1'><%= t.text %></span>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-5 mb-2">
+    <%= f.label :snack_id, class: 'fs-5 fw-bold col-md-5 col-12 m-1 text-muted' %>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-5 col-auto">
+      <%= f.collection_check_boxes(:snack_id_eq_any, Snack.all, :id, :name) do |t| %>
+        <%= t.label do %>
+          <%= t.check_box class: 'btn-check' %>
+          <span class='btn btn-secondary btn-search m-1'><%= t.text %></span>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-5 mb-2">
+    <%= f.label :flavor_id, class: 'fs-5 fw-bold col-md-5 col-12 m-1 text-muted' %>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-5 col-auto">
+      <%= f.collection_check_boxes(:flavors_id_eq_any, Flavor.all, :id, :name) do |t| %>
+        <%= t.label do %>
+          <%= t.check_box class: 'btn-check' %>
+          <span class='btn btn-secondary btn-search m-1'><%= t.text %></span>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+
+<% end %>
