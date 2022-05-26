@@ -3,7 +3,7 @@ class DrinkWaysController < ApplicationController
   before_action :authorize_drink_way
 
   def index
-    @drink_ways = DrinkWay.all.eager_load(image_attachment: :blob)
+    @drink_ways = DrinkWay.eager_load(image_attachment: :blob).order(:id)
   end
 
   def show; end

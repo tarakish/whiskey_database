@@ -1,13 +1,13 @@
-<div class="col-md-4">
+<div class="col-lg-4 col-md-6 transform-y-md">
   <div class="row bg-white g-0 border rounded overflow-hidden flex-md-row mb-4 shadow h-md-250 position-relative card">
     <div class="col-xl-4 col-auto mx-auto my-xl-auto my-5 text-center">
-      <%= link_to whiskey.amazon_link, target: '_blank' do %><%= image_tag whiskey.amazon_image_link, class: 'border-none' %><% end %> 
+      <%= link_to whiskey.amazon_link, target: '_blank' do %><%= image_tag whiskey.amazon_image_link, class: 'border-none img-fluid' %><% end %> 
       <%= image_tag whiskey.amazon_impression_link, alt: '', size: '1x1', style: 'border:none !important; margin:0px !important' %>
     </div>
     <div class="col-xl-8 col-auto p-4 d-flex flex-column position-static">
       <div class="d-inline-block text-muted"><%= whiskey.region %></div>
       <h4 class="my-2"><%= whiskey.name %></h4>
-      <div class="text-muted text-end">¥<%= whiskey.price %></div>
+      <div class="text-muted text-end">¥<%= whiskey.price.to_s(:delimited) %></div>
       <div class="box shadow-sm">
         <span class="box-title">フレーバー</span>
         <%= render partial: 'flavor', collection: whiskey.flavors %>
@@ -16,9 +16,3 @@
     </div>
   </div>
 </div>
-
-<!--
-<span class="small ui brown tag label ms-2 me-2 my-1">バニラ</span>
-<span class="small ui brown tag label ms-2 me-2 my-1">はちみつ</span>
-<span class="small ui orange tag label ms-2 me-2 my-1">ドライフルーツ</span>
--->

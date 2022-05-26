@@ -14,7 +14,9 @@
         </em></h5>
         <p class="my-5"><%= simple_format(h(snack.description)) %></p>
         <h6 class="my-3 hover-target">
-          <span class="text-decoration-line-through"><i class="fa-solid fa-magnifying-glass"></i> <%= snack.name %>が合うウイスキーを探す</span> comming soon!
+          <%= link_to whiskeys_path(q: { snack_id_eq: snack }), class: 'simple-a-tag' do %>
+            <i class="fa-solid fa-magnifying-glass"></i> <%= snack.name %>が合うウイスキーを探す
+          <% end %>
         </h6>
       </div>
     </div>

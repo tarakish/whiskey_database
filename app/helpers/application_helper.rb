@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include Pagy::Frontend
+
   def separate_header
     if controller_name == 'staticpages'
       render 'shared/top_header'
@@ -7,7 +9,7 @@ module ApplicationHelper
     end
   end
 
-  def space_head
+  def space_behind_head
     return 'mt-7' if controller_name != 'staticpages'
   end
 end

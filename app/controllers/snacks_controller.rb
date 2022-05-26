@@ -3,7 +3,7 @@ class SnacksController < ApplicationController
   before_action :authorize_snack
 
   def index
-    @snacks = Snack.all.eager_load(image_attachment: :blob)
+    @snacks = Snack.eager_load(image_attachment: :blob).order(:id)
   end
 
   def show; end

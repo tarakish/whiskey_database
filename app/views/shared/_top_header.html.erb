@@ -5,15 +5,10 @@
         <i class="fa-solid fa-whiskey-glass fa-xl"></i> Whiskey Database
       <% end %>
       <%= link_to '/', class: 'navbar-brand d-lg-none d-inline hover-target-reverse' do %>
-        <i class="fa-solid fa-wine-bottle fa-xl"></i>
+      <i class="fa-solid fa-wine-bottle fa-xl"></i>
       <% end %>
-      <%= form_with url: '#', local: true, class: 'ms-lg-15 d-none', id: 'js-search-form' do |f| %>
-        <div class="input-group">
-          <%= f.text_field :keyword, class: 'form-control-lg border-0 rounded-left search-width', placeholder: '(実装中)ウイスキー名を入力' %>
-          <%= button_tag type: :submit, disabled: true, class: "btn bg-white rounded-right" do %>
-            <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
-          <% end %>
-        </div>
+      <%= search_form_for @q, url: whiskeys_path, class: 'ms-lg-15 d-none', id: 'js-search-form' do |f| %>
+        <%= render 'shared/search_bar', f: f %>
       <% end %>
       <button class="navbar-toggler px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

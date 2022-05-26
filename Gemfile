@@ -36,8 +36,14 @@ gem 'seed-fu'
 gem 'pundit'
 gem 'sorcery'
 
-# Use CSS_framework
+# CSS-framework
 gem 'semantic-ui-sass'
+
+# Use Pagenation
+gem 'pagy', '~> 5.10'
+
+# For Search Function
+gem 'ransack'
 
 # i18n
 gem 'enum_help'

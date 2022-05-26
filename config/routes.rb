@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :flavors
   resources :snacks
   resources :users
+  resource :search, only: :new
 
   get 'login', to: 'user_sessions#new', as: :login
   post 'login', to: 'user_sessions#create'

@@ -44,7 +44,7 @@
         </h6>
         <h4 class="row text-muted my-auto justify-content-center justify-content-lg-start">
           <div class="col-auto pt-3 my-xl-0 my-3">
-            <span class="h5 mx-auto">希望小売価格 ¥</span><%= @whiskey.price %>
+            <span class="h5 mx-auto">希望小売価格 ¥</span><%= @whiskey.price.to_s(:delimited) %>
           </div>
           <div class="col-auto">
             <%= link_to @whiskey.amazon_link, target: '_blank' do %>
@@ -71,7 +71,7 @@
 </div>
 
 <!-- paring -->
-<div class="container mt-5" data-aos="fade-up">
+<div class="container mt-5">
   <div class="row justify-content-center">
     <%= link_to drink_ways_path(anchor: "#{@whiskey.drink_way.english_name}"), class: 'col-lg-9 row text-center rounded shadow bg-white p-0 transform-y-md simple-a-tag hover-target-reverse' do %>
       <%= image_tag @whiskey.drink_way.image, class: 'img-fluid col-lg-4 p-0' if @whiskey.drink_way.image.attached? %>
@@ -90,7 +90,7 @@
   </div>
 </div>
 
-<div class="container mt-5" data-aos="fade-up">
+<div class="container mt-5">
   <div class="row justify-content-center">
     <%= link_to snacks_path(anchor: "#{@whiskey.snack.english_name}"), class: 'col-lg-9 row text-center rounded shadow bg-white p-0 transform-y-md simple-a-tag hover-target-reverse' do %>
       <%= image_tag @whiskey.snack.image, class: 'img-fluid col-lg-4 p-0' if @whiskey.snack.image.attached? %>
@@ -149,7 +149,7 @@
   </div>
 </div>
 
-<div class="container my-5" data-aos="fade-up">
+<div class="container my-5">
   <div class="row justify-content-center">
     <div class="col-lg-9 rounded shadow bg-white pe-0">
       <div class="row justify-content-between">
@@ -165,7 +165,7 @@
 
       <div class="row text-center text-muted justify-content-center my-4">
         <div class="col-5 border-end border-2">
-          <h6>強く感じたフレーバー</h6>
+          <h6>感じたフレーバー</h6>
           <h4>バニラ</h4>
         </div>
         <div class="col-5">
