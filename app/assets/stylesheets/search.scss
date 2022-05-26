@@ -1,5 +1,5 @@
 .btn-search {
-  
+  color: #000 !important;
   box-shadow: none !important;
   background-color: #c9c1b0 !important;
   border: none !important;
@@ -21,4 +21,8 @@ label input[type="checkbox"]:checked + span {
   @media screen and (max-width: 576px) {
     width: 50vw;
   }
+}
+
+.bg-d-cream {
+  background-color: #c9c1b0 !important;
 }

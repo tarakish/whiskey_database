@@ -15,7 +15,11 @@
       </div>
     <% end %>
   </div>
+  <div class="row justify-content-center mb-5">
+    <%= link_to '　細かい条件で検索　', new_search_path, class: "fs-5 ui icon button rounded-pill col-auto bg-d-cream hover-target" %>
+  </div>
 </div>
+
 
 <div class="container pt-5">
   <% if @searched_whiskeys.blank? %>
