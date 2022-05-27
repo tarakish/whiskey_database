@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_21_114047) do
+ActiveRecord::Schema.define(version: 2022_05_27_005220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 2022_05_21_114047) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "bookmarks", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "whiskey_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
+    t.index ["whiskey_id"], name: "index_bookmarks_on_whiskey_id"
+  end
+
   create_table "drink_ways", force: :cascade do |t|
     t.string "name", null: false
     t.text "explanation", null: false
@@ -73,6 +82,18 @@ ActiveRecord::Schema.define(version: 2022_05_21_114047) do
     t.string "english_name", null: false
     t.index ["english_name"], name: "index_snacks_on_english_name", unique: true
     t.index ["name", "description"], name: "index_snacks_on_name_and_description", unique: true
+  end
+
+  create_table "tasting_notes", force: :cascade do |t|
+    t.string "comment", null: false
+    t.bigint "user_id", null: false
+    t.bigint "drink_way_id", null: false
+    t.bigint "flavor_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["drink_way_id"], name: "index_tasting_notes_on_drink_way_id"
+    t.index ["flavor_id"], name: "index_tasting_notes_on_flavor_id"
+    t.index ["user_id"], name: "index_tasting_notes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -120,6 +141,11 @@ ActiveRecord::Schema.define(version: 2022_05_21_114047) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bookmarks", "users"
+  add_foreign_key "bookmarks", "whiskeys"
+  add_foreign_key "tasting_notes", "drink_ways"
+  add_foreign_key "tasting_notes", "flavors"
+  add_foreign_key "tasting_notes", "users"
   add_foreign_key "whiskey_flavors", "flavors"
   add_foreign_key "whiskey_flavors", "whiskeys"
   add_foreign_key "whiskeys", "drink_ways"

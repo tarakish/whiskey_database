@@ -9,6 +9,8 @@ ja:
       drink_way: 飲み方
       snack: おつまみ
       whyskey_flavors: ウイスキーのフレーバー
+      tasting_notes: テイスティングノート
+      bookmarks: お気に入り
     attributes:
       id: ID
       created_at: 作成日時
@@ -41,6 +43,10 @@ ja:
       snack:
         name: 名称
         description: 説明
+      tasting_note:
+        comment: コメント
+        drink_way_id: 飲み方
+        flavor_id: 感じたフレーバー
     errors:
       messages:
         a_whiskey_has_upto_three_flavors: は3つまでじゃよ。欲張りなさんな。

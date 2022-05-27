@@ -37,6 +37,8 @@ class Whiskey < ApplicationRecord
   belongs_to :snack
   has_many :whiskey_flavors
   has_many :flavors, through: :whiskey_flavors
+  has_many :bookmarks
+  has_many :users, through: :bookmarks
 
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true # , uniqueness: true 必要そうであればコメントアウト＆DBへ定義追加

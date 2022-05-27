@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @tasting_note.comment %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tasting_note.user_id %>
+</p>
+
+<p>
+  <strong>Drink way:</strong>
+  <%= @tasting_note.drink_way_id %>
+</p>
+
+<p>
+  <strong>Flavor:</strong>
+  <%= @tasting_note.flavor_id %>
+</p>
+
+<%= link_to 'Edit', edit_tasting_note_path(@tasting_note) %> |
+<%= link_to 'Back', tasting_notes_path %>
