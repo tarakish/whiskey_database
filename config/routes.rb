@@ -2,10 +2,15 @@ Rails.application.routes.draw do
   root 'staticpages#top'
 
   resources :drink_ways
-  resources :whiskeys
   resources :flavors
   resources :snacks
   resources :users
+  resources :whiskeys do
+    resources :tasting_notes, shallow: true, except: %i[index show]
+    resource :bookmarks, only: %i[create destroy]
+  end
+
+  resources :tasting_notes, only: :index
   resource :search, only: :new
 
   get 'login', to: 'user_sessions#new', as: :login

@@ -1,0 +1,32 @@
+<%= form_with model: [whiskey, tasting_note] do |form| %>
+  <% if tasting_note.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tasting_note.errors.count, "error") %> prohibited this tasting_note from being saved:</h2>
+
+      <ul>
+        <% tasting_note.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_field :comment %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :flavor_id %>
+    <%= form.collection_select :flavor_id, Flavor.all, :id, :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :drink_way_id %>
+    <%= form.collection_select :drink_way_id, DrinkWay.all, :id, :name, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

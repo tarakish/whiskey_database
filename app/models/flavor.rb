@@ -14,6 +14,7 @@
 #  index_flavors_on_name_and_detail  (name,detail) UNIQUE
 #
 class Flavor < ApplicationRecord
+  has_many :tasting_notes
   has_many :whiskey_flavors
   has_many :whiskeys, through: :whiskey_flavors
 

@@ -6,7 +6,7 @@
 #  crypted_password :string
 #  email            :string           not null
 #  name             :string           default("ユーザー"), not null
-#  role             :integer          default(0), not null
+#  role             :integer          default("general"), not null
 #  salt             :string
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
@@ -17,6 +17,10 @@
 #
 class User < ApplicationRecord
   authenticates_with_sorcery!
+
+  has_many :tasting_notes
+  has_many :bookmarks
+  has_many :users, through: :bookmarks
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }

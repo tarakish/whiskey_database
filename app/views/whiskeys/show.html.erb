@@ -57,6 +57,20 @@
   </div>
 </div>
 
+<!-- 暫定 -->
+<div class="container mt-15">
+  <div class="row justify-content-center">
+    <h1 class="col-auto text-muted text-center">
+    <% if @whiskey.bookmarked_by?(current_user) %>
+      <%= link_to 'お気に入りを外す', whiskey_bookmarks_path(@whiskey), method: :delete, class: 'ui button' %>
+    <% else %>
+      <%= link_to 'お気に入り', whiskey_bookmarks_path(@whiskey), method: :post, class: 'ui button' %>
+    <% end %>
+    </h1>
+  </div>
+</div>
+
+
 <div class="container mt-15">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center">
@@ -185,9 +199,7 @@
 
 <div class="container my-5 pt-3">
   <div class="row justify-content-center">
-    <button class="btn fs-4 bg-navy transform-y-sm f-yellow hover-target-reverse col-auto">
-      　投稿する　
-    </button>
+    <%= link_to '　投稿する　', new_whiskey_tasting_note_path(@whiskey), class: 'btn fs-4 bg-navy transform-y-sm f-yellow hover-target-reverse col-auto' %>
   </div>
 </div>
 

@@ -22,6 +22,5 @@ class WhiskeyFlavor < ApplicationRecord
   belongs_to :whiskey
   belongs_to :flavor
 
-  # 組み合わせの一意制約
   validates :whiskey_id, uniqueness: { scope: :flavor_id }
 end

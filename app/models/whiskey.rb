@@ -37,6 +37,8 @@ class Whiskey < ApplicationRecord
   belongs_to :snack
   has_many :whiskey_flavors
   has_many :flavors, through: :whiskey_flavors
+  has_many :bookmarks
+  has_many :users, through: :bookmarks
 
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true # , uniqueness: true 必要そうであればコメントアウト＆DBへ定義追加
@@ -57,15 +59,7 @@ class Whiskey < ApplicationRecord
                           smoky: 4 }
   enum rarity: { rare: 0, a_little_rare: 1, stable_supplyed: 2 }
 
-  def add_flavor(flavor)
-    whiskey_flavors << flavor
-  end
-
-  def remove_flavor(flavor)
-    whiskey_flavors.delete(flavor)
-  end
-
-  def has_flavor?(flavor)
-    flavor.whiskey_flavors.pluck(:whiskey_id).include(id)
+  def bookmarked_by?(user)
+    users.include?(user)
   end
 end

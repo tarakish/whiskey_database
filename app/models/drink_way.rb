@@ -19,9 +19,10 @@
 #
 class DrinkWay < ApplicationRecord
   has_many :whiskeys
+  has_many :tasting_notes
+
   has_one_attached :image
 
-  validates :name, presence: true, uniqueness: true
   validates :name, presence: true, uniqueness: true
   validates :how_to_make_url, presence: true, uniqueness: true
   validates :explanation, presence: true, uniqueness: true
