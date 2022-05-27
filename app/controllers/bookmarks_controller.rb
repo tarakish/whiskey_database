@@ -1,27 +1,19 @@
 class BookmarksController < ApplicationController
-  before_action :set_bookmark, only: %i[ destroy ]
+  before_action :set_whiskey
 
   def create
-    @bookmark = Bookmark.new(bookmark_params)
-
-    if @bookmark.save
-      redirect_to bookmark_url(@bookmark), notice: "Bookmark was successfully created."
-    else
-      render :new
-    end
+    current_user.bookmarks.find_or_create_by(whiskey_id: @whiskey.id)
+    redirect_to whiskey_path(@whiskey), notice: "Bookmark was successfully created."
   end
 
   def destroy
-    @bookmark.destroy
-    redirect_to bookmarks_url, notice: "Bookmark was successfully destroyed."
+    bookmarks = current_user.bookmarks.find_by!(whiskey_id: @whiskey.id)
+    bookmarks.destroy!
+    redirect_to whiskey_path(@whiskey), notice: "Bookmark was successfully destroyed."
   end
 
   private
-    def set_bookmark
-      @bookmark = Bookmark.find(params[:id])
-    end
-
-    def bookmark_params
-      params.require(:bookmark).permit(:user_id, :whiskey_id)
+    def set_whiskey
+      @whiskey = Whiskey.find(params[:whiskey_id])
     end
 end

@@ -59,15 +59,7 @@ class Whiskey < ApplicationRecord
                           smoky: 4 }
   enum rarity: { rare: 0, a_little_rare: 1, stable_supplyed: 2 }
 
-  def add_flavor(flavor)
-    whiskey_flavors << flavor
-  end
-
-  def remove_flavor(flavor)
-    whiskey_flavors.delete(flavor)
-  end
-
-  def has_flavor?(flavor)
-    flavor.whiskey_flavors.pluck(:whiskey_id).include(id)
+  def bookmarked_by?(user)
+    users.include?(user)
   end
 end

@@ -1,25 +1,23 @@
 class TastingNotesController < ApplicationController
-  before_action :set_tasting_note, only: %i[ show edit update destroy ]
+  before_action :set_tasting_note, only: %i[ edit update destroy ]
 
   def index
     @tasting_notes = TastingNote.all
   end
 
-  def show
-  end
-
   def new
-    @tasting_note = TastingNote.new
+    @whiskey = Whiskey.find(params[:whiskey_id])
+    @tasting_note = current_user.tasting_notes.build
   end
 
   def edit
   end
 
   def create
-    @tasting_note = TastingNote.new(tasting_note_params)
-
+    @whiskey = Whiskey.find(params[:whiskey_id])
+    @tasting_note = current_user.tasting_notes.build(tasting_note_params.merge(whiskey_id: @whiskey.id))
       if @tasting_note.save
-        redirect_to tasting_note_url(@tasting_note), notice: "Tasting note was successfully created."
+        redirect_to whiskey_path(@whiskey), notice: "Tasting note was successfully created."
       else
         render :new
       end
@@ -40,10 +38,10 @@ class TastingNotesController < ApplicationController
 
   private
     def set_tasting_note
-      @tasting_note = TastingNote.find(params[:id])
+      @tasting_note = current_user.tasting_notes.find(params[:id])
     end
 
     def tasting_note_params
-      params.require(:tasting_note).permit(:comment, :user_id, :drink_way_id, :flavor_id)
+      params.require(:tasting_note).permit(:comment, :drink_way_id, :flavor_id)
     end
 end

@@ -5,11 +5,12 @@ Rails.application.routes.draw do
   resources :flavors
   resources :snacks
   resources :users
-  resources :tasting_notes
   resources :whiskeys do
+    resources :tasting_notes, shallow: true, except: %i[index show]
     resource :bookmarks, only: %i[create destroy]
   end
-  
+
+  resources :tasting_notes, only: :index
   resource :search, only: :new
 
   get 'login', to: 'user_sessions#new', as: :login
