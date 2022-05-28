@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   post 'logout', to: 'user_sessions#destroy', as: :logout
   
   post "oauth/callback" => "oauths#callback"
-  # get "oauth/callback" => "oauths#callback" # for use with Github, Facebook
+  get "oauth/callback" => "oauths#callback"
   get "oauth/:provider" => "oauths#oauth", as: :auth_at_provider
 
   get '/login_as/:user_id', to: 'user_sessions#login_as', as: :login_as if Rails.env.development?
