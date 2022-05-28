@@ -45,6 +45,9 @@ gem 'pagy', '~> 5.10'
 # For Search Function
 gem 'ransack'
 
+# For Control Constant
+gem 'config'
+
 # i18n
 gem 'enum_help'
 gem 'rails-i18n', '~> 6.0'
