@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   get 'login', to: 'user_sessions#new', as: :login
   post 'login', to: 'user_sessions#create'
   post 'logout', to: 'user_sessions#destroy', as: :logout
+  
+  post "oauth/callback" => "oauths#callback"
+  # get "oauth/callback" => "oauths#callback" # for use with Github, Facebook
+  get "oauth/:provider" => "oauths#oauth", as: :auth_at_provider
 
   get '/login_as/:user_id', to: 'user_sessions#login_as', as: :login_as if Rails.env.development?
 end
