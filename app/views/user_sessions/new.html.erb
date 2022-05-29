@@ -14,14 +14,14 @@
           SNSアカウントでログイン
         </div>
       </h3>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center mb-3">
         <%= link_to auth_at_provider_path(provider: :twitter), class: 'col-auto fs-5 ui button twitter' do %>
-          <i class="fa-brands fa-twitter fa-lg"></i>　Twitterで登録／ログイン
+          <i class="twitter icon"></i> Twitterで登録／ログイン
         <% end %>
       </div>
-      <div class="row justify-content-center">
-        <%= link_to auth_at_provider_path(provider: :twitter), class: 'col-auto fs-5 ui button twitter' do %>
-          <i class="fa-brands fa-twitter fa-lg"></i>　Twitterで登録／ログイン
+      <div class="row justify-content-center mb-3">
+        <%= link_to auth_at_provider_path(provider: :google), class: 'col-auto fs-5 ui button google plus' do %>
+          <i class="google icon"></i> Googleで登録／ログイン
         <% end %>
       </div>
       <div class="row justify-content-center mt-5 mb-3 pt-3">
