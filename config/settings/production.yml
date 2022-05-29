@@ -1,2 +1,3 @@
 sorcery:
-  callback_url: 'https://whiskey-database-beta.herokuapp.com/oauth/callback?provider=twitter'
+  twitter_callback_url: 'https://whiskey-database-beta.herokuapp.com/oauth/callback?provider=twitter'
+  google_callback_url: 'https://whiskey-database-beta.herokuapp.com/oauth/callback?provider=google'
