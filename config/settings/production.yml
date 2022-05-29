@@ -1,0 +1,2 @@
+sorcery:
+  callback_url: 'https://whiskey-database-beta.herokuapp.com/oauth/callback?provider=twitter'

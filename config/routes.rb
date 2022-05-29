@@ -17,5 +17,9 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   post 'logout', to: 'user_sessions#destroy', as: :logout
 
+  post 'oauth/callback', to: 'oauths#callback'
+  get 'oauth/callback', to: 'oauths#callback'
+  get 'oauth/:provider', to: 'oauths#oauth', as: :auth_at_provider
+
   get '/login_as/:user_id', to: 'user_sessions#login_as', as: :login_as if Rails.env.development?
 end
