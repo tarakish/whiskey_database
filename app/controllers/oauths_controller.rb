@@ -22,7 +22,7 @@ class OauthsController < ApplicationController
   private
 
   def auth_params
-    params.permit(:code, :provider, :denied, :scope, :authuser, :prompt)
+    params.permit(:code, :provider, :denied)
   end
 
   def create_user_from(provider)
