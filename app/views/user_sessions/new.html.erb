@@ -1,6 +1,50 @@
-<h1>Login</h1>
+<div class="container my-5 pt-5">
+  <div class="row justify-content-center">
+    <h1 class="col-auto text-muted fw-bold ">
+      ログイン
+    </h1>
+  </div>
+</div>
 
-<%= render 'form' %>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-auto text-center rounded shadow bg-white px-4 py-5">
+      <div class="row justify-content-center my-3 pt-3">
+        <h3 class="col-auto text-muted border-bottom border-3 pb-2">
+          SNSアカウントでログイン
+        </div>
+      </h3>
+      <div class="row justify-content-center">
+        <%= link_to auth_at_provider_path(provider: :twitter), class: 'col-auto fs-5 ui button twitter' do %>
+          <i class="fa-brands fa-twitter fa-lg"></i>　Twitterで登録／ログイン
+        <% end %>
+      </div>
+      <div class="row justify-content-center">
+        <%= link_to auth_at_provider_path(provider: :twitter), class: 'col-auto fs-5 ui button twitter' do %>
+          <i class="fa-brands fa-twitter fa-lg"></i>　Twitterで登録／ログイン
+        <% end %>
+      </div>
+      <div class="row justify-content-center mt-5 mb-3 pt-3">
+        <h3 class="col-auto text-muted border-bottom border-3 pb-2">
+          メールアドレスでログイン
+        </div>
+      </h3>
+      <div class="row justify-content-center">
+        <%= form_with url: login_path, method: :post do |f| %>
+          <div class="ui left icon input col-9 mb-2">
+            <%= f.text_field :email, placeholder: 'メールアドレスを入力' %>
+            <i class="envelope icon"></i>
+          </div>
+          <div class="ui left icon input col-9 mb-2">
+            <%= f.password_field :password, placeholder: 'パスワードを入力' %>
+            <i class="lock icon"></i>
+          </div>
+          <%= f.submit "ログイン", class: 'actions ui button teal col-9' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Back', users_path %>
 <%= link_to 'Logout', logout_path, method: :post %>
