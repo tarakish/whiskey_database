@@ -1,3 +1,30 @@
+<div class="container my-5 py-5">
+  <div class="row justify-content-center">
+    <h1 class="col-auto text-muted">
+      マイページ
+    </h1>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row justify-content-center my-5">
+    <div class="col-auto">
+      <%= image_tag 'https://via.placeholder.com/150', class: 'ui circular image' %>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-5 mb-1">
+    <h1 class="col-auto">
+      たらこたらたら
+    </h1>
+  </div>
+  <div class="row justify-content-center mb-5">
+    <%= link_to edit_user_path(@user), class: 'circular ui icon button col-auto u-set fs-3' do %>
+      <i class='icon cog'></i>
+    <% end %>
+  </div>
+</div>
+
+
 <p>
   <strong>Email:</strong>
   <%= @user.email %>

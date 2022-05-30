@@ -6,3 +6,13 @@
 .bg-delete {
   background-color: #fc3317 !important;
 }
+
+.u-set {
+  background-color: darken(#F0ECE3, 1%) !important;
+  &:hover {
+    background-color: darken(#F0ECE3, 5%) !important
+  }
+  &:active {
+    background-color: darken(#F0ECE3, 10%) !important
+  }
+}
