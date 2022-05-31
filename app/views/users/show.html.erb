@@ -1,3 +1,100 @@
+<div class="container my-5 py-5">
+  <div class="row justify-content-center">
+    <h1 class="col-auto text-muted fw-bold">
+      マイページ
+    </h1>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 col-auto row justify-content-center text-center rounded bg-gray">
+      <div class="col-lg-3 py-3">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <%= image_tag 'https://via.placeholder.com/150', class: 'ui circular image' %>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="ui labeled button col-auto mt-3">
+            <div class="ui button blue basic small">
+              <i class="fa-solid fa-whiskey-glass fa-lg"></i> 投稿数
+            </div>
+            <div class="ui basic blue left pointing label">
+              3
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9 my-auto text-center text-lg-start text-muted">
+        <div class="row justify-content-between my-3">
+          <div class="col-lg-auto col-12 fs-3 my-auto">
+            たらこたらたら
+          </div>
+          <%= link_to edit_user_path(@user), class: 'circular ui icon button col-lg-auto col-12 u-set fs-2 me-3 p-3' do %>
+            <i class='icon cog'></i>
+          <% end %>
+        </div>
+        <div class="row my-3">
+          <h4 class="col-lg-auto col-12">
+            <i class="fa-solid fa-wine-bottle"></i>Best Bottle
+          </h4>
+          <div class="col-12 fs-2 fw-bold text-black">
+            "マッカラン　シェリーオーク　12年"
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 rounded shadow bg-white pe-0">
+      <div class="row justify-content-between">
+        <h5 class="col-auto text-white bg-navy py-3">
+          <span class="">〇〇`s Notes</span>
+        </h5>
+        <!-- if節制御する -->
+        <h5 class="col-auto py-3">
+          <%= link_to '　編集　', '#', class:'btn bg-edit text-white rounded-pill hover-target' %>
+          <%= link_to '　削除　', '#', class:'btn bg-delete text-white rounded-pill hover-target ms-1 me-3' %>
+        </h5>
+      </div>
+
+      <div class="row text-center text-muted justify-content-center my-4">
+        <div class="col-5 border-end border-2">
+          <h6>感じたフレーバー</h6>
+          <h4>バニラ</h4>
+        </div>
+        <div class="col-5">
+          <h6>飲み方</h6>
+          <h4>ハイボール</h4>
+        </div>
+      </div>
+      <div class="row justify-content-center my-3">
+        <div class="ui label large col-auto">
+          <div class="detail ms-0">
+            <i class="beer icon"></i>飲み方
+          </div>
+          ハイボール
+        </div>
+        <div class="ui label large col-auto">
+          <i class="mail icon"></i> 23
+        </div>
+      </div>
+
+      <div class="row justify-content-center my-3">
+        <div class="col-8">
+          アメリカンオーク樽とヨーロピアンシェリー樽で最低12年熟成させ、さらに後熟させたボトル。<br>甘く、フルーティーな味わいで、洋梨やレモンを感じさせる爽やかな香りが特徴です。<br>飲んだ後は、ほのかな甘みが残り、繊細で軽やかな味わいが口いっぱいに広がります。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
@@ -25,3 +122,4 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+-->

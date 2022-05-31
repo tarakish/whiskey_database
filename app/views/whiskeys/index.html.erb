@@ -5,7 +5,7 @@
       <span class="fs-3">〜ウイスキー一覧〜</span>
     </h1>
   </div>
-  <div class="row justify-content-center my-5">
+  <div class="row justify-content-center mt-5 mb-4">
     <%= search_form_for @q, url: whiskeys_path, class: 'col-auto' do |f| %>
       <div class="input-group">
         <%= f.text_field :name_cont, class: 'form-control-lg border-0 rounded-left search-width', placeholder: 'ウイスキー名を入力' %>
