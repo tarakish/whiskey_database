@@ -8,11 +8,19 @@
 }
 
 .u-set {
-  background-color: darken(#F0ECE3, 1%) !important;
+  background-color: darken(#ded9cf, 1%) !important;
   &:hover {
-    background-color: darken(#F0ECE3, 5%) !important
+    background-color: darken(#ded9cf, 5%) !important
   }
   &:active {
-    background-color: darken(#F0ECE3, 10%) !important
+    background-color: darken(#ded9cf, 10%) !important
   }
+}
+
+.bg-main-darken {
+  background-color: darken(#F0ECE3, 5%) !important;
+}
+
+.bg-gray {
+  background-color: #ded9cf !important;
 }
