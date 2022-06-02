@@ -17,10 +17,10 @@
         </div>
         <div class="row justify-content-center">
           <div class="ui labeled button col-auto mt-3">
-            <div class="ui button blue basic small">
+            <div class="ui button white basic small">
               <i class="fa-solid fa-whiskey-glass fa-lg"></i> 投稿数
             </div>
-            <div class="ui basic blue left pointing label">
+            <div class="ui basic white left pointing label">
               3
             </div>
           </div>
@@ -53,7 +53,7 @@
     <div class="col-lg-9 rounded shadow bg-white pe-0">
       <div class="row justify-content-between">
         <h5 class="col-auto text-white bg-navy py-3">
-          <span class="">〇〇`s Notes</span>
+          <span class="">ウイスキー好き`s Notes</span>
         </h5>
         <!-- if節制御する -->
         <h5 class="col-auto py-3">
@@ -61,38 +61,33 @@
           <%= link_to '　削除　', '#', class:'btn bg-delete text-white rounded-pill hover-target ms-1 me-3' %>
         </h5>
       </div>
-
-      <div class="row text-center text-muted justify-content-center my-4">
-        <div class="col-5 border-end border-2">
-          <h6>感じたフレーバー</h6>
-          <h4>バニラ</h4>
-        </div>
-        <div class="col-5">
-          <h6>飲み方</h6>
-          <h4>ハイボール</h4>
-        </div>
-      </div>
-      <div class="row justify-content-center my-3">
-        <div class="ui label large col-auto">
-          <div class="detail ms-0">
-            <i class="beer icon"></i>飲み方
-          </div>
-          ハイボール
-        </div>
-        <div class="ui label large col-auto">
-          <i class="mail icon"></i> 23
-        </div>
-      </div>
-
       <div class="row justify-content-center my-3">
         <div class="col-8">
-          アメリカンオーク樽とヨーロピアンシェリー樽で最低12年熟成させ、さらに後熟させたボトル。<br>甘く、フルーティーな味わいで、洋梨やレモンを感じさせる爽やかな香りが特徴です。<br>飲んだ後は、ほのかな甘みが残り、繊細で軽やかな味わいが口いっぱいに広がります。
+          <span class="text-muted">飲み方：</span>
+          <div class="ui label basic image large me-3">
+            <%= image_tag 'icon_drink.jpg' %>
+            ハイボール
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center my-3">
+        <div class="col-8">
+          <span class="text-muted">感じたフレーバー：</span>
+          <span class="ui text-white label-woody tag label ms-3 my-1 ">バニラ</span>
+          <span class="ui text-white label-fruity tag label ms-3 my-1 ">ドライフルーツ</span>
+          <span class="ui text-white label-smoky tag label ms-3 my-1 ">ピーティ</span>
+        </div>
+      </div>
+      <div class="row justify-content-center my-3">
+        <div class="col-8">
+          アメリカンオーク樽とヨーロピアンシェリー樽で最低12年熟成させ、さらに後熟させたボトル。<br>
+          甘く、フルーティーな味わいで、洋梨やレモンを感じさせる爽やかな香りが特徴です。<br>
+          飲んだ後は、ほのかな甘みが残り、繊細で軽やかな味わいが口いっぱいに広がります。
         </div>
       </div>
     </div>
   </div>
 </div>
-
 
 <!--
 <p>
