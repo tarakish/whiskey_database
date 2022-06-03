@@ -36,6 +36,6 @@ class User < ApplicationRecord
   enum role: { general: 0, admin: 1 }
 
   def own?(object)
-    id == object.user_id  #「self == comments.user」でオブジェクト同士の比較をするとcommnets.userの部分でSQLを発行してしまうため、こちらのほうがベター。元の形はself.id == object.user_id
+    id == object.user_id
   end
 end
