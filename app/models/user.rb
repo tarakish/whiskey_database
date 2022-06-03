@@ -22,7 +22,7 @@ class User < ApplicationRecord
 
   has_many :tasting_notes
   has_many :bookmarks
-  has_many :users, through: :bookmarks
+  has_many :whiskeys, through: :bookmarks
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
@@ -34,4 +34,8 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   enum role: { general: 0, admin: 1 }
+
+  def own?(object)
+    id == object.user_id  #「self == comments.user」でオブジェクト同士の比較をするとcommnets.userの部分でSQLを発行してしまうため、こちらのほうがベター。元の形はself.id == object.user_id
+  end
 end

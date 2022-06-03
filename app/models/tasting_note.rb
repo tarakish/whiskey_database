@@ -26,6 +26,7 @@
 #  fk_rails_...  (whiskey_id => whiskeys.id)
 #
 class TastingNote < ApplicationRecord
+  belongs_to :whiskey
   belongs_to :user
   belongs_to :drink_way
   belongs_to :flavor
