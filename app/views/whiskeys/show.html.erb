@@ -154,7 +154,6 @@
     <h1 class="col-auto text-muted text-center">
       <em>Tasting Notes</em><br>
       <span class="fs-3">〜ユーザー投稿〜</span><br>
-      <span class="fs-4">（実装予定！表示はイメージです）</span>
     </h1>
   </div>
   <div class="row justify-content-center mt-4">
@@ -163,38 +162,8 @@
   </div>
 </div>
 
-<div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 rounded shadow bg-white pe-0">
-      <div class="row justify-content-between">
-        <h5 class="col-auto text-white bg-navy py-3">
-          <span class="">〇〇`s Notes</span>
-        </h5>
-        <!-- if節制御する -->
-        <h5 class="col-auto py-3">
-          <%= link_to '　編集　', '#', class:'btn bg-edit text-white rounded-pill hover-target' %>
-          <%= link_to '　削除　', '#', class:'btn bg-delete text-white rounded-pill hover-target ms-1 me-3' %>
-        </h5>
-      </div>
-
-      <div class="row text-center text-muted justify-content-center my-4">
-        <div class="col-5 border-end border-2">
-          <h6>感じたフレーバー</h6>
-          <h4>バニラ</h4>
-        </div>
-        <div class="col-5">
-          <h6>飲み方</h6>
-          <h4>ハイボール</h4>
-        </div>
-      </div>
-
-      <div class="row justify-content-center my-3">
-        <div class="col-8">
-          アメリカンオーク樽とヨーロピアンシェリー樽で最低12年熟成させ、さらに後熟させたボトル。<br>甘く、フルーティーな味わいで、洋梨やレモンを感じさせる爽やかな香りが特徴です。<br>飲んだ後は、ほのかな甘みが残り、繊細で軽やかな味わいが口いっぱいに広がります。
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container mb-5">
+  <%= render partial: 'tasting_notes/note', collection: @whiskey.tasting_notes %>
 </div>
 
 <div class="container my-5 pt-3">

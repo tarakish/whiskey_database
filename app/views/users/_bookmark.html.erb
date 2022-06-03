@@ -1,0 +1,8 @@
+<div class="col-lg-3 col-md-4 col-6 text-center bg-white rounded shadow me-4 ui blurring fav-whiskey">
+  <%= link_to whiskey.amazon_link, target: '_blank' do %><%= image_tag whiskey.amazon_image_link, class: 'border-none' %><% end %> 
+  <%= image_tag whiskey.amazon_impression_link, alt: '', size: '1x1', style: 'border:none !important; margin:0px !important' %>
+  <%= link_to whiskey_path(whiskey), class: "ui dimmer text-white simple-a-tag" do %>
+    <h4><%= whiskey.name %></h4>
+    <p>クリックで詳細</p>
+  <% end %>
+</div>

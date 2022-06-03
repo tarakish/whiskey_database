@@ -6,3 +6,7 @@
 $(function(){
   $('.ui.dropdown').dropdown();
 })
+
+$(document).ready(function() {
+  $('.fav-whiskey').dimmer({on: 'hover'});
+});

@@ -39,6 +39,7 @@ class Whiskey < ApplicationRecord
   has_many :flavors, through: :whiskey_flavors
   has_many :bookmarks
   has_many :users, through: :bookmarks
+  has_many :tasting_notes
 
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true # , uniqueness: true 必要そうであればコメントアウト＆DBへ定義追加
