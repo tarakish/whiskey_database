@@ -1,0 +1,1 @@
+$('.tabular.menu .item').tab();
