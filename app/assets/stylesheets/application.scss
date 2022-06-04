@@ -151,3 +151,8 @@ body {
 .rounded-right {
   border-radius: 0 50rem 50rem 0 !important;
 }
+
+.field_with_errors {
+  display: inline;
+  @extend .field.error.required; // requiredは改善余地あり
+}

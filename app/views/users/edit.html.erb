@@ -1,6 +1,50 @@
-<h1>Editing User</h1>
+<div class="container mt-5 pt-5">
+  <div class="row justify-content-center">
+    <h1 class="col-auto text-muted fw-bold">
+      アカウント設定
+    </h1>
+  </div>
+</div>
 
+
+
+<div class="container mt-5 mb-5 pb-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-sm-10 col row justify-content-center rounded bg-gray p-5 ui large form error">
+      <%= form_with(model: @user) do |f| %>
+        <% if @user.errors.any? %>
+          <div id="error_explanation" class="ui error message">
+            <ul>
+              <% @user.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        
+        <div class="required field my-4">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+        <div class="required field my-4">
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+        </div>
+        <div class="field my-4">
+          <%= f.label 'Best Bottle' %>
+          <%= f.text_field :bbb %>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <%= f.submit '更新する', class: 'ui button teal col-auto' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!--
 <%= render 'form', user: @user %>
 
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
+-->
