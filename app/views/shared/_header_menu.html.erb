@@ -14,11 +14,11 @@
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link fs-5 fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <%= image_tag 'https://via.placeholder.com/40', class: 'ui circular image' %>
+      <%= image_tag 'default_icon.png', class: 'ui circular image', size: '40' %>
     </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <li><%= link_to 'マイページ', drink_ways_path, class: 'dropdown-item' %></li>
-      <li><%= link_to 'ログアウト', flavors_path, class: 'dropdown-item' %></li>
+      <li><%= link_to 'マイページ', user_path(current_user), class: 'dropdown-item' %></li>
+      <li><%= link_to 'ログアウト', logout_path, method: :post, class: 'dropdown-item' %></li>
     </ul>
   </li>
 </ul>

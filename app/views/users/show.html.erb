@@ -12,7 +12,7 @@
       <div class="col-lg-3 py-3">
         <div class="row justify-content-center">
           <div class="col-auto">
-            <%= image_tag 'https://via.placeholder.com/150', class: 'ui circular image' %>
+            <%= image_tag 'default_icon.png', class: 'ui circular image', size: '150' %>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -91,35 +91,3 @@
 <div class="container mb-5">
   <%= render partial: 'tasting_notes/note', collection: @user.tasting_notes %>
 </div>
-
-
-
-<!--
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Crypted password:</strong>
-  <%= @user.crypted_password %>
-</p>
-
-<p>
-  <strong>Salt:</strong>
-  <%= @user.salt %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Role:</strong>
-  <%= @user.role %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
--->
