@@ -1,6 +1,8 @@
 // Loads all Semantic javascripts
 //= require semantic-ui
 
-$(function() {
-  $('.fav-whiskey').dimmer({on: 'hover'});
+$(document).on("turbolinks:load", () => {
+  $(function() {
+    $('.fav-whiskey').dimmer({on: 'hover'});
+  });
 });

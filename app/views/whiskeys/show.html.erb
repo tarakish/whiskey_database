@@ -62,9 +62,9 @@
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center">
     <% if @whiskey.bookmarked_by?(current_user) %>
-      <%= link_to 'お気に入りを外す', whiskey_bookmarks_path(@whiskey), method: :delete, class: 'ui button' %>
+      <%= link_to '気になる！済', whiskey_bookmarks_path(@whiskey), method: :delete, class: 'ui button' %>
     <% else %>
-      <%= link_to 'お気に入り', whiskey_bookmarks_path(@whiskey), method: :post, class: 'ui button' %>
+      <%= link_to '気になる！', whiskey_bookmarks_path(@whiskey), method: :post, class: 'ui button' %>
     <% end %>
     </h1>
   </div>
