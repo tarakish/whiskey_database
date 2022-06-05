@@ -1,4 +1,5 @@
 class TastingNotesController < ApplicationController
+  skip_before_action :require_login, only: :index
   before_action :set_tasting_note, only: %i[edit update destroy]
 
   def index

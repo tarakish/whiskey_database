@@ -1,4 +1,5 @@
 class WhiskeysController < ApplicationController
+  skip_before_action :require_login, only: %i[index show]
   before_action :set_whiskey, only: %i[show edit update destroy]
   before_action :authorize_whiskey, except: :show
 

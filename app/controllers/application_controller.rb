@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   add_flash_types :success, :info, :warning, :danger
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   before_action :set_search_instance
+  before_action :require_login
 
   private
 
@@ -15,5 +16,9 @@ class ApplicationController < ActionController::Base
 
   def set_search_instance
     @q = Whiskey.ransack(params[:q])
+  end
+
+  def not_authenticated
+    redirect_back_or_to root_path, alert: 'ログインしてください'
   end
 end

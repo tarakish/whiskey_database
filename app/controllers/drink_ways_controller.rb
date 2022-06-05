@@ -1,12 +1,11 @@
 class DrinkWaysController < ApplicationController
-  before_action :set_drink_way, only: %i[show edit update destroy]
+  skip_before_action :require_login, only: :index
+  before_action :set_drink_way, only: %i[edit update destroy]
   before_action :authorize_drink_way
 
   def index
     @drink_ways = DrinkWay.eager_load(image_attachment: :blob).order(:id)
   end
-
-  def show; end
 
   def new
     @drink_way = DrinkWay.new
