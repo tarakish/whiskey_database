@@ -1,6 +1,6 @@
 class SnacksController < ApplicationController
   skip_before_action :require_login, only: :index
-  before_action :set_snack, only: %i[show edit update destroy]
+  before_action :set_snack, only: %i[edit update destroy]
   before_action :authorize_snack
 
   def index

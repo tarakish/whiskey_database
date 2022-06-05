@@ -18,7 +18,7 @@ class TastingNotesController < ApplicationController
     @tasting_note =
       current_user.tasting_notes.build(tasting_note_params.merge(whiskey_id: @whiskey.id))
     if @tasting_note.save
-      redirect_to whiskey_path(@whiskey), notice: 'Tasting note was successfully created.'
+      redirect_to whiskey_path(@whiskey), notice: 'テイスティングノートを投稿しました'
     else
       render :new
     end
@@ -26,7 +26,7 @@ class TastingNotesController < ApplicationController
 
   def update
     if @tasting_note.update(tasting_note_params)
-      redirect_to tasting_note_url(@tasting_note), notice: 'Tasting note was successfully updated.'
+      redirect_to tasting_note_url(@tasting_note), notice: 'テイスティングノートを更新しました'
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class TastingNotesController < ApplicationController
 
   def destroy
     @tasting_note.destroy
-    redirect_to tasting_notes_url, notice: 'Tasting note was successfully destroyed.'
+    redirect_to tasting_notes_url, notice: 'テイスティングノートを投稿しました'
   end
 
   private
