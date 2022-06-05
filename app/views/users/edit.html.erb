@@ -38,10 +38,6 @@
                 <label for="user_name"><i class="user outline icon"></i>ニックネーム</label>
                 <%= f.text_field :name, placeholder: 'ニックネームを入力' %>
               </div>
-              <div class="required field my-4">
-                <label for="user_email"><i class="envelope outline icon"></i>メールアドレス</label>
-                <%= f.email_field :email, placeholder: 'メールアドレスを入力' %>
-              </div>
               <div class="field my-4">
                 <label for="user_best_bottle"><i class="fa-solid fa-wine-bottle"></i>Best Bottle</label>
                 <%= f.text_field :best_bottle, placeholder: 'お気に入りのウイスキーを入力' %>
@@ -55,7 +51,7 @@
               </div>
             <% end %>
             <div class="col-12 text-center mt-5">
-              <%= link_to 'マイページに戻る', user_path(@user), class: 'col-auto simple-a-tag' %>
+              <%= link_to 'マイページに戻る', user_path(@user), class: 'col-auto simple-a-tag hover-target' %>
             </div>
           </div>
         </div>
@@ -64,7 +60,6 @@
             <div class="col-12">
               <h3 class="text-decoration-underline mb-3">退会時に削除される情報</h3>
               <h6>・ニックネーム</h6>
-              <h6>・メールアドレス</h6>
               <h6>・プロフィール画像</h6>
               <h6>・連携SNS認証情報</h6>
               <h6>・気になる！ウイスキー履歴</h6>
@@ -75,7 +70,7 @@
               <%= link_to '同意して退会', user_path(@user), class: 'fs-5 simple-a-tag hover-target', method: :delete, data: { confirm: '本当に退会しますか?' } %>
             </div>
             <div class="col-12 mt-5 text-center">
-              <%= link_to 'マイページに戻る', user_path(@user), class: 'simple-a-tag' %>
+              <%= link_to 'マイページに戻る', user_path(@user), class: 'simple-a-tag hover-target' %>
             </div>
           </div>
         </div>
@@ -84,9 +79,5 @@
   </div>
 </div>
 
-<!--
-<%= render 'form', user: @user %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
--->
+<script async type="text/javascript" src="https://collectcdn.com/embed.js"></script>
+<iframe src="https://links.collect.chat/629c77ad9f8d485e3467cb04"  width="100%" height="600" frameBorder="0"></iframe>

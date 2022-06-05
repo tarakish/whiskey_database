@@ -119,7 +119,7 @@ Rails.application.config.sorcery.configure do |config|
   config.twitter.secret = Rails.application.credentials.dig(:twitter, :secret_key)
   config.twitter.callback_url = Settings.sorcery[:twitter_callback_url]
   config.twitter.user_info_path = '/1.1/account/verify_credentials.json?include_email=true'
-  config.twitter.user_info_mapping = { email: 'email' }
+  # config.twitter.user_info_mapping = { email: 'email' }
   #
   # config.facebook.key = ""
   # config.facebook.secret = ""
@@ -162,8 +162,8 @@ Rails.application.config.sorcery.configure do |config|
   config.google.key = Rails.application.credentials.dig(:google, :client_id)
   config.google.secret = Rails.application.credentials.dig(:google, :client_secret)
   config.google.callback_url = Settings.sorcery[:google_callback_url]
-  config.google.user_info_mapping = { email: 'email' }
-  config.google.scope = 'https://www.googleapis.com/auth/userinfo.email'
+  # config.google.user_info_mapping = { email: 'email' }
+  # config.google.scope = 'https://www.googleapis.com/auth/userinfo.email'
 
   # For Microsoft Graph, the key will be your App ID, and the secret will be your app password/public key.
   # The callback URL "can't contain a query string or invalid special characters"

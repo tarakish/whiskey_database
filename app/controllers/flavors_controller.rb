@@ -1,5 +1,6 @@
 class FlavorsController < ApplicationController
-  before_action :set_flavor, only: %i[show edit update destroy]
+  skip_before_action :require_login, only: :index
+  before_action :set_flavor, only: %i[edit update destroy]
   before_action :authorize_flavor
 
   def index
@@ -12,8 +13,6 @@ class FlavorsController < ApplicationController
     # for admin
     @flavors = Flavor.order(:id)
   end
-
-  def show; end
 
   def new
     @flavor = Flavor.new

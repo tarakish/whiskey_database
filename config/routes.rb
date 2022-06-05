@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   root 'staticpages#top'
 
-  resources :drink_ways
-  resources :flavors
-  resources :snacks
-  resources :users
+  resources :drink_ways, except: :show
+  resources :flavors, except: :show
+  resources :snacks, except: :show
+  resources :users, except: %i[new create]
   resources :whiskeys do
     resources :tasting_notes, shallow: true, except: %i[index show]
     resource :bookmarks, only: %i[create destroy]

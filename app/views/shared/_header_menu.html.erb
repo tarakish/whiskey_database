@@ -1,0 +1,24 @@
+<ul class="navbar-nav">
+  <li class="nav-item me-2 my-auto">
+    <%= link_to 'ウイスキー', whiskeys_path, class: 'nav-link fs-5 fw-bold' %>
+  </li>
+  <li class="nav-item dropdown my-auto">
+    <a class="nav-link dropdown-toggle fs-5 fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      もっと楽しむ
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><%= link_to '飲み方一覧', drink_ways_path, class: 'dropdown-item' %></li>
+      <li><%= link_to 'おつまみ一覧', snacks_path, class: 'dropdown-item' %></li>
+      <li><%= link_to 'フレーバー一覧', flavors_path, class: 'dropdown-item' %></li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link fs-5 fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <%= image_tag 'default_icon.png', class: 'ui circular image', size: '40' %>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><%= link_to 'マイページ', user_path(current_user), class: 'dropdown-item' %></li>
+      <li><%= link_to 'ログアウト', logout_path, method: :post, class: 'dropdown-item' %></li>
+    </ul>
+  </li>
+</ul>

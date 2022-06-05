@@ -1,12 +1,11 @@
 class SnacksController < ApplicationController
-  before_action :set_snack, only: %i[show edit update destroy]
+  skip_before_action :require_login, only: :index
+  before_action :set_snack, only: %i[edit update destroy]
   before_action :authorize_snack
 
   def index
     @snacks = Snack.eager_load(image_attachment: :blob).order(:id)
   end
-
-  def show; end
 
   def new
     @snack = Snack.new
