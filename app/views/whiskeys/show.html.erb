@@ -1,13 +1,5 @@
 <!-- 主情報 -->
-<div class="container mt-5 pt-5">
-  <div class="row justify-content-center">
-    <h1 class="col-auto text-muted">
-
-    </h1>
-  </div>
-</div>
-
-<div class="container mt-5" data-aos="zoom-in">
+<div class="container mt-5 pt-5" data-aos="zoom-in">
   <div class="row justify-content-center">
     <div class="col-lg-9 col-auto row justify-content-center text-center rounded shadow bg-white">
       <div class="col-lg-4 text-center">
@@ -30,18 +22,41 @@
         </div>
       </div>
       <div class="col-lg-7 text-lg-start ms-lg-5 my-5">
-        <h5 class="text-muted mb-3">
-          <%= @whiskey.region %>
-        </h5>
-        <h1 class="my-4">
-          <%= @whiskey.name %>
-        </h1>
-        <h6 class="mb-5 mt-4">
-          <%= render partial: 'flavor', collection: @whiskey.flavors %>
-        </h6>
-        <h6 class="spacing-text mx-lg-auto m-5">
-          <%= simple_format(h(@whiskey.description)) %>
-        </h6>
+        <div class="row justify-content-lg-between justify-content-center mb-3">
+          <h5 class="col-lg-auto col-12 text-muted my-auto order-lg-0 order-1">
+            <%= @whiskey.region %>
+          </h5>
+          <span class="col-auto text-muted text-center mb-lg-auto mb-5 order-lg-1 order-0">
+            <% if @whiskey.bookmarked_by?(current_user) %>
+              <%= link_to whiskey_bookmarks_path(@whiskey), method: :delete, class: 'ui button orange small' do %>
+                <i class="fa-solid fa-wine-glass fa-lg"></i>　気になる！
+              <% end %>
+            <% else %>
+              <%= link_to whiskey_bookmarks_path(@whiskey), method: :post, class: 'ui button orange small basic' do %>
+                <i class="fa-solid fa-wine-glass-empty fa-lg"></i>　気になる！
+              <% end %>
+            <% end %>
+          </span>
+        </div>
+      
+        <div class="row justify-content-lg-start justify-content-center">
+          <h1 class="col-auto my-4">
+            <%= @whiskey.name %>
+          </h1>
+        </div>
+
+        <div class="row justify-content-lg-start justify-content-center">
+          <h6 class="mt-4">
+            <%= render partial: 'flavor', collection: @whiskey.flavors %>
+          </h6>
+        </div>
+
+        <div class="row justify-content-lg-start justify-content-center">
+          <h6 class="spacing-text mx-lg-auto m-5">
+            <%= simple_format(h(@whiskey.description)) %>
+          </h6>
+        </div>
+
         <h4 class="row text-muted my-auto justify-content-center justify-content-lg-start">
           <div class="col-auto pt-3 my-xl-0 my-3">
             <span class="h5 mx-auto">希望小売価格 ¥</span><%= @whiskey.price.to_s(:delimited) %>
@@ -57,21 +72,7 @@
   </div>
 </div>
 
-<!-- 暫定 -->
-<div class="container mt-15">
-  <div class="row justify-content-center">
-    <h1 class="col-auto text-muted text-center">
-    <% if @whiskey.bookmarked_by?(current_user) %>
-      <%= link_to '気になる！済', whiskey_bookmarks_path(@whiskey), method: :delete, class: 'ui button' %>
-    <% else %>
-      <%= link_to '気になる！', whiskey_bookmarks_path(@whiskey), method: :post, class: 'ui button' %>
-    <% end %>
-    </h1>
-  </div>
-</div>
-
-
-<div class="container mt-15">
+<div class="container mt-5 pt-5">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center">
       <em>Pairing</em><br>
