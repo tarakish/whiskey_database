@@ -49,11 +49,15 @@ class FlavorsController < ApplicationController
     @flavor = Flavor.find(params[:id])
   end
 
-  def flavor_params
-    params.require(:flavor).permit(:name, :detail, :group)
-  end
-
   def authorize_flavor
     authorize Flavor, policy_class: ApplicationPolicy
+  end
+
+  def flavor_params
+    params.require(:flavor).permit(
+      :name,
+      :detail,
+      :group
+    )
   end
 end

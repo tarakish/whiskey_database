@@ -21,10 +21,15 @@
   background-color: darken(#F0ECE3, 5%) !important;
 }
 
-.bg-gray {
-  background-color: #ded9cf !important;
-}
-
 .ui.basic.white.label {
   background: none #ded9cf !important;
+}
+
+.nav-link.border-0 {
+  background-color: #F0ECE3 !important;
+}
+
+.nav-link.border-0.active {
+  background-color: #ded9cf !important;
+  font-weight: bold;
 }

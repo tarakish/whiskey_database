@@ -43,6 +43,10 @@ class TastingNotesController < ApplicationController
   end
 
   def tasting_note_params
-    params.require(:tasting_note).permit(:comment, :drink_way_id, :flavor_id)
+    params.require(:tasting_note).permit(
+      :comment,
+      :drink_way_id,
+      :flavor_id
+    )
   end
 end
