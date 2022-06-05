@@ -45,14 +45,25 @@ class WhiskeysController < ApplicationController
     @whiskey = Whiskey.find(params[:id])
   end
 
-  def whiskey_params
-    params.require(:whiskey).permit(:name, :description, :mouth_feel, :region,
-                                    :flavor_strength, :rarity, :price,
-                                    :amazon_link, :amazon_image_link, :amazon_impression_link,
-                                    :drink_way_id, :snack_id, flavor_ids: [])
-  end
-
   def authorize_whiskey
     authorize Whiskey, policy_class: ApplicationPolicy
+  end
+
+  def whiskey_params
+    params.require(:whiskey).permit(
+      :name,
+      :description,
+      :mouth_feel,
+      :region,
+      :flavor_strength,
+      :rarity,
+      :price,
+      :amazon_link,
+      :amazon_image_link,
+      :amazon_impression_link,
+      :drink_way_id,
+      :snack_id,
+      flavor_ids: []
+    )
   end
 end

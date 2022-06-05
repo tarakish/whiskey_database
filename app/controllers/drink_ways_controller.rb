@@ -42,11 +42,17 @@ class DrinkWaysController < ApplicationController
     @drink_way = DrinkWay.find(params[:id])
   end
 
-  def drink_way_params
-    params.require(:drink_way).permit(:name, :english_name, :how_to_make_url, :explanation, :image)
-  end
-
   def authorize_drink_way
     authorize DrinkWay, policy_class: ApplicationPolicy
+  end
+
+  def drink_way_params
+    params.require(:drink_way).permit(
+      :name,
+      :english_name,
+      :how_to_make_url,
+      :explanation,
+      :image
+    )
   end
 end

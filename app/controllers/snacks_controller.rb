@@ -43,11 +43,16 @@ class SnacksController < ApplicationController
     @snack = Snack.find(params[:id])
   end
 
-  def snack_params
-    params.require(:snack).permit(:name, :english_name, :description, :image)
-  end
-
   def authorize_snack
     authorize Snack, policy_class: ApplicationPolicy
+  end
+
+  def snack_params
+    params.require(:snack).permit(
+      :name,
+      :english_name,
+      :description,
+      :image
+    )
   end
 end

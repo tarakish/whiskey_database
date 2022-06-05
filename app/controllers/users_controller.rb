@@ -44,15 +44,22 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def user_params
-    params.require(:user).permit(:name, :email, :best_bottle, :password, :password_confirmation, :role)
-  end
-
   def authorize_user
     authorize User
   end
 
   def authorize_self
     authorize @user
+  end
+
+  def user_params
+    params.require(:user).permit(
+      :name,
+      :email,
+      :best_bottle,
+      :password,
+      :password_confirmation,
+      :role
+    )
   end
 end
