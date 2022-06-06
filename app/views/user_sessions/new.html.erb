@@ -15,13 +15,18 @@
         </div>
       </h3>
       <div class="row justify-content-center mb-3">
-        <%= link_to auth_at_provider_path(provider: :twitter), class: 'col-auto fs-5 ui button twitter' do %>
+        <%= link_to auth_at_provider_path(provider: :twitter), class: 'col-xl-8 col fs-5 ui button twitter' do %>
           <i class="twitter icon"></i> Twitterで登録／ログイン
         <% end %>
       </div>
       <div class="row justify-content-center mb-3">
-        <%= link_to auth_at_provider_path(provider: :google), class: 'col-auto fs-5 ui button google plus' do %>
+        <%= link_to auth_at_provider_path(provider: :google), class: 'col-xl-8 fs-5 col ui button google plus' do %>
           <i class="google icon"></i> Googleで登録／ログイン
+        <% end %>
+      </div>
+      <div class="row justify-content-center mb-3">
+        <%= link_to auth_at_provider_path(provider: :line), class: 'col-xl-8 col fs-5 ui button green' do %>
+          <i class="fa-brands fa-line fa-lg hover-target"></i>　LINEで登録／ログイン
         <% end %>
       </div>
       <!--
