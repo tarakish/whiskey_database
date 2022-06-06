@@ -19,6 +19,6 @@ class ApplicationController < ActionController::Base
   end
 
   def not_authenticated
-    redirect_back_or_to root_path, alert: 'ログインしてください'
+    redirect_to login_path, alert: 'ログインしてください'
   end
 end

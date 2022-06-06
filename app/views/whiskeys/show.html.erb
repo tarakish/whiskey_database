@@ -27,7 +27,7 @@
             <%= @whiskey.region %>
           </h5>
           <span class="col-auto text-muted text-center mb-lg-auto mb-5 order-lg-1 order-0">
-            <%= render 'bookmark_button', whiskey: @whiskey %>
+            <%= render 'bookmark_button', whiskey: @whiskey if logged_in? %>
           </span>
         </div>
       
