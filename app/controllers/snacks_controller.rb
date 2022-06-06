@@ -19,7 +19,7 @@ class SnacksController < ApplicationController
     if @snack.save
       redirect_to snack_url(@snack), notice: 'Snack was successfully created.'
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
@@ -27,7 +27,7 @@ class SnacksController < ApplicationController
     if @snack.update(snack_params)
       redirect_to snack_url(@snack), notice: 'Snack was successfully updated.'
     else
-      render :edit, status: :unprocessable_entity
+      render :edit
     end
   end
 

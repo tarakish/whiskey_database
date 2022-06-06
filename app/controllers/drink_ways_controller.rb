@@ -18,7 +18,7 @@ class DrinkWaysController < ApplicationController
     if @drink_way.save
       redirect_to drink_way_url(@drink_way), notice: 'Drink way was successfully created.'
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
