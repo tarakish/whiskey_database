@@ -223,7 +223,7 @@ Rails.application.config.sorcery.configure do |config|
   config.line.key = Rails.application.credentials.dig(:line, :channel_id)
   config.line.secret = Rails.application.credentials.dig(:line, :channel_secret)
   config.line.callback_url = Settings.sorcery[:line_callback_url]
-  config.line.scope = "profile"
+  config.line.scope = 'profile'
 
   # For information about Discord API
   # https://discordapp.com/developers/docs/topics/oauth2
