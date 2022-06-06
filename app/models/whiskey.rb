@@ -61,6 +61,6 @@ class Whiskey < ApplicationRecord
   enum rarity: { rare: 0, a_little_rare: 1, stable_supplyed: 2 }
 
   def bookmarked_by?(user)
-    users.include?(user)
+    users.pluck(:id).include?(user.id)
   end
 end

@@ -1,5 +1,5 @@
 <!-- 主情報 -->
-<div class="container mt-5 pt-5" data-aos="zoom-in">
+<div class="container mt-5 pt-5">
   <div class="row justify-content-center">
     <div class="col-lg-9 col-auto row justify-content-center text-center rounded shadow bg-white">
       <div class="col-lg-4 text-center">
@@ -27,15 +27,7 @@
             <%= @whiskey.region %>
           </h5>
           <span class="col-auto text-muted text-center mb-lg-auto mb-5 order-lg-1 order-0">
-            <% if @whiskey.bookmarked_by?(current_user) %>
-              <%= link_to whiskey_bookmarks_path(@whiskey), method: :delete, class: 'ui button orange small' do %>
-                <i class="fa-solid fa-wine-glass fa-lg"></i>　気になる！
-              <% end %>
-            <% else %>
-              <%= link_to whiskey_bookmarks_path(@whiskey), method: :post, class: 'ui button orange small basic' do %>
-                <i class="fa-solid fa-wine-glass-empty fa-lg"></i>　気になる！
-              <% end %>
-            <% end %>
+            <%= render 'bookmark_button', whiskey: @whiskey %>
           </span>
         </div>
       
