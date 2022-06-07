@@ -1,24 +1,20 @@
 <div class="container my-5 pt-3">
   <div class="row justify-content-center">
-    <button type="button" class="btn fs-4 bg-navy transform-y-sm f-yellow hover-target-reverse col-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      　投稿する　
+    <button type="button" class="ui button orange fs-5 col-auto" data-bs-toggle="modal" data-bs-target="#newTastingNote">
+      　投稿する！　
     </button>
   </div>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered ">
+<div class="modal fade" id="newTastingNote" tabindex="-1" aria-labelledby="newTastingNoteLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+      <div class="modal-header text-white bg-navy">
+        <h5 class="modal-title" id="newTastingNoteLabel">テイスティングノートを記録する</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <%= render 'tasting_notes/form', { whiskey: whiskey, tasting_note: tasting_note } %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-body bg-main">
+        <%= render 'tasting_notes/form', { whiskey: whiskey, tasting_note: tasting_note, action: '投稿' } %>
       </div>
     </div>
   </div>

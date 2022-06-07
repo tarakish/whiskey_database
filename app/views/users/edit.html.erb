@@ -67,7 +67,7 @@
               <h6>・投稿したテイスティングノート</h6>
             </div>
             <div class="col-auto mt-5">
-              <%= link_to '同意して退会', user_path(@user), class: 'fs-5 simple-a-tag hover-target', method: :delete, data: { confirm: '本当に退会しますか?' } %>
+              <%= link_to '同意して退会', user_path(@user), class: 'fs-5 simple-a-tag hover-target', method: :delete, data: { confirm: '本当に退会しますか?　※この操作は取り消せません。' } %>
             </div>
             <div class="col-12 mt-5 text-center">
               <%= link_to 'マイページに戻る', user_path(@user), class: 'simple-a-tag hover-target' %>
