@@ -3,8 +3,6 @@
     <%= form_with model: [whiskey, tasting_note] do |form| %>
       <% if tasting_note.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(tasting_note.errors.count, "error") %> prohibited this tasting_note from being saved:</h2>
-
           <ul>
             <% tasting_note.errors.each do |error| %>
               <li><%= error.full_message %></li>
@@ -15,7 +13,7 @@
 
       <div class="field">
         <%= form.label :comment %>
-        <%= form.text_field :comment %>
+        <%= form.text_area :comment, required: true %>
       </div>
 
       <div class="form-group">
