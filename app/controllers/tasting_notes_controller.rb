@@ -34,7 +34,7 @@ class TastingNotesController < ApplicationController
 
   def destroy
     @tasting_note.destroy
-    redirect_to tasting_notes_url, notice: 'テイスティングノートを投稿しました'
+    redirect_to whiskey_url(@tasting_note.whiskey_id), notice: 'テイスティングノートを削除しました'
   end
 
   private

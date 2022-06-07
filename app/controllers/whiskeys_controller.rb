@@ -10,6 +10,8 @@ class WhiskeysController < ApplicationController
 
   def show
     authorize Whiskey
+    @tasting_notes = @whiskey.tasting_notes.order(id: :desc)
+    @tasting_note = current_user.tasting_notes.build if current_user
   end
 
   def new

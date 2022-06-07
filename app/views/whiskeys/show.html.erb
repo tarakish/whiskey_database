@@ -156,14 +156,13 @@
 </div>
 
 <div class="container mb-5">
-  <%= render partial: 'tasting_notes/note', collection: @whiskey.tasting_notes %>
+  <%= render partial: 'tasting_notes/note', collection: @tasting_notes %>
 </div>
 
-<div class="container my-5 pt-3">
-  <div class="row justify-content-center">
-    <%= link_to '　投稿する　', new_whiskey_tasting_note_path(@whiskey), class: 'btn fs-4 bg-navy transform-y-sm f-yellow hover-target-reverse col-auto' %>
-  </div>
-</div>
+<!-- 投稿フォーム -->
+<% if current_user %>
+  <%= render 'create_tasting_note', { tasting_note: @tasting_note, whiskey: @whiskey } %>
+<% end %>
 
 <!-- レコメンド-->
 <div class="container mt-15">
@@ -177,5 +176,11 @@
   <div class="row justify-content-center mt-4">
     <div class="col-lg-9 col-6 ui divider border-2">
     </div>
+  </div>
+</div>
+
+<div class="container my-5 pt-3">
+  <div class="row justify-content-center">
+    <%= link_to '　投稿する　', new_whiskey_tasting_note_path(@whiskey), class: 'btn fs-4 bg-navy transform-y-sm f-yellow hover-target-reverse col-auto'%>
   </div>
 </div>
