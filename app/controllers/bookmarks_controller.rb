@@ -6,8 +6,8 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    bookmarks = current_user.bookmarks.find_by!(whiskey_id: @whiskey.id)
-    bookmarks.destroy!
+    bookmark = current_user.bookmarks.find_by!(whiskey_id: @whiskey.id)
+    bookmark.destroy!
   end
 
   private

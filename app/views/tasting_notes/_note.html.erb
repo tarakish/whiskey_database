@@ -27,7 +27,7 @@
           <button type="button" class="btn bg-edit text-white rounded-pill hover-target" data-bs-toggle="modal" data-bs-target="#formEdit-<%= note.id %>">
             　編集　
           </button>
-          <%= link_to '　削除　', tasting_note_path(note), class:'btn bg-delete text-white rounded-pill hover-target ms-1 me-3', method: :delete, data: { confirm: '本当に削除しますか?' } %>
+          <%= link_to '　削除　', tasting_note_path(note), class:'btn bg-delete text-white rounded-pill hover-target ms-1 me-3', method: :delete, data: { confirm: '本当に削除しますか?　※この操作は取り消せません。' } %>
         <% end %>
       </h5>
     </div>

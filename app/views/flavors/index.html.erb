@@ -11,12 +11,9 @@
   </div>
 </div>
 
-<%= render partial: 'flavors', locals: { flavors: @fruity_flavors } %>
-<%= render partial: 'flavors', locals: { flavors: @woody_flavors } %>
-<%= render partial: 'flavors', locals: { flavors: @winy_flavors } %>
-<%= render partial: 'flavors', locals: { flavors: @floral_flavors } %>
-<%= render partial: 'flavors', locals: { flavors: @sereal_flavors } %>
-<%= render partial: 'flavors', locals: { flavors: @smoky_flavors } %>
+<% Flavor.groups.keys.each do |key| %>
+  <%= render partial: 'flavors', locals: { flavors: Flavor.where(group: key).order(:id) } %>
+<% end %>
 
 <% if logged_in? && current_user.admin? %>
   <table>

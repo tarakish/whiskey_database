@@ -10,7 +10,7 @@ class WhiskeysController < ApplicationController
 
   def show
     authorize Whiskey
-    @tasting_notes = @whiskey.tasting_notes.order(id: :desc)
+    @tasting_notes = @whiskey.tasting_notes.preload(:user).eager_load(:drink_way).order(id: :desc)
     @tasting_note = current_user.tasting_notes.build if current_user
   end
 

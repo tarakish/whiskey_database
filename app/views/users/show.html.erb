@@ -21,7 +21,7 @@
               <i class="fa-solid fa-whiskey-glass fa-lg"></i> 投稿数
             </div>
             <div class="ui basic white left pointing label">
-              <%= @user.tasting_notes.length %>
+              <%= @tasting_notes.length %>
             </div>
           </div>
         </div>
@@ -91,5 +91,5 @@
 </div>
 
 <div class="container mb-5">
-  <%= render partial: 'tasting_notes/note', collection: @user.tasting_notes %>
+  <%= render partial: 'tasting_notes/note', collection: @tasting_notes %>
 </div>

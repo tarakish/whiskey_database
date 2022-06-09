@@ -4,14 +4,8 @@ class FlavorsController < ApplicationController
   before_action :authorize_flavor
 
   def index
-    @woody_flavors = Flavor.woody.order(:id)
-    @winy_flavors = Flavor.winy.order(:id)
-    @fruity_flavors = Flavor.fruity.order(:id)
-    @floral_flavors = Flavor.floral.order(:id)
-    @sereal_flavors = Flavor.sereal.order(:id)
-    @smoky_flavors = Flavor.smoky.order(:id)
-    # for admin
     @flavors = Flavor.order(:id)
+    # @flavors = Flavor.groups.keys.map {|key| {key => Flavor.where(group: key).order(:id)}}
   end
 
   def new

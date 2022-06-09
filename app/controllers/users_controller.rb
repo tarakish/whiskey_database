@@ -8,7 +8,9 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show; end
+  def show
+    @tasting_notes = @user.tasting_notes.preload(:whiskey, :drink_way)
+  end
 
   def edit; end
 
