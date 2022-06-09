@@ -1,32 +1,28 @@
-<%= form_with model: [whiskey, tasting_note] do |form| %>
-  <% if tasting_note.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(tasting_note.errors.count, "error") %> prohibited this tasting_note from being saved:</h2>
-
-      <ul>
-        <% tasting_note.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+<div class="modal-dialog">
+  <div class="modal-content border-0 bg-main container-fluid">
+    <div class="row ui large form">
+      <%= form_with model: [whiskey, tasting_note] do |form| %>
+        <div class="required field mb-4">
+          <label for="tasting_note_drink_way_id_name"><i class="fa-solid fa-whiskey-glass text-muted"></i> 飲み方</label>
+          <%= form.collection_select :drink_way_id, DrinkWay.all, :id, :name, { prompt: '飲み方を選択' }, { class: 'ui dropdown search', required: true } %>
+        </div>
+        <div class="field mb-4">
+          <label for="tasting_note_flavor_id_name"><i class="fa-brands fa-medapps text-muted"></i> 感じたフレーバー</label>
+          <%= form.collection_select :flavor_id, Flavor.all, :id, :name, { prompt: 'フレーバーを選択' }, { class: 'ui dropdown search', required: true } %>
+        </div>
+        <div class="required field mb-4">
+          <label for="tasting_note_comment"><i class="fa-solid fa-pen-fancy text-muted"></i> 感想</label>
+          <%= form.text_area :comment, required: true, rows: '4', placeholder: '感想を入力（例:合わせたおつまみ、飲んだ場所など）' %>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <%= form.submit "　#{action}　", class: 'col-auto ui button large orange'%>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <button type="button" class="col-auto ui button tiny" data-bs-dismiss="modal">キャンセル</button>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_field :comment %>
   </div>
+</div>
 
-  <div class="form-group">
-    <%= form.label :flavor_id %>
-    <%= form.collection_select :flavor_id, Flavor.all, :id, :name, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :drink_way_id %>
-    <%= form.collection_select :drink_way_id, DrinkWay.all, :id, :name, class: 'form-control' %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<script>$('.ui.dropdown').dropdown();</script>

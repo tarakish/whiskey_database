@@ -9,16 +9,25 @@
 <% end %>
 
 <div class="row justify-content-center">
-  <div class="col-lg-9 rounded shadow bg-white pe-0">
+  <div class="col-lg-9 rounded shadow bg-white pe-0 mb-5">
     <div class="row justify-content-sm-between">
-      <%= link_to user_path(note.user), class: 'col-auto text-white bg-navy py-3 simple-a-tag fs-5 hover-target-reverse' do %>
-        <%= image_tag 'default_icon.png', class: 'ui avatar image' %>
-        <%= note.user.name %>`s Note
+      <% if note.user %>
+        <%= link_to user_path(note.user), class: 'col-auto text-white bg-navy py-3 simple-a-tag fs-5 hover-target-reverse' do %>
+          <%= image_tag 'default_icon.png', class: 'ui avatar image' %>
+          <%= note.user.name %>`s Note
+        <% end %>
+      <% else %>
+        <div class='col-auto text-white bg-navy py-3 fs-5'>
+          <%= image_tag 'default_icon.png', class: 'ui avatar image' %>
+          退会済みユーザー's Note
+        </div>
       <% end %>
       <h5 class="col-sm-auto col-12 py-3 text-center">
-        <% if logged_in? && current_user.own?(note) %>
-          <%= link_to '　編集　', edit_tasting_note_path(note), class:'btn bg-edit text-white rounded-pill hover-target' %>
-          <%= link_to '　削除　', tasting_note_path(note), class:'btn bg-delete text-white rounded-pill hover-target ms-1 me-3', method: :delete, data: { confirm: '本当に削除しますか?' } %>
+        <% if logged_in? && note.written_by?(current_user) %>
+          <button type="button" class="btn bg-edit text-white rounded-pill hover-target" data-bs-toggle="modal" data-bs-target="#formEdit-<%= note.id %>">
+            　編集　
+          </button>
+          <%= link_to '　削除　', tasting_note_path(note), class:'btn bg-delete text-white rounded-pill hover-target ms-1 me-3', method: :delete, data: { confirm: '本当に削除しますか?　※この操作は取り消せません。' } %>
         <% end %>
       </h5>
     </div>
@@ -35,14 +44,27 @@
       <div class="col-8">
         <span class="text-muted">感じたフレーバー：</span>
         <span class="d-md-none"><br></span>
-        <span class="ui text-white label-woody tag label ms-3 my-1">バニラ</span>
-        <span class="ui text-white label-fruity tag label ms-3 my-1">ドライフルーツ</span>
-        <span class="ui text-white label-smoky tag label ms-3 my-1">ピーティ</span>
+        <span class="ui text-white label-<%= note.flavor.group %> tag label ms-3 my-1"><%= note.flavor.name %></span>
       </div>
     </div>
     <div class="row justify-content-center my-3">
       <div class="col-lg-8 col-10">
         <%= simple_format(h(note.comment)) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="formEdit-<%= note.id %>" tabindex="-1" aria-labelledby="formEdit-<%= note.id %>Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header text-white bg-navy">
+        <h5 class="modal-title" id="formEdit-<%= note.id %>Label">テイスティングノートの編集</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-main">
+        <%= render 'tasting_notes/form', { whiskey: nil, tasting_note: note, action: '更新' } %>
       </div>
     </div>
   </div>

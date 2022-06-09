@@ -21,7 +21,7 @@
               <i class="fa-solid fa-whiskey-glass fa-lg"></i> 投稿数
             </div>
             <div class="ui basic white left pointing label">
-              <%= @user.tasting_notes.length %>
+              <%= @tasting_notes.length %>
             </div>
           </div>
         </div>
@@ -31,8 +31,10 @@
           <div class="col-lg-auto col-12 fs-3 my-auto">
             <%= @user.name %>
           </div>
-          <%= link_to edit_user_path(@user), class: 'circular ui icon button col-lg-auto col-12 u-set fs-2 me-3 p-3' do %>
-            <i class='icon cog'></i>
+          <% if current_user == @user %>
+            <%= link_to edit_user_path(@user), class: 'circular ui icon button col-lg-auto col-12 u-set fs-2 me-3 p-3' do %>
+              <i class='icon cog'></i>
+            <% end %>
           <% end %>
         </div>
         <div class="row my-3 pt-3">
@@ -89,5 +91,5 @@
 </div>
 
 <div class="container mb-5">
-  <%= render partial: 'tasting_notes/note', collection: @user.tasting_notes %>
+  <%= render partial: 'tasting_notes/note', collection: @tasting_notes %>
 </div>

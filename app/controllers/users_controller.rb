@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :require_login, only: :show
   before_action :set_user, only: %i[show edit update destroy]
   before_action :authorize_user, only: %i[index show]
   before_action :authorize_self, only: %i[edit update destroy]
@@ -7,7 +8,9 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show; end
+  def show
+    @tasting_notes = @user.tasting_notes.preload(:whiskey, :drink_way, :flavor)
+  end
 
   def edit; end
 

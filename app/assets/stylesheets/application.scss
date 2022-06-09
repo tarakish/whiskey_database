@@ -31,6 +31,14 @@ body {
   background-color: #ded9cf !important;
 }
 
+.bg-main {
+  background-color: #F0ECE3 !important;
+}
+
+.bg-glass {
+  background-color: rgba(255, 255, 255, .1) !important;
+}
+
 // border-color
 .bd-main-color {
   border-color: #F0ECE3 !important;
@@ -172,4 +180,8 @@ body {
   .active.item {
     background-color: #ded9cf !important;
   }
+}
+
+.danger {
+  @extend .negative 
 }

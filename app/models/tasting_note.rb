@@ -32,4 +32,8 @@ class TastingNote < ApplicationRecord
   belongs_to :flavor
 
   validates :comment, presence: true
+
+  def written_by?(user)
+    user_id == user.id
+  end
 end
