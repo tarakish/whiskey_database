@@ -4,5 +4,7 @@
 $(document).on("turbolinks:load", () => {
   $(function() {
     $('.fav-whiskey').dimmer({on: 'hover'});
+    
+    $('.ui.dropdown').dropdown();
   });
 });

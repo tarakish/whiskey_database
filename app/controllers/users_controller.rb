@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @tasting_notes = @user.tasting_notes.preload(:whiskey, :drink_way)
+    @tasting_notes = @user.tasting_notes.preload(:whiskey, :drink_way, :flavor)
   end
 
   def edit; end
