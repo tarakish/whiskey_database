@@ -18,9 +18,6 @@ label input[type="checkbox"]:checked + span {
   @media screen and (max-width: 991px) {
     width: 45vw;
   }
-  @media screen and (max-width: 576px) {
-    width: 50vw;
-  }
 }
 
 .bg-d-cream {

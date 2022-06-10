@@ -5,8 +5,8 @@
     <% end %>
   </div>
   <div class="row inner-text ms-lg-3 text-center">
-    <h1 class="fw-bold col-lg-7">カジュアルに楽しむ</h1>
-    <h1 class="fw-bold col-lg-7">ウイスキー情報サービス（コピー募集中）</h1>
+    <h1 class="fw-bold col-lg-7">気張らずに楽しむ</h1>
+    <h1 class="fw-bold col-lg-7">ウイスキー情報サービス</h1>
     <div class="col-lg-7 row justify-content-center my-3">
       <%= search_form_for @q, url: whiskeys_path, class: 'col-auto' do |f| %>
         <%= render 'shared/search_bar', f: f %>
@@ -14,6 +14,9 @@
     </div>
     <div class="col-lg-7 mt-3">
       <%= link_to 'さっそく見に行く', whiskeys_path, class: 'huge ui inverted button basic btn-ani btn-left rounded-pill' %>
+    </div>
+    <div class="row col-lg-7 justify-content-center mt-5 d-lg-none">
+      <%= image_tag 'logo_with_title.webp', class: 'col-6' %>
     </div>
   </div>
 </div>
