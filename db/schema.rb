@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_05_134557) do
+ActiveRecord::Schema.define(version: 2022_06_10_135027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,7 +79,6 @@ ActiveRecord::Schema.define(version: 2022_06_05_134557) do
     t.string "detail", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "group"
     t.index ["name", "detail"], name: "index_flavors_on_name_and_detail", unique: true
   end
 
@@ -135,10 +134,11 @@ ActiveRecord::Schema.define(version: 2022_06_05_134557) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "drink_way_id"
     t.bigint "snack_id"
-    t.string "region", null: false
     t.text "amazon_link", null: false
     t.string "amazon_image_link", null: false
     t.string "amazon_impression_link", null: false
+    t.integer "region", default: 0, null: false
+    t.integer "processing", default: 0, null: false
     t.index ["amazon_image_link"], name: "index_whiskeys_on_amazon_image_link", unique: true
     t.index ["amazon_impression_link"], name: "index_whiskeys_on_amazon_impression_link", unique: true
     t.index ["amazon_link"], name: "index_whiskeys_on_amazon_link", unique: true

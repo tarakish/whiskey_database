@@ -59,6 +59,7 @@ class WhiskeysController < ApplicationController
       :description,
       :mouth_feel,
       :region,
+      :processing,
       :flavor_strength,
       :rarity,
       :price,
