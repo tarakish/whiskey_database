@@ -16,6 +16,7 @@
 #  index_snacks_on_name_and_description  (name,description) UNIQUE
 #
 class Snack < ApplicationRecord
+  mount_uploader :image, ImageUploader
   has_many :whiskeys
 
   validates :name, presence: true, uniqueness: true

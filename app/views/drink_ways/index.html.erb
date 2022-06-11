@@ -34,8 +34,8 @@
           <td><%= drink_way.how_to_make_url %></td>
           <td><%= simple_format(h(drink_way.explanation)) %></td>
           <td>
-            <% if drink_way.image.attached? %>
-              <%= image_tag drink_way.image.variant(resize_to_limit: [100, 100]) %>
+            <% if drink_way.image? %>
+              <%= image_tag drink_way.image.url %>
             <% end %>
           </td>
           <td><%= link_to 'Show', drink_way %></td>

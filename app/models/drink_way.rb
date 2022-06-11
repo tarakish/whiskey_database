@@ -19,6 +19,7 @@
 #  index_drink_ways_on_name             (name) UNIQUE
 #
 class DrinkWay < ApplicationRecord
+  mount_uploader :image, ImageUploader
   has_many :whiskeys
   has_many :tasting_notes
 

@@ -30,8 +30,8 @@
           <td><%= snack.name %></td>
           <td><%= snack.description %></td>
           <td>
-            <% if snack.image.attached? %>
-              <%= image_tag snack.image.variant(resize_to_limit: [100, 100]) %>
+            <% if snack.image? %>
+              <%= image_tag snack.image.url %>
             <% end %>
           </td>
           <td><%= link_to 'Show', snack %></td>
