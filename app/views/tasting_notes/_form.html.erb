@@ -8,7 +8,7 @@
         </div>
         <div class="field mb-4">
           <label for="tasting_note_flavor_id_name"><i class="fa-brands fa-medapps text-muted"></i> 感じたフレーバー</label>
-          <%= form.collection_select :flavor_id, Flavor.all, :id, :name, { prompt: 'フレーバーを選択' }, { class: 'ui dropdown search', required: true } %>
+          <%= form.collection_select :flavor_ids, Flavor.all, :id, :name, { prompt: 'フレーバーを選択' }, { class: 'ui dropdown search', required: true, multiple: true } %>
         </div>
         <div class="required field mb-4">
           <label for="tasting_note_comment"><i class="fa-solid fa-pen-fancy text-muted"></i> 感想</label>

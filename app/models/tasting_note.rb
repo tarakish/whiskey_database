@@ -29,7 +29,8 @@ class TastingNote < ApplicationRecord
   belongs_to :whiskey
   belongs_to :user
   belongs_to :drink_way
-  belongs_to :flavor
+  has_many :tasting_note_flavors
+  has_many :flavors, through: :tasting_note_flavors
 
   validates :comment, presence: true
 

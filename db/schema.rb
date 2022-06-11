@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_10_135027) do
+ActiveRecord::Schema.define(version: 2022_06_10_144407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2022_06_10_135027) do
   create_table "flavors", force: :cascade do |t|
     t.string "name", null: false
     t.string "detail", null: false
+    t.integer "group", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name", "detail"], name: "index_flavors_on_name_and_detail", unique: true
@@ -90,6 +91,15 @@ ActiveRecord::Schema.define(version: 2022_06_10_135027) do
     t.string "english_name", null: false
     t.index ["english_name"], name: "index_snacks_on_english_name", unique: true
     t.index ["name", "description"], name: "index_snacks_on_name_and_description", unique: true
+  end
+
+  create_table "tasting_note_flavors", force: :cascade do |t|
+    t.bigint "tasting_note_id", null: false
+    t.bigint "flavor_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["flavor_id"], name: "index_tasting_note_flavors_on_flavor_id"
+    t.index ["tasting_note_id"], name: "index_tasting_note_flavors_on_tasting_note_id"
   end
 
   create_table "tasting_notes", force: :cascade do |t|
@@ -151,6 +161,8 @@ ActiveRecord::Schema.define(version: 2022_06_10_135027) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookmarks", "users"
   add_foreign_key "bookmarks", "whiskeys"
+  add_foreign_key "tasting_note_flavors", "flavors"
+  add_foreign_key "tasting_note_flavors", "tasting_notes"
   add_foreign_key "tasting_notes", "drink_ways"
   add_foreign_key "tasting_notes", "flavors"
   add_foreign_key "tasting_notes", "users"

@@ -24,7 +24,7 @@
       <div class="col-lg-7 text-lg-start ms-lg-5 my-5">
         <div class="row justify-content-lg-between justify-content-center mb-3">
           <h5 class="col-lg-auto col-12 text-muted my-auto order-lg-0 order-1">
-            <%= @whiskey.region %>
+            <%= "#{@whiskey.region_i18n}ウイスキー" %>
           </h5>
           <span class="col-auto text-muted text-center mb-lg-auto mb-5 order-lg-1 order-0">
             <%= render 'bookmark_button', whiskey: @whiskey if logged_in? %>

@@ -13,7 +13,7 @@
 #  price                  :integer
 #  processing             :integer          default("single_malt"), not null
 #  rarity                 :integer          default("stable_supplyed"), not null
-#  region                 :integer          default(0), not null
+#  region                 :integer          default("scotch"), not null
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  drink_way_id           :bigint
