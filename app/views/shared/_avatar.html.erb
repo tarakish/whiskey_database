@@ -1,0 +1,5 @@
+<% if user.avatar? %>
+  <%= image_tag user.avatar.url, class: 'ui circular image', size: size %>
+<% else %>
+  <%= image_tag 'default_icon.png', class: 'ui circular image', size: size %>
+<% end %>

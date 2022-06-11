@@ -10,38 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_10_144407) do
+ActiveRecord::Schema.define(version: 2022_06_11_042432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "active_storage_attachments", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "record_type", null: false
-    t.bigint "record_id", null: false
-    t.bigint "blob_id", null: false
-    t.datetime "created_at", null: false
-    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
-    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
-  end
-
-  create_table "active_storage_blobs", force: :cascade do |t|
-    t.string "key", null: false
-    t.string "filename", null: false
-    t.string "content_type"
-    t.text "metadata"
-    t.string "service_name", null: false
-    t.bigint "byte_size", null: false
-    t.string "checksum", null: false
-    t.datetime "created_at", null: false
-    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
-  end
-
-  create_table "active_storage_variant_records", force: :cascade do |t|
-    t.bigint "blob_id", null: false
-    t.string "variation_digest", null: false
-    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
-  end
 
   create_table "authentications", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -68,6 +40,7 @@ ActiveRecord::Schema.define(version: 2022_06_10_144407) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "how_to_make_url", null: false
     t.string "english_name", null: false
+    t.string "image"
     t.index ["english_name"], name: "index_drink_ways_on_english_name", unique: true
     t.index ["explanation"], name: "index_drink_ways_on_explanation", unique: true
     t.index ["how_to_make_url"], name: "index_drink_ways_on_how_to_make_url", unique: true
@@ -89,6 +62,7 @@ ActiveRecord::Schema.define(version: 2022_06_10_144407) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "english_name", null: false
+    t.string "image"
     t.index ["english_name"], name: "index_snacks_on_english_name", unique: true
     t.index ["name", "description"], name: "index_snacks_on_name_and_description", unique: true
   end
@@ -122,6 +96,7 @@ ActiveRecord::Schema.define(version: 2022_06_10_144407) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "best_bottle"
+    t.string "avatar"
   end
 
   create_table "whiskey_flavors", force: :cascade do |t|
@@ -157,8 +132,6 @@ ActiveRecord::Schema.define(version: 2022_06_10_144407) do
     t.index ["snack_id"], name: "index_whiskeys_on_snack_id"
   end
 
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookmarks", "users"
   add_foreign_key "bookmarks", "whiskeys"
   add_foreign_key "tasting_note_flavors", "flavors"

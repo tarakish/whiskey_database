@@ -43,8 +43,8 @@
                 <%= f.text_field :best_bottle, placeholder: 'お気に入りのウイスキーを入力' %>
               </div>
               <div class="field my-4">
-                <label for="user_avatar"><i class="camera icon"></i>プロフィール画像(実装中)</label>
-                <%= f.file_field :avatar, disabled: true %>
+                <label for="user_avatar"><i class="camera icon"></i>プロフィール画像</label>
+                <%= f.file_field :avatar %>
               </div>
               <div class="row justify-content-center mt-5">
                 <%= f.submit '更新する', class: 'ui button teal col-auto' %>
