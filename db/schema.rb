@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_11_042432) do
+ActiveRecord::Schema.define(version: 2022_06_12_101638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,12 +80,10 @@ ActiveRecord::Schema.define(version: 2022_06_11_042432) do
     t.string "comment", null: false
     t.bigint "user_id", null: false
     t.bigint "drink_way_id", null: false
-    t.bigint "flavor_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "whiskey_id", null: false
     t.index ["drink_way_id"], name: "index_tasting_notes_on_drink_way_id"
-    t.index ["flavor_id"], name: "index_tasting_notes_on_flavor_id"
     t.index ["user_id"], name: "index_tasting_notes_on_user_id"
     t.index ["whiskey_id"], name: "index_tasting_notes_on_whiskey_id"
   end
@@ -137,7 +135,6 @@ ActiveRecord::Schema.define(version: 2022_06_11_042432) do
   add_foreign_key "tasting_note_flavors", "flavors"
   add_foreign_key "tasting_note_flavors", "tasting_notes"
   add_foreign_key "tasting_notes", "drink_ways"
-  add_foreign_key "tasting_notes", "flavors"
   add_foreign_key "tasting_notes", "users"
   add_foreign_key "tasting_notes", "whiskeys"
   add_foreign_key "whiskey_flavors", "flavors"
