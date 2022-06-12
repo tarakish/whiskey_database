@@ -26,11 +26,12 @@ class TastingNote < ApplicationRecord
   belongs_to :whiskey
   belongs_to :user
   belongs_to :drink_way
-  has_many :tasting_note_flavors
+  has_many :tasting_note_flavors, dependent: :destroy
   has_many :flavors, through: :tasting_note_flavors
 
   validates :comment, presence: true
-  validates :tasting_note_flavors, length: { maximum: 3 }
+  validates :tasting_note_flavors,
+            length: { maximum: 3, message: I18n.t('activerecord.errors.messages.upto_three') }
 
   before_save :remove_null_of_flavor_ids
 
@@ -41,6 +42,6 @@ class TastingNote < ApplicationRecord
   private
 
   def remove_null_of_flavor_ids
-    flavor_ids.delete("")
+    flavor_ids.delete('')
   end
 end

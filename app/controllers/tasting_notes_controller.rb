@@ -27,7 +27,7 @@ class TastingNotesController < ApplicationController
   end
 
   def destroy
-    @tasting_note.destroy
+    @tasting_note.destroy!
     redirect_to whiskey_url(@tasting_note.whiskey_id), success: 'テイスティングノートを削除しました。'
   end
 

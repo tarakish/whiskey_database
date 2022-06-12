@@ -55,7 +55,7 @@ class Whiskey < ApplicationRecord
   validates :whiskey_flavors,
             length: { maximum: 3,
                       message:
-                      I18n.t('activerecord.errors.messages.a_whiskey_has_upto_three_flavors') }
+                      I18n.t('activerecord.errors.messages.upto_three') }
 
   enum mouth_feel: { light: 0, a_little_light: 1, balanced: 2, a_little_rich: 3, rich: 4 }
   enum flavor_strength:

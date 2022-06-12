@@ -14,8 +14,8 @@ class User < ApplicationRecord
   authenticates_with_sorcery!
   mount_uploader :avatar, AvatarUploader
   has_many :authentications, dependent: :destroy
-  has_many :tasting_notes
-  has_many :bookmarks
+  has_many :tasting_notes, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
   has_many :whiskeys, through: :bookmarks
 
   accepts_nested_attributes_for :authentications

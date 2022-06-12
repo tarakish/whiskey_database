@@ -49,7 +49,7 @@ ja:
         flavor_id: 感じたフレーバー
     errors:
       messages:
-        a_whiskey_has_upto_three_flavors: は3つまでじゃよ。欲張りなさんな。
+        upto_three: は3最大3つまでです。
 
 
   enums:
