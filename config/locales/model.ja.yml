@@ -49,7 +49,7 @@ ja:
         flavor_id: 感じたフレーバー
     errors:
       messages:
-        a_whiskey_has_upto_three_flavors: は3つまでじゃよ。欲張りなさんな。
+        upto_three: は3最大3つまでです。
 
 
   enums:
@@ -74,6 +74,16 @@ ja:
         rare: かなり希少
         a_little_rare: 希少
         stable_supplyed: 安定供給
+      proseccing:
+        single_malt: シングルモルト
+        blended: ブレンデッド
+        single_grain: シングルグレーン
+      region:
+        scotch: スコッチ
+        japanese: ジャパニーズ
+        bourbon: バーボン
+        irish: アイリッシュ
+        canadian: カナディアン
     flavor:
       group:
         woody: ウッディ

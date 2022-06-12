@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @tasting_notes = @user.tasting_notes.preload(:whiskey, :drink_way, :flavor)
+    @tasting_notes = @user.tasting_notes.preload(:whiskey, :drink_way)
   end
 
   def edit; end
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(
       :name,
       :best_bottle,
-      :role
+      :avatar
     )
   end
 end

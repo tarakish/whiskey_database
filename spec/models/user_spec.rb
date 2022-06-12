@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id          :bigint           not null, primary key
+#  avatar      :string
 #  best_bottle :string
 #  name        :string           default("ユーザー"), not null
 #  role        :integer          default("general"), not null

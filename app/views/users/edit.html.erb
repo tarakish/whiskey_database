@@ -43,8 +43,8 @@
                 <%= f.text_field :best_bottle, placeholder: 'お気に入りのウイスキーを入力' %>
               </div>
               <div class="field my-4">
-                <label for="user_avatar"><i class="camera icon"></i>プロフィール画像(実装中)</label>
-                <%= f.file_field :avatar, disabled: true %>
+                <label for="user_avatar"><i class="camera icon"></i>プロフィール画像</label>
+                <%= f.file_field :avatar %>
               </div>
               <div class="row justify-content-center mt-5">
                 <%= f.submit '更新する', class: 'ui button teal col-auto' %>
@@ -63,8 +63,8 @@
               <h6>・プロフィール画像</h6>
               <h6>・連携SNS認証情報</h6>
               <h6>・気になる！ウイスキー履歴</h6>
-              <h3 class="text-decoration-underline mt-5 mb-3">退会時に削除されない情報</h3>
               <h6>・投稿したテイスティングノート</h6>
+              <!-- <h3 class="text-decoration-underline mt-5 mb-3">退会時に削除されない情報</h3> -->
             </div>
             <div class="col-auto mt-5">
               <%= link_to '同意して退会', user_path(@user), class: 'fs-5 simple-a-tag hover-target', method: :delete, data: { confirm: '本当に退会しますか?　※この操作は取り消せません。' } %>

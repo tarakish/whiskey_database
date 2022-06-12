@@ -6,6 +6,7 @@
 #  english_name    :string           not null
 #  explanation     :text             not null
 #  how_to_make_url :text             not null
+#  image           :string
 #  name            :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
@@ -18,10 +19,9 @@
 #  index_drink_ways_on_name             (name) UNIQUE
 #
 class DrinkWay < ApplicationRecord
+  mount_uploader :image, ImageUploader
   has_many :whiskeys
   has_many :tasting_notes
-
-  has_one_attached :image
 
   validates :name, presence: true, uniqueness: true
   validates :how_to_make_url, presence: true, uniqueness: true

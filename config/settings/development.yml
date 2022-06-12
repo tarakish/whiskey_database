@@ -2,3 +2,5 @@ sorcery:
   twitter_callback_url: 'http://127.0.0.1:3000/oauth/callback?provider=twitter'
   google_callback_url: 'http://localhost:3000/oauth/callback?provider=google'
   line_callback_url: 'https://localhost:3000/oauth/callback?provider=line'
+carrierwave:
+  storage: :fog

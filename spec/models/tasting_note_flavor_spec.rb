@@ -1,0 +1,25 @@
+# == Schema Information
+#
+# Table name: tasting_note_flavors
+#
+#  id              :bigint           not null, primary key
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  flavor_id       :bigint           not null
+#  tasting_note_id :bigint           not null
+#
+# Indexes
+#
+#  index_tasting_note_flavors_on_flavor_id        (flavor_id)
+#  index_tasting_note_flavors_on_tasting_note_id  (tasting_note_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (flavor_id => flavors.id)
+#  fk_rails_...  (tasting_note_id => tasting_notes.id)
+#
+require 'rails_helper'
+
+RSpec.describe TastingNoteFlavor, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
+end
