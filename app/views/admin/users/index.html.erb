@@ -1,0 +1,51 @@
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12 text-center text-muted fs-1">
+      ユーザー管理
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12">
+      <table class="ui orange striped table">
+        <thead><tr>
+          <th>menu</th>
+          <th>id</th>
+          <th>name</th>
+          <th>avatar</th>
+          <th>best_bottle</th>
+          <th>投稿数</th>
+        </tr></thead>
+        <% @users.each do |user| %>
+          <tbody><tr>
+            <td>
+              <%= link_to edit_admin_user_path(user), class: 'simple-a-tag hover-target text-muted fs-4' do %>
+                <i class="edit icon"></i><br>
+              <% end %>
+              <%= link_to admin_user_path(user), method: :delete, data: { confirm: '削除して大丈夫ですか〜？' }, class: 'simple-a-tag hover-target text-danger fs-4' do %>
+                <i class="trash alternate icon"></i>
+              <% end %>
+            </td>
+            <td><%= user.id %></td>
+            <td class="fw-bold">
+              <%= link_to user.name, user_path(user), class: 'simple-a-tag hover-target' %>
+            </td>
+            <td><%= (image_tag user.avatar.url, size: '50' ) if user.avatar? %></td>
+            <td><%= user.best_bottle %></td>
+            <td><%= user.tasting_notes.length %></td>
+          </tr></tbody>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <%= link_to 'ユーザー作成', new_admin_user_path, class: 'ui button inverted orange huge' %>
+    </div>
+  </div>
+</div>
