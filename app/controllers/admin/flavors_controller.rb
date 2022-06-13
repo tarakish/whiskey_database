@@ -1,11 +1,9 @@
 class Admin::FlavorsController < Admin::BaseController
   skip_before_action :require_login, only: :index
   before_action :set_flavor, only: %i[edit update destroy]
-  before_action :authorize_flavor
 
   def index
     @flavors = Flavor.order(:id)
-    # @flavors = Flavor.groups.keys.map {|key| {key => Flavor.where(group: key).order(:id)}}
   end
 
   def new
@@ -17,7 +15,7 @@ class Admin::FlavorsController < Admin::BaseController
   def create
     @flavor = Flavor.new(flavor_params)
     if @flavor.save
-      redirect_to flavor_url(@flavor), notice: 'Flavor was successfully created.'
+      redirect_to admin_flavors_url, success: '作成しました！'
     else
       render :new
     end
@@ -25,7 +23,7 @@ class Admin::FlavorsController < Admin::BaseController
 
   def update
     if @flavor.update(flavor_params)
-      redirect_to flavor_url(@flavor), notice: 'Flavor was successfully updated.'
+      redirect_to admin_flavors_url, success: '更新しました！'
     else
       render :edit
     end
@@ -33,7 +31,7 @@ class Admin::FlavorsController < Admin::BaseController
 
   def destroy
     @flavor.destroy!
-    redirect_to flavors_url, notice: 'Flavor was successfully destroyed.'
+    redirect_to admin_flavors_url, danger: '削除しました！'
   end
 
   private
