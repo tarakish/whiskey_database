@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'staticpages#top'
 
-  resources :drink_ways, except: :show
+  resources :drink_ways, only: :index
   resources :flavors, except: :show
-  resources :snacks, except: :show
+  resources :snacks, except: :index
   resources :users, except: %i[new create]
   resources :whiskeys do
     resources :tasting_notes, shallow: true, except: %i[index show]
