@@ -21,11 +21,11 @@ Rails.application.routes.draw do
   get '/login_as/:user_id', to: 'user_sessions#login_as', as: :login_as if Rails.env.development?
 
   namespace :admin do
+    resources :whiskeys
     resources :drink_ways, except: :show
     resources :flavors, except: :show
     resources :snacks, except: :show
     resources :users, except: :show
-    resources :whiskeys
-    resources :tasting_notes
+    resources :tasting_notes, except: :show
   end
 end
