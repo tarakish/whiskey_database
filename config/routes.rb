@@ -21,9 +21,9 @@ Rails.application.routes.draw do
   get '/login_as/:user_id', to: 'user_sessions#login_as', as: :login_as if Rails.env.development?
 
   namespace :admin do
-    resources :drink_ways, except: %i[index show]
-    resources :flavors, except: %i[index show]
-    resources :snacks, except: %i[index show]
+    resources :drink_ways, except: :show
+    resources :flavors, except: :show
+    resources :snacks, except: :show
     resources :users, except: %i[new create]
     resources :whiskeys
     resources :tasting_notes, only: :index

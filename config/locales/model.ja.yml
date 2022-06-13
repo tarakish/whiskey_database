@@ -38,11 +38,15 @@ ja:
         group: グループ
       drink_way:
         name: 名称
-        how_to_make: 作り方
+        english_name: 英語名
+        how_to_make_url: 作り方動画
         explanation: 説明
+        image: イメージ画像
       snack:
         name: 名称
+        english_name: 英語名
         description: 説明
+        image: イメージ画像
       tasting_note:
         comment: コメント
         drink_way_id: 飲み方
@@ -92,3 +96,9 @@ ja:
         floral: フローラル
         sereal: シリアル
         smoky: スモーキー
+
+  helpers:
+    submit:
+      create: 作成する
+      update: 更新する
+      submit: 保存する

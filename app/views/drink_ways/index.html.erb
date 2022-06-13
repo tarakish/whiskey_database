@@ -12,39 +12,3 @@
 </div>
 
 <%= render @drink_ways %>
-
-<% if logged_in? && current_user.admin? %>
-  <table class="text-center">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>English_name</th>
-        <th>How to make url</th>
-        <th>Explanation</th>
-        <th>image</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @drink_ways.each do |drink_way| %>
-        <tr>
-          <td><%= drink_way.name %></td>
-          <td><%= drink_way.english_name %></td>
-          <td><%= drink_way.how_to_make_url %></td>
-          <td><%= simple_format(h(drink_way.explanation)) %></td>
-          <td>
-            <% if drink_way.image? %>
-              <%= image_tag drink_way.image.url %>
-            <% end %>
-          </td>
-          <td><%= link_to 'Show', drink_way %></td>
-          <td><%= link_to 'Edit', edit_drink_way_path(drink_way) %></td>
-          <td><%= link_to 'Destroy', drink_way, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-  <%= link_to 'New Drink Way', new_drink_way_path %>
-<% end %>
