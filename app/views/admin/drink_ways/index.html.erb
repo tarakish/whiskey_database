@@ -1,0 +1,51 @@
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12 text-center text-muted fs-1">
+      【管理】飲み方
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12">
+      <table class="ui orange striped table">
+        <thead><tr>
+          <th>menu</th>
+          <th>id</th>
+          <th>name</th>
+          <th>image</th>
+          <th>english_name</th>
+          <th>explanation</th>
+          <th>how_to_make_url</th>
+        </tr></thead>
+        <% @drink_ways.each do |drink_way| %>
+          <tbody><tr>
+            <td>
+              <%= link_to edit_admin_drink_way_path(drink_way), class: 'simple-a-tag hover-target text-muted fs-4' do %>
+                <i class="edit icon"></i><br>
+              <% end %>
+              <%= link_to admin_drink_way_path(drink_way), method: :delete, data: { confirm: '削除して大丈夫ですか〜？' }, class: 'simple-a-tag hover-target text-danger fs-4' do %>
+                <i class="trash alternate icon"></i>
+              <% end %>
+            </td>
+            <td><%= drink_way.id %></td>
+            <td class="fw-bold"><%= drink_way.name %></td>
+            <td><%= (image_tag drink_way.image.url, size: '75x50' ) if drink_way.image? %></td>
+            <td><%= drink_way.english_name %></td>
+            <td><%= simple_format(h(drink_way.explanation)) %></td>
+            <td><%= drink_way.how_to_make_url %></td>
+          </tr></tbody>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <%= link_to '飲み方作成', new_admin_drink_way_path, class: 'ui button inverted orange huge' %>
+    </div>
+  </div>
+</div>

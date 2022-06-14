@@ -1,0 +1,75 @@
+<div class='row rounded bg-gray p-5 ui large form error mx-0'>
+  <%= form_with model: [:admin, whiskey] do |f| %>
+    <% if whiskey.errors.any? %>
+      <div id="error_explanation" class="ui error message">
+        <ul>
+          <% whiskey.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field my-4">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :region %>
+      <%= f.select :region, Whiskey.regions_i18n.invert, {} %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :processing %>
+      <%= f.select :processing, Whiskey.processings_i18n.invert, {} %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :mouth_feel %>
+      <%= f.select :mouth_feel, Whiskey.mouth_feels_i18n.invert, {} %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :flavor_strength %>
+      <%= f.select :flavor_strength, Whiskey.flavor_strengths_i18n.invert, {} %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :price %>
+      <%= f.number_field :price %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :region %>
+      <%= f.select :region, Whiskey.regions_i18n.invert, {} %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :amazon_link %>
+      <%= f.text_area :amazon_link, rows: 4 %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :amazon_image_link %>
+      <%= f.text_area :amazon_image_link, rows: 4 %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :amazon_impression_link %>
+      <%= f.text_area :amazon_impression_link, rows: 4 %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :drink_way_id %>
+      <%= f.collection_select :drink_way_id, DrinkWay.all, :id, :name %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :snack_id %>
+      <%= f.collection_select :snack_id, Snack.all, :id, :name %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :flavor_id %>
+      <%= f.collection_check_boxes :flavor_ids, Flavor.all, :id, :name %>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <%= f.submit class: 'ui button teal col-auto' %>
+    </div>
+  <% end %>
+  <div class="col-12 text-center mt-5">
+    <%= link_to '戻る', admin_whiskeys_path, class: 'col-auto simple-a-tag hover-target ui button' %>
+  </div>
+</div>

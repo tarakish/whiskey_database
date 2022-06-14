@@ -36,9 +36,9 @@
 class Whiskey < ApplicationRecord
   belongs_to :drink_way
   belongs_to :snack
-  has_many :whiskey_flavors
+  has_many :whiskey_flavors, dependent: :destroy
   has_many :flavors, through: :whiskey_flavors
-  has_many :bookmarks
+  has_many :bookmarks, dependent: :destroy
   has_many :users, through: :bookmarks
   has_many :tasting_notes
 

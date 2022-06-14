@@ -1,0 +1,31 @@
+<div class='row rounded bg-gray p-5 ui large form error mx-0'>
+  <%= form_with model: [:admin, flavor] do |f| %>
+    <% if flavor.errors.any? %>
+      <div id="error_explanation" class="ui error message">
+        <ul>
+          <% flavor.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field my-4">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :detail %>
+      <%= f.text_area :detail %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :group %>
+      <%= f.select :group, Flavor.groups_i18n.invert, {} %>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <%= f.submit class: 'ui button teal col-auto' %>
+    </div>
+  <% end %>
+  <div class="col-12 text-center mt-5">
+    <%= link_to '戻る', admin_flavors_path, class: 'col-auto simple-a-tag hover-target ui button' %>
+  </div>
+</div>

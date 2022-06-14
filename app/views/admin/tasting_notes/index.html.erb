@@ -1,0 +1,55 @@
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12 text-center text-muted fs-1">
+      【管理】テイスティングノート
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12">
+      <table class="ui orange striped table">
+        <thead><tr>
+          <th>menu</th>
+          <th>id</th>
+          <th>user_id</th>
+          <th>whiskey_id</th>
+          <th>drink_way</th>
+          <th>flavors</th>
+          <th>comment</th>
+        </tr></thead>
+        <% @tasting_notes.each do |tasting_note| %>
+          <tbody><tr>
+            <td>
+              <%= link_to edit_admin_tasting_note_path(tasting_note), class: 'simple-a-tag hover-target text-muted fs-4' do %>
+                <i class="edit icon"></i><br>
+              <% end %>
+              <%= link_to admin_tasting_note_path(tasting_note), method: :delete, data: { confirm: '削除して大丈夫ですか〜？' }, class: 'simple-a-tag hover-target text-danger fs-4' do %>
+                <i class="trash alternate icon"></i>
+              <% end %>
+            </td>
+            <td><%= tasting_note.id %></td>
+            <td>
+              <%= link_to tasting_note.user_id, user_path(tasting_note.user), class: 'simple-a-tag hover-target' %>
+            </td>
+            <td>
+              <%= link_to tasting_note.whiskey.name, whiskey_path(tasting_note.whiskey), class: 'simple-a-tag hover-target' %>
+            </td>
+            <td><%= tasting_note.drink_way.name %></td>
+            <td><%= tasting_note.flavors.pluck(:name)*', ' %></td>
+            <td><%= simple_format(h(tasting_note.comment)) %></td>
+          </tr></tbody>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <%= link_to 'テイスティングノート作成', new_admin_tasting_note_path, class: 'ui button inverted orange huge' %>
+    </div>
+  </div>
+</div>

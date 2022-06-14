@@ -1,0 +1,39 @@
+<div class='row rounded bg-gray p-5 ui large form error mx-0'>
+  <%= form_with model: [:admin, drink_way] do |f| %>
+    <% if drink_way.errors.any? %>
+      <div id="error_explanation" class="ui error message">
+        <ul>
+          <% drink_way.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field my-4">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :english_name %>
+      <%= f.text_field :english_name %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :explanation %>
+      <%= f.text_area :explanation %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :how_to_make_url %>
+      <%= f.text_field :how_to_make_url %>
+    </div>
+    <div class="field my-4">
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <%= f.submit class: 'ui button teal col-auto' %>
+    </div>
+  <% end %>
+  <div class="col-12 text-center mt-5">
+    <%= link_to '戻る', admin_drink_ways_path, class: 'col-auto simple-a-tag hover-target ui button' %>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12 text-center text-muted fs-1">
+      管理画面トップページ
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 pt-5">
+  <div class="ui labeled icon menu row">
+    <%= link_to admin_whiskeys_path, class: 'item col-3 m-5' do %>
+      <i class="fa-solid fa-wine-bottle fa-4x pb-4"></i>
+      ウイスキー
+    <% end %>
+    <%= link_to admin_drink_ways_path, class: 'item col-3 m-5' do %>
+      <i class="fa-solid fa-whiskey-glass fa-4x pb-4"></i>
+      飲み方
+    <% end %>
+    <%= link_to admin_snacks_path, class: 'item col-3 m-5' do %>
+      <i class="fa-solid fa-shrimp fa-4x pb-4"></i>
+      おつまみ
+    <% end %>
+    <%= link_to admin_flavors_path, class: 'item col-3 m-5' do %>
+      <i class="fa-solid fa-lightbulb fa-4x pb-4"></i>
+      フレーバー
+    <% end %>
+    <%= link_to admin_users_path, class: 'item col-3 m-5' do %>
+      <i class="fa-solid fa-user-group fa-4x pb-4"></i>
+      ユーザー
+    <% end %>
+    <%= link_to admin_tasting_notes_path, class: 'item col-3 m-5' do %>
+      <i class="fa-solid fa-pen-to-square fa-4x pb-4"></i>
+      テイスティングノート
+    <% end %>
+  </div>
+</div>

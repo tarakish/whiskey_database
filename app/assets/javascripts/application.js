@@ -6,5 +6,6 @@ $(document).on("turbolinks:load", () => {
     $('.fav-whiskey').dimmer({on: 'hover'});
     
     $('.ui.dropdown').dropdown();
+    
   });
 });

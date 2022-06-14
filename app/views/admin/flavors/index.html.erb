@@ -1,0 +1,47 @@
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12 text-center text-muted fs-1">
+      【管理】フレーバー
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12">
+      <table class="ui orange striped table">
+        <thead><tr>
+          <th>menu</th>
+          <th>id</th>
+          <th>name</th>
+          <th>detail</th>
+          <th>group</th>
+        </tr></thead>
+        <% @flavors.each do |flavor| %>
+          <tbody><tr>
+            <td>
+              <%= link_to edit_admin_flavor_path(flavor), class: 'simple-a-tag hover-target text-muted fs-4' do %>
+                <i class="edit icon"></i><br>
+              <% end %>
+              <%= link_to admin_flavor_path(flavor), method: :delete, data: { confirm: '削除して大丈夫ですか〜？' }, class: 'simple-a-tag hover-target text-danger fs-4' do %>
+                <i class="trash alternate icon"></i>
+              <% end %>
+            </td>
+            <td><%= flavor.id %></td>
+            <td class="fw-bold"><%= flavor.name %></td>
+            <td><%= simple_format(h(flavor.detail)) %></td>
+            <td><%= flavor.group_i18n %></td>
+          </tr></tbody>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <%= link_to 'フレーバー作成', new_admin_flavor_path, class: 'ui button inverted orange huge' %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,174 @@
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12 text-center text-muted fs-1">
+      【管理】<%= @whiskey.name %>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12">
+      <table class="ui orange striped table">
+        <thead><tr>
+          <th>カラム名</th>
+          <th>値</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold">
+              ID
+            </td>
+            <td>
+              <%= @whiskey.id %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              名前
+            </td>
+            <td>
+              <%= @whiskey.name %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              リージョン
+            </td>
+            <td>
+              <%= @whiskey.region_i18n %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              製法
+            </td>
+            <td>
+              <%= @whiskey.processing_i18n %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              飲み心地
+            </td>
+            <td>
+              <%= @whiskey.mouth_feel_i18n %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              フレーバー
+            </td>
+            <td>
+              <%= @whiskey.flavor_strength_i18n %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              希望小売価格
+            </td>
+            <td>
+              <%= @whiskey.price %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              レア度
+            </td>
+            <td>
+              <%= @whiskey.rarity_i18n %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              説明文
+            </td>
+            <td>
+              <%= simple_format(h(@whiskey.description)) %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              アマゾンリンク
+            </td>
+            <td>
+              <%= @whiskey.amazon_link %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              アマゾン画像リンク
+            </td>
+            <td>
+              <%= @whiskey.amazon_image_link %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              アマゾンインプレ計測リンク
+            </td>
+            <td>
+              <%= @whiskey.amazon_impression_link %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              相性いい飲み方
+            </td>
+            <td>
+              <%= @whiskey.drink_way.name %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              相性いいおつまみ
+            </td>
+            <td>
+              <%= @whiskey.snack.name %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              フレーバー
+            </td>
+            <td>
+              <%= @whiskey.flavors.pluck(:name)*', ' %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              投稿され数
+            </td>
+            <td>
+              <%= @whiskey.tasting_notes.length %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              お気に入られ数
+            </td>
+            <td>
+              <%= @whiskey.bookmarks.length %>
+            </td>
+          </tr>
+          <tr>
+            <td class="fw-bold">
+              Menu
+            </td>
+            <td>
+              <%= link_to edit_admin_whiskey_path(@whiskey), class: 'simple-a-tag hover-target text-muted fs-4' do %>
+                <i class="edit icon"></i>
+              <% end %>
+              <%= link_to admin_whiskey_path(@whiskey), method: :delete, data: { confirm: '削除して大丈夫ですか〜？' }, class: 'simple-a-tag hover-target text-danger fs-4' do %>
+                <i class="trash alternate icon"></i>
+              <% end %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-12 text-center mt-5">
+    <%= link_to '戻る', admin_whiskeys_path, class: 'col-auto simple-a-tag hover-target ui button' %>
+  </div>
+</div>

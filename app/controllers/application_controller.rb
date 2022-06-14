@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   def user_not_authorized
     flash[:alert] = 'ページが見つかりません'
-    redirect_back(fallback_location: whiskeys_path)
+    redirect_back(fallback_location: root_path)
   end
 
   def set_search_instance
@@ -19,6 +19,6 @@ class ApplicationController < ActionController::Base
   end
 
   def not_authenticated
-    redirect_to login_path, danger: 'ログインしてください'
+    redirect_to login_url, danger: 'ログインしてください'
   end
 end
