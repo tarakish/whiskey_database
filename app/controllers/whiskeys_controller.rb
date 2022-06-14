@@ -1,6 +1,5 @@
 class WhiskeysController < ApplicationController
   skip_before_action :require_login, only: %i[index show]
-  before_action :authorize_whiskey, except: :show
 
   def index
     result = @q.result(distinct: true).eager_load(:whiskey_flavors, :flavors)
@@ -8,7 +7,6 @@ class WhiskeysController < ApplicationController
   end
 
   def show
-    authorize Whiskey
     @whiskey = Whiskey.find(params[:id])
     # 表示用
     @tasting_notes =
@@ -19,10 +17,6 @@ class WhiskeysController < ApplicationController
   end
 
   private
-
-  def authorize_whiskey
-    authorize Whiskey, policy_class: ApplicationPolicy
-  end
 
   def whiskey_params
     params.require(:whiskey).permit(

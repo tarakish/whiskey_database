@@ -1,4 +1,5 @@
 class Admin::DrinkWaysController < Admin::BaseController
+  before_action :authorize_user
   before_action :set_drink_way, only: %i[edit update destroy]
 
   def index
@@ -37,6 +38,10 @@ class Admin::DrinkWaysController < Admin::BaseController
 
   def set_drink_way
     @drink_way = DrinkWay.find(params[:id])
+  end
+
+  def authorize_user
+    authorize DrinkWay, policy_class: ApplicationPolicy
   end
 
   def drink_way_params

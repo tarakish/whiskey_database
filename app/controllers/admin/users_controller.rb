@@ -1,4 +1,5 @@
 class Admin::UsersController < Admin::BaseController
+  before_action :authorize_user
   before_action :set_user, only: %i[edit update destroy]
 
   def index
@@ -40,7 +41,7 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def authorize_user
-    authorize User
+    authorize User, policy_class: ApplicationPolicy
   end
 
   def user_params

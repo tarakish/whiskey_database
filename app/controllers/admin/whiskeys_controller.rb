@@ -1,4 +1,5 @@
 class Admin::WhiskeysController < Admin::BaseController
+  before_action :authorize_user
   before_action :set_whiskey, only: %i[show edit update destroy]
 
   def index
@@ -41,7 +42,7 @@ class Admin::WhiskeysController < Admin::BaseController
     @whiskey = Whiskey.find(params[:id])
   end
 
-  def authorize_whiskey
+  def authorize_user
     authorize Whiskey, policy_class: ApplicationPolicy
   end
 

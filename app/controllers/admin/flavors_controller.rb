@@ -1,5 +1,5 @@
 class Admin::FlavorsController < Admin::BaseController
-  skip_before_action :require_login, only: :index
+  before_action :authorize_user
   before_action :set_flavor, only: %i[edit update destroy]
 
   def index
@@ -40,7 +40,7 @@ class Admin::FlavorsController < Admin::BaseController
     @flavor = Flavor.find(params[:id])
   end
 
-  def authorize_flavor
+  def authorize_user
     authorize Flavor, policy_class: ApplicationPolicy
   end
 

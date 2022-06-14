@@ -1,5 +1,5 @@
 class Admin::SnacksController < Admin::BaseController
-  skip_before_action :require_login, only: :index
+  before_action :authorize_user
   before_action :set_snack, only: %i[edit update destroy]
 
   def index
@@ -41,7 +41,7 @@ class Admin::SnacksController < Admin::BaseController
     @snack = Snack.find(params[:id])
   end
 
-  def authorize_snack
+  def authorize_user
     authorize Snack, policy_class: ApplicationPolicy
   end
 

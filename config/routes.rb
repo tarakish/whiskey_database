@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :drink_ways, only: :index
   resources :flavors, only: :index
   resources :snacks, only: :index
-  resources :users, except: %i[new create]
-  resources :whiskeys do
+  resources :users, only: %i[index show edit update destroy]
+  resources :whiskeys, only: %i[index show] do
     resources :tasting_notes, shallow: true, except: %i[index show]
     resource :bookmarks, only: %i[create destroy]
   end
@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/login_as/:user_id', to: 'user_sessions#login_as', as: :login_as if Rails.env.development?
 
   namespace :admin do
+    root 'dashboards#top'
     resources :whiskeys
     resources :drink_ways, except: :show
     resources :flavors, except: :show

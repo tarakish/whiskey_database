@@ -1,4 +1,5 @@
 class Admin::TastingNotesController < Admin::BaseController
+  before_action :authorize_user
   before_action :set_tasting_note, only: %i[edit update destroy]
 
   def index
@@ -38,6 +39,10 @@ class Admin::TastingNotesController < Admin::BaseController
 
   def set_tasting_note
     @tasting_note = TastingNote.find(params[:id])
+  end
+
+  def authorize_user
+    authorize TastingNote, policy_class: ApplicationPolicy
   end
 
   def tasting_note_params
