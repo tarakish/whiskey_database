@@ -12,7 +12,6 @@ class Admin::TastingNotesController < Admin::BaseController
 
   def edit; end
 
-
   def create
     @tasting_note = TastingNote.new(tasting_note_params)
     if @tasting_note.save

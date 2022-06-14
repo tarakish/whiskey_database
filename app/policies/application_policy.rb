@@ -24,7 +24,7 @@ class ApplicationPolicy
     index?
   end
 
-  def create?
+  def update?
     index?
   end
 
