@@ -1,0 +1,40 @@
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-12 text-center text-muted fs-1">
+      ウイスキー管理
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <% @whiskeys.each do |whiskey| %>
+      <div class="col-2">
+        <%= link_to admin_whiskey_path(whiskey), class: 'card simple-a-tag' do %>
+          <%= image_tag whiskey.amazon_image_link, class: 'card-img-top', size: '50x300' %>
+          <div class="card-body">
+            <h5 class="card-title"><%= whiskey.name %></h5>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="py-5">
+  <div class='container'>
+    <div class='row mb-5 justify-content-center'>
+      <div class="col-auto">
+        <%== pagy_semantic_nav(@pagy) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <%= link_to 'ウイスキー作成', new_admin_whiskey_path, class: 'ui button inverted orange huge' %>
+    </div>
+  </div>
+</div>
