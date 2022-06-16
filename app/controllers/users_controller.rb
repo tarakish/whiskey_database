@@ -40,7 +40,8 @@ class UsersController < ApplicationController
     params.require(:user).permit(
       :name,
       :best_bottle,
-      :avatar
+      :avatar,
+      :avatar_cache
     )
   end
 end
