@@ -34,6 +34,15 @@
                   </ul>
                 </div>
               <% end %>
+              <div class="row justify-content-center">
+                <div class="col-auto">
+                  <%= image_tag @user.avatar.url, class: 'ui circular image', size: 150 %>
+                </div>
+              </div>
+              <div class="field my-4">
+                <label for="user_avatar"><i class="camera icon"></i>プロフィール画像</label>
+                <%= f.file_field :avatar %>
+              </div>
               <div class="required field my-4">
                 <label for="user_name"><i class="user outline icon"></i>ニックネーム</label>
                 <%= f.text_field :name, placeholder: 'ニックネームを入力' %>
@@ -41,10 +50,6 @@
               <div class="field my-4">
                 <label for="user_best_bottle"><i class="fa-solid fa-wine-bottle"></i>Best Bottle</label>
                 <%= f.text_field :best_bottle, placeholder: 'お気に入りのウイスキーを入力' %>
-              </div>
-              <div class="field my-4">
-                <label for="user_avatar"><i class="camera icon"></i>プロフィール画像</label>
-                <%= f.file_field :avatar %>
               </div>
               <div class="row justify-content-center mt-5">
                 <%= f.submit '更新する', class: 'ui button teal col-auto' %>
