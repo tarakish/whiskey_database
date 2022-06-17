@@ -48,7 +48,9 @@ class Admin::UsersController < Admin::BaseController
     params.require(:user).permit(
       :name,
       :best_bottle,
-      :avatar
+      :avatar,
+      :avatar_cache,
+      :remove_avatar
     )
   end
 end

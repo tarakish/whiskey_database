@@ -26,6 +26,8 @@ ja:
         description: 詳細
         mouth_feel: 飲み口
         flavor_strength: フレーバー
+        region: 産地
+        processing: 分類
         rarity: レア度
         price: 適正価格
         flavor_id: フレーバー
@@ -54,6 +56,17 @@ ja:
     errors:
       messages:
         upto_three: は3最大3つまでです。
+        carrierwave_processing_error: 処理できませんでした
+        carrierwave_integrity_error: は許可されていないファイルタイプです
+        carrierwave_download_error: はダウンロードできません
+        extension_whitelist_error: "%{extension}ファイルのアップロードは許可されていません。アップロードできるファイルタイプ: %{allowed_types}"
+        extension_blacklist_error: "%{extension}ファイルのアップロードは許可されていません。アップロードできないファイルタイプ: %{prohibited_types}"
+        content_type_whitelist_error: "%{content_type}ファイルのアップロードは許可されていません。アップロードできるファイルタイプ: %{allowed_types}"
+        content_type_blacklist_error: "%{content_type}ファイルのアップロードは許可されていません"
+        rmagick_processing_error: "rmagickがファイルを処理できませんでした。画像を確認してください。エラーメッセージ: %{e}"
+        mini_magick_processing_error: "MiniMagickがファイルを処理できませんでした。画像を確認してください。エラーメッセージ: %{e}"
+        min_size_error: "を%{min_size}以上のサイズにしてください"
+        max_size_error: "を%{max_size}以下のサイズにしてください"
 
 
   enums:

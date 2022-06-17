@@ -32,7 +32,7 @@
             <td class="fw-bold">
               <%= link_to user.name, user_path(user), class: 'simple-a-tag hover-target' %>
             </td>
-            <td><%= (image_tag user.avatar.url, size: '50' ) if user.avatar? %></td>
+            <td><%= (image_tag user.avatar.url(:thumb) ) if user.avatar? %></td>
             <td><%= user.best_bottle %></td>
             <td><%= user.tasting_notes.length %></td>
           </tr></tbody>
