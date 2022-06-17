@@ -26,6 +26,8 @@ ja:
         description: 詳細
         mouth_feel: 飲み口
         flavor_strength: フレーバー
+        region: 産地
+        processing: 分類
         rarity: レア度
         price: 適正価格
         flavor_id: フレーバー
