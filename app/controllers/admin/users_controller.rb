@@ -49,7 +49,8 @@ class Admin::UsersController < Admin::BaseController
       :name,
       :best_bottle,
       :avatar,
-      :avatar_cache
+      :avatar_cache,
+      :remove_avatar
     )
   end
 end

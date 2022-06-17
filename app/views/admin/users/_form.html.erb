@@ -22,6 +22,14 @@
       <%= f.file_field :avatar %>
       <%= f.hidden_field :avatar_cache %>
     </div>
+    <div class="row justify-content-center my-4">
+      <div class="col-auto form-check">
+        <label class='form-check-label'>
+          <%= f.check_box :remove_avatar, class: 'form-check-input' %>
+          画像を削除する
+        </label>
+      </div>
+    </div>
     <div class="row justify-content-center mt-5">
       <%= f.submit class: 'ui button teal col-auto' %>
     </div>
