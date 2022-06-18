@@ -32,3 +32,22 @@
 .pie-chart-4 {
   background-image: $bg-pie, conic-gradient(#ffce20 0% 100%);
 }
+
+.sm-small {
+  @media screen and (max-width: 991px) {
+    height: 200px !important;
+  }
+  @media screen and (max-width: 575px) { 
+    height: 150px !important;
+  }
+}
+
+.card {
+  min-height: 265px;
+  @media screen and (max-width: 991px) {
+    min-height: 450px;
+  }
+  @media screen and (max-width: 575px) {
+    min-height: 320px;
+  }
+}

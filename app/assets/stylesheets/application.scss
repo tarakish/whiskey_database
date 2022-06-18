@@ -136,6 +136,13 @@ body {
   }
 }
 
+.transform-y-lg {
+  &:hover{
+    transform: translateY(-7px);
+    transition: 0.5s;
+  }
+}
+
 // spacing
 .mt-15 {
   margin-top: 15rem;
