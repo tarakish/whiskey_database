@@ -8,16 +8,21 @@
           <%= link_to @whiskey.amazon_link, target: '_blank' do %><%= image_tag @whiskey.amazon_image_link, class: 'border-none' %><% end %> 
           <%= image_tag @whiskey.amazon_impression_link, alt: '', size: '1x1', style: 'border:none !important; margin:0px !important' %>
         </div>
-        <div class="col-auto mb-3 pt-3 ms-3">
-          <div class='row-lg d-flex justify-content-center'>
-            <div class="col-xl-4 mx-3 p-lg-0 px-4">
-              <div class="row fs-6 pie pie-chart-<%= @whiskey.mouth_feel_before_type_cast %>"><%= @whiskey.mouth_feel_i18n %></div>
-              <div class="mt-3 text-start">　 味わい</div>
-            </div>
-            <div class="col-xl-4 mx-3 p-lg-0 px-4">
-              <div class="row fs-6 m-0 pie pie-chart-<%= @whiskey.flavor_strength_before_type_cast %>"><%= @whiskey.flavor_strength_i18n %></div>
-              <div class="mt-3">フレーバー</div>
-            </div>
+        <div class="row justify-content-center mb-4">
+          <div class="col-auto">
+            <%= render 'bookmark_button', whiskey: @whiskey if logged_in? %>
+            <%= render 'bookmark', whiskey: @whiskey unless logged_in? %>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <%= link_to anchor: "indexTastingNote" do %>
+              <div class='ui bg-navy text-white image label large'>
+                <%= image_tag 'icon_pen.png' %>
+                　投稿数　
+                <div class="detail"><%= @tasting_notes.length %></div>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -26,11 +31,7 @@
           <h5 class="col-lg-auto col-12 text-muted my-auto order-lg-0 order-1">
             <%= "#{@whiskey.region_i18n}ウイスキー" %>
           </h5>
-          <span class="col-auto text-muted text-center mb-lg-auto mb-5 order-lg-1 order-0">
-            <%= render 'bookmark_button', whiskey: @whiskey if logged_in? %>
-          </span>
         </div>
-      
         <div class="row justify-content-lg-start justify-content-center">
           <h1 class="col-auto my-4 fw-bold">
             <%= @whiskey.name %>
@@ -97,7 +98,7 @@
   </div>
 </div>
 
-<div class="container mt-5">
+<div class="container mt-5" id='indexTastingNote'>
   <div class="row justify-content-center">
     <%= link_to snacks_path(anchor: "#{@whiskey.snack.english_name}"), class: 'col-lg-9 row text-center rounded shadow bg-white p-0 transform-y-md simple-a-tag hover-target-reverse' do %>
       <%= image_tag @whiskey.snack.image.url, class: 'img-fluid col-lg-4 p-0' if @whiskey.snack.image? %>
