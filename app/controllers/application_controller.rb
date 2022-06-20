@@ -19,6 +19,6 @@ class ApplicationController < ActionController::Base
   end
 
   def not_authenticated
-    redirect_to login_url, danger: 'ログインしてください'
+    redirect_to login_url, danger: 'この機能の利用にはログインが必要です'
   end
 end

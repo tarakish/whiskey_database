@@ -1,3 +1,5 @@
-<%= link_to whiskey_bookmarks_path(whiskey), method: :post, class: 'ui button orange small basic', id: 'jsBookmarkButton', remote: true do %>
-  <i class="fa-solid fa-wine-glass-empty fa-lg"></i>　気になる！
+<%= link_to whiskey_bookmarks_path(whiskey), method: :post, class: 'ui orange image basic label large simple-a-tag', id: 'jsBookmarkButton', remote: true do %>
+  <%= image_tag 'icon_clip.png' %>
+    気になる！
+  <div class="detail"><%= @whiskey.bookmarks.length %></div>
 <% end %>

@@ -20,4 +20,17 @@ module ApplicationHelper
   def space_behind_head
     return 'mt-7' if controller_name != 'staticpages'
   end
+
+  def draw_rating(n, star)
+    html_text = ''
+    (n + 1).times do
+      html_text += render 'shared/rating/star'
+    end
+
+    # 5つ星と3つ星を出し分ける
+    (star - 1 - n).times do
+      html_text += render 'shared/rating/outline_star'
+    end
+    raw(html_text)
+  end
 end
