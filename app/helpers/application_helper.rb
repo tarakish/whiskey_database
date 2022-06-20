@@ -26,7 +26,6 @@ module ApplicationHelper
     (n + 1).times do
       html_text += render 'shared/rating/star'
     end
-
     # 5つ星と3つ星を出し分ける
     (star - 1 - n).times do
       html_text += render 'shared/rating/outline_star'

@@ -1,6 +1,6 @@
 <% if controller_name == 'users' %>
   <div class="row justify-content-center">
-    <div class="col-lg-9 rounded shadow text-center text-muted bg-gray pe-0 py-3">
+    <div class="col-<%= width %>-9 rounded shadow text-center text-muted bg-gray pe-0 py-3">
       <%= link_to whiskey_path(note.whiskey), class: 'simple-a-tag' do %>
         <i class="fa-solid fa-wine-bottle"></i> <span class="hover-target"><%= note.whiskey.name %></span> のノート
       <% end %>
@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="row justify-content-center">
-  <div class="col-lg-9 rounded shadow bg-white pe-0 mb-5">
+  <div class="col-<%= width %>-9 rounded shadow bg-white pe-0 mb-5">
     <div class="row justify-content-sm-between">
       <% if note.user %>
         <%= link_to user_path(note.user), class: 'col-auto text-white bg-navy py-3 simple-a-tag fs-5 hover-target-reverse' do %>
