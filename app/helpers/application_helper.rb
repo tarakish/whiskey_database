@@ -31,6 +31,6 @@ module ApplicationHelper
     (star - 1 - n).times do
       html_text += render 'shared/rating/outline_star'
     end
-    return raw(html_text)
+    raw(html_text)
   end
 end

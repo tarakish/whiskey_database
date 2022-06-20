@@ -2,7 +2,8 @@ class WhiskeysController < ApplicationController
   skip_before_action :require_login, only: %i[index show]
 
   def index
-    result = @q.result(distinct: true).eager_load(:bookmarks, :tasting_notes).order(updated_at: :desc)
+    result =
+      @q.result(distinct: true).eager_load(:bookmarks, :tasting_notes).order(updated_at: :desc)
     @pagy, @searched_whiskeys = pagy(result)
   end
 
