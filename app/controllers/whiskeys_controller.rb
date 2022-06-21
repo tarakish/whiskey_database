@@ -14,6 +14,7 @@ class WhiskeysController < ApplicationController
       @whiskey.tasting_notes.preload(:user).eager_load(:drink_way, :flavors).order(id: :desc)
     # 投稿用
     @tasting_note = current_user.tasting_notes.build if current_user
+    
   end
 
   private
