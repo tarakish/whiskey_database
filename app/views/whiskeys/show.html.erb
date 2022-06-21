@@ -112,8 +112,8 @@
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center fw-bold">
-      <em class='fs-3'>- Pairing -</em><br>
-      <span>相性を楽しむ</span>
+      <em class='fs-3 fw-light'>- Pairing -</em><br>
+      相性を楽しむ
     </h1>
   </div>
   <div class="row justify-content-center mt-4">
@@ -189,9 +189,9 @@
 <!-- 投稿 -->
 <div class="container mt-15">
   <div class="row justify-content-center">
-    <h1 class="col-auto text-muted text-center">
-      <em>Tasting Notes</em><br>
-      <span class="fs-3">〜ユーザー投稿〜</span><br>
+    <h1 class="col-auto text-muted text-center fw-bold">
+      <em class="fs-3 fw-light">- Tasting Notes -</em><br>
+      <span>ユーザー投稿</span>
     </h1>
   </div>
   <div class="row justify-content-center mt-4 mb-5">
@@ -212,14 +212,19 @@
 <!-- レコメンド-->
 <div class="container mt-15">
   <div class="row justify-content-center">
-    <h1 class="col-auto text-muted text-center">
-      <em>You may also like…</em><br>
-      <span class="fs-3">〜オススメのウイスキー〜</span><br>
-      <span class="fs-4">（実装予定！）</span>
+    <h1 class="col-auto text-muted text-center fw-bold">
+      <em class="fs-3 fw-light">- You may also like ... -</em><br>
+      <span>似ているウイスキー</span>
     </h1>
   </div>
   <div class="row justify-content-center mt-4">
     <div class="col-lg-9 col-6 ui divider border-2">
     </div>
+  </div>
+</div>
+
+<div class="container pt-5">
+  <div class="row mb-2 gx-5 gy-4 justify-content-center">
+    <%= render partial: 'whiskey', locals: { whiskey: @recommended_whiskey } %>
   </div>
 </div>

@@ -3,8 +3,8 @@
 # Table name: flavors
 #
 #  id         :bigint           not null, primary key
+#  category   :integer          default(0), not null
 #  detail     :string           not null
-#  group      :integer          default("woody"), not null
 #  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -21,7 +21,7 @@ class Flavor < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :detail, presence: true, uniqueness: true
-  validates :group, presence: true
+  validates :category, presence: true
 
-  enum group: { woody: 0, winy: 1, fruity: 2, floral: 3, sereal: 4, smoky: 5 }
+  enum category: { woody: 0, winy: 1, fruity: 2, floral: 3, sereal: 4, smoky: 5 }
 end

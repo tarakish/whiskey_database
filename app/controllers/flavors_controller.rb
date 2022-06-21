@@ -3,6 +3,6 @@ class FlavorsController < ApplicationController
 
   def index
     @flavors = Flavor.order(:id)
-    # @flavors = Flavor.groups.keys.map {|key| {key => Flavor.where(group: key).order(:id)}}
+    # @flavors = Flavor.categories.keys.map {|key| {key => Flavor.where(category: key).order(:id)}}
   end
 end

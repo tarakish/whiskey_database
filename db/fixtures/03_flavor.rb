@@ -33,6 +33,6 @@
   [27, '燻製', 'カリッと焼いたベーコンのような燻香。', 5]
 ].each do |id, name, detail, num|
   Flavor.create!(
-    { id: id, name: name, detail: detail, group: num }
+    { id: id, name: name, detail: detail, category: num }
   )
 end
