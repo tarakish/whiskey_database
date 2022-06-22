@@ -69,7 +69,7 @@ class Whiskey < ApplicationRecord
   end
 
   def similar_to_self
-    whiskeys_same_drink_way = Whiskey.where(drink_way_id: drink_way).where.not(id: id)
+    whiskeys_same_drink_way = Whiskey.where(drink_way_id: drink_way).where.not(id: id).preload(:bookmarks).eager_load(:flavors, :tasting_notes, :whiskey_flavors)
     return nil if whiskeys_same_drink_way == []
 
     original_flavors = flavors.map(&:category_before_type_cast)
