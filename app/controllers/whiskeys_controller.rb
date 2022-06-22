@@ -9,6 +9,7 @@ class WhiskeysController < ApplicationController
 
   def show
     @whiskey = Whiskey.find(params[:id])
+
     # 表示用
     @tasting_notes =
       @whiskey.tasting_notes.preload(:user).eager_load(:drink_way, :flavors).order(id: :desc)
@@ -16,22 +17,7 @@ class WhiskeysController < ApplicationController
     @tasting_note = current_user.tasting_notes.build if current_user
 
     # レコメンド
-    whiskeys_same_drink_way = Whiskey.where(drink_way_id: @whiskey.drink_way).where.not(id: @whiskey.id)
-    # 見つからなかった場合のハンドリング
-    original_flavors = @whiskey.flavors.map(&:category_before_type_cast)
-    filtered_whiskeys = []
-    whiskeys_same_drink_way.each do |whiskey_same_drink_way|
-      similarity = 0
-      comparison_flavors = whiskey_same_drink_way.flavors.map(&:category_before_type_cast).tally
-      original_flavors.uniq.each do |i|
-        similarity += comparison_flavors[i] unless comparison_flavors[i].nil?
-      end
-      filtered_whiskeys.push({whiskey: whiskey_same_drink_way, sim: similarity})
-    end
-    max_similarity = filtered_whiskeys.sort_by { |i| -i[:sim] }.first[:sim]
-    # max_similarity == 0 の時は 抜けて「似ているウイスキーが見つかりませんでした…ウイスキーの登録をお待ち下さい！」
-    @recommended_whiskey = filtered_whiskeys.select { |i| i[:sim] == max_similarity }.sample[:whiskey]
-
+    @recommended_whiskey = @whiskey.similar_to_self
   end
 
   private

@@ -224,7 +224,15 @@
 </div>
 
 <div class="container pt-5">
-  <div class="row mb-2 gx-5 gy-4 justify-content-center">
-    <%= render partial: 'whiskey', locals: { whiskey: @recommended_whiskey } %>
-  </div>
+  <% if @recommended_whiskey.blank? %>
+    <div class="row mb-2 justify-content-center">
+      <div class="col-auto">
+        似ているウイスキーが見つかりませんでした…ウイスキーの追加登録をお待ち下さい！
+      </div>
+    </div>
+  <% else %>
+    <div class="row mb-2 gx-5 gy-4 justify-content-center">
+      <%= render partial: 'whiskey', locals: { whiskey: @recommended_whiskey } %>
+    </div>
+  <% end %>
 </div>
