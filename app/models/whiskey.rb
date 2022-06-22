@@ -72,7 +72,7 @@ class Whiskey < ApplicationRecord
     whiskeys_same_drink_way = Whiskey.where(drink_way_id: drink_way).where.not(id: id)
                                      .preload(:bookmarks)
                                      .eager_load(:flavors, :tasting_notes, :whiskey_flavors)
-    return nil if whiskeys_same_drink_way.blank?
+    return if whiskeys_same_drink_way.blank?
 
     original_flavors = flavors.map(&:category_before_type_cast)
     whiskeys_with_similarity = []
@@ -85,7 +85,7 @@ class Whiskey < ApplicationRecord
       whiskeys_with_similarity.push({ whiskey: whiskey_same_drink_way, sim: similarity })
     end
     max_similarity = whiskeys_with_similarity.max_by { |i| i[:sim] }[:sim]
-    return nil if max_similarity.zero?
+    return if max_similarity.zero?
 
     whiskeys_with_similarity.filter { |i| i[:sim] == max_similarity }.sample[:whiskey]
   end
