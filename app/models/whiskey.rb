@@ -69,9 +69,10 @@ class Whiskey < ApplicationRecord
   end
 
   def similar_to_self
-    whiskeys_same_drink_way = Whiskey.where(drink_way_id: self.drink_way).where.not(id: self.id)
-    return recommended_whiskey = nil if whiskeys_same_drink_way == []
-    original_flavors = self.flavors.map(&:category_before_type_cast)
+    whiskeys_same_drink_way = Whiskey.where(drink_way_id: drink_way).where.not(id: id)
+    return nil if whiskeys_same_drink_way == []
+
+    original_flavors = flavors.map(&:category_before_type_cast)
     whiskeys_with_similarity = []
     whiskeys_same_drink_way.each do |whiskey_same_drink_way|
       similarity = 0
@@ -79,11 +80,11 @@ class Whiskey < ApplicationRecord
       original_flavors.uniq.each do |i|
         similarity += comparison_flavors[i] unless comparison_flavors[i].nil?
       end
-      whiskeys_with_similarity.push({whiskey: whiskey_same_drink_way, sim: similarity})
+      whiskeys_with_similarity.push({ whiskey: whiskey_same_drink_way, sim: similarity })
     end
-    max_similarity = whiskeys_with_similarity.sort_by { |i| -i[:sim] }.first[:sim]
-    return recommended_whiskey = nil if max_similarity == 0
-    recommended_whiskey = whiskeys_with_similarity.filter { |i| i[:sim] == max_similarity }.sample[:whiskey]
+    max_similarity = whiskeys_with_similarity.max_by { |i| i[:sim] }[:sim]
+    return nil if max_similarity.zero?
+
+    whiskeys_with_similarity.filter { |i| i[:sim] == max_similarity }.sample[:whiskey]
   end
 end
-
