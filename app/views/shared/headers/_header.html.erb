@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-3">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-3 header-main">
     <div class="container">
       <%= link_to '/', class: 'navbar-brand d-none d-lg-inline hover-target-reverse' do %>
         <%= image_tag 'logo_with_title.webp', size: '200x50' %>
@@ -7,8 +7,8 @@
       <%= link_to '/', class: 'navbar-brand d-lg-none d-inline hover-target-reverse' do %>
         <%= image_tag 'logo.webp', size: '40' %>
       <% end %>
-      <%= search_form_for @q, url: whiskeys_path, class: 'ms-lg-15 d-none', id: 'js-search-form' do |f| %>
-        <%= render 'shared/search_bar', f: f %>
+      <%= search_form_for @q, url: whiskeys_path, class: 'ms-lg-15' do |f| %>
+        <%= render 'shared/headers/search_bar', f: f %>
       <% end %>
       <button class="navbar-toggler px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

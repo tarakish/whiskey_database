@@ -9,7 +9,7 @@
     <h1 class="fw-bold col-lg-7">ウイスキー情報サービス</h1>
     <div class="col-lg-7 row justify-content-center my-3">
       <%= search_form_for @q, url: whiskeys_path, class: 'col-auto' do |f| %>
-        <%= render 'shared/search_bar', f: f %>
+        <%= render 'shared/headers/search_bar', f: f %>
       <% end %>
     </div>
     <div class="col-lg-7 mt-3">
