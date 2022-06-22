@@ -1,20 +1,20 @@
-<footer class="text-center text-secondary mt-5">
+<footer class="text-center text-secondary mt-5" id='help'>
   <div class="container">
     <div class="row justify-content-evenly mb-5">
       <div class="col-auto">
-        <%= link_to '利用規約', '#', class: 'simple-a-tag hover-target' %>
+        <a href='' class='simple-a-tag hover-target' data-bs-toggle="modal" data-bs-target="#termsOfService">利用規約</a>
       </div> 
       <div class="col-auto">
-        <%= link_to 'プライバシポリシー', '#', class: 'simple-a-tag hover-target' %>
+        <a href='' class='simple-a-tag hover-target' data-bs-toggle="modal" data-bs-target="#privacyPolicy">プライバシーポリシー</a>
       </div>
       <div class="col-auto">
-        <%= link_to 'お問い合わせ', '#', class: 'simple-a-tag hover-target' %>
+        <a href='' class='simple-a-tag hover-target' data-bs-toggle="modal" data-bs-target="#inquiry">お問い合わせ</a>
       </div>
     </div>
   </div>
   <div class="row justify-content-center mb-4">
     <div class="col-auto">
-      ※当サイトは"amazon.co.jp"が提供するアソシエイトリンクを利用しています。
+      ※お酒は20歳になってから。
     </div>
   </div>
 
@@ -23,3 +23,7 @@
     All rights reserved.</p>
   </div>
 </footer>
+
+<%= render 'shared/helps/terms_of_service' %>
+<%= render 'shared/helps/privacy_policy' %>
+<%= render 'shared/helps/inquiry' %>

@@ -1,0 +1,32 @@
+<div class="modal fade" id="inquiry" tabindex="-1" aria-labelledby="inquiryLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fw-bold" id="inquiryLabel">お問い合わせ</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class='row mt-3'>
+            <div class='col-auto'>
+              Malt Mateに関するお問い合わせ、不具合の報告などございましたら、以下のTwitterアカウントまでご連絡ください。（DMもしくはリプライにて）<br>
+              ご感想、不具合のご報告なども頂けますと幸いです！
+            </div>
+          </div>
+
+          <div class='row my-5'>
+            <div class='col-auto fs-4 fw-bold'>
+              <%= link_to 'https://twitter.com/tarakish_23', class: 'ui twitter button', target: '_blank', rel: 'noopener noreferrer' do %>
+                <i class="twitter icon"></i>
+                @tarakish_23
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="ui button" data-bs-dismiss="modal">閉じる</button>
+      </div>
+    </div>
+  </div>
+</div>
