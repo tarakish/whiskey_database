@@ -232,7 +232,7 @@
     </div>
   <% else %>
     <div class="row mb-2 gx-5 gy-4 justify-content-center">
-      <%= render partial: 'whiskey', locals: { whiskey: @recommended_whiskey } %>
+      <%= render @recommended_whiskey %>
     </div>
   <% end %>
 </div>
