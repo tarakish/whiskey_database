@@ -18,8 +18,8 @@
       <%= f.text_area :detail %>
     </div>
     <div class="field my-4">
-      <%= f.label :group %>
-      <%= f.select :group, Flavor.groups_i18n.invert, {} %>
+      <%= f.label :category %>
+      <%= f.select :category, Flavor.categories_i18n.invert, {} %>
     </div>
     <div class="row justify-content-center mt-5">
       <%= f.submit class: 'ui button teal col-auto' %>

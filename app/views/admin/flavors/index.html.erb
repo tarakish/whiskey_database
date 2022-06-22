@@ -15,7 +15,7 @@
           <th>id</th>
           <th>name</th>
           <th>detail</th>
-          <th>group</th>
+          <th>category</th>
         </tr></thead>
         <% @flavors.each do |flavor| %>
           <tbody><tr>
@@ -30,7 +30,7 @@
             <td><%= flavor.id %></td>
             <td class="fw-bold"><%= flavor.name %></td>
             <td><%= simple_format(h(flavor.detail)) %></td>
-            <td><%= flavor.group_i18n %></td>
+            <td><%= flavor.category_i18n %></td>
           </tr></tbody>
         <% end %>
       </table>

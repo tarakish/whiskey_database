@@ -48,7 +48,7 @@ class Admin::FlavorsController < Admin::BaseController
     params.require(:flavor).permit(
       :name,
       :detail,
-      :group
+      :category
     )
   end
 end

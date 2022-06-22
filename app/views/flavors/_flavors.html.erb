@@ -1,11 +1,11 @@
-<div  id=<%= "#{flavors.first.group}" %>>
+<div  id=<%= "#{flavors.first.category}" %>>
 </div>
 
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
-    <h2 class="col-lg-9 text-center text-capitalize pt-3 pb-3 mb-1 shadow-sm rounded bg-<%= "#{flavors.first.group}" %>">
-      <%= flavors.first.group %><br>
-      <span class="fs-5">〜<%= flavors.first.group_i18n %>〜</span>
+    <h2 class="col-lg-9 text-center text-capitalize pt-3 pb-3 mb-1 shadow-sm rounded bg-<%= "#{flavors.first.category}" %>">
+      <%= flavors.first.category %><br>
+      <span class="fs-5">〜<%= flavors.first.category_i18n %>〜</span>
     </h2>
   </div>
 </div>
@@ -14,7 +14,7 @@
   <div class="row justify-content-center">
     <div class="col-lg-9 p-0">
       <div class="table-responsive">
-        <table class="table text-nowrap text-center fs-5 rounded shadow-sm bg-<%= "#{flavors.first.group}" %>">
+        <table class="table text-nowrap text-center fs-5 rounded shadow-sm bg-<%= "#{flavors.first.category}" %>">
           <tbody class="bd-main-color">
             <%= render flavors %>
           </tbody>

@@ -9,11 +9,15 @@ class WhiskeysController < ApplicationController
 
   def show
     @whiskey = Whiskey.find(params[:id])
+
     # 表示用
     @tasting_notes =
       @whiskey.tasting_notes.preload(:user).eager_load(:drink_way, :flavors).order(id: :desc)
     # 投稿用
     @tasting_note = current_user.tasting_notes.build if current_user
+
+    # レコメンド
+    @recommended_whiskey = @whiskey.similar_to_self
   end
 
   private

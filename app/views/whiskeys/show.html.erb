@@ -1,7 +1,7 @@
 <!-- 主情報 -->
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
-    <div class="col-lg-9 col-auto row justify-content-center text-center rounded bg-white">
+    <div class="col-xl-9 col-auto row justify-content-center text-center rounded bg-white">
       <div class="col-lg-4 text-center">
         <div class="col-12 my-5">
           <!-- 階層を変えるとインプレッション用の画像が表示されてしまうため改行しない -->
@@ -27,7 +27,7 @@
       <div class="col-lg-7 text-lg-start ms-lg-5 my-5">
         <div class="row justify-content-lg-between justify-content-center mb-3">
           <h5 class="col-lg-auto col-12 text-muted my-auto order-lg-0 order-1">
-            <%= @whiskey.region_i18n %>ウイスキー　/　<%= @whiskey.processing_i18n %>
+            <%= @whiskey.region_i18n %>ウイスキー<span class="d-none d-sm-inline">　/　</span><span class='d-sm-inline d-block mt-sm-0 mt-3'><%= @whiskey.processing_i18n %></span>
           </h5>
         </div>
         <div class="row justify-content-lg-start justify-content-center">
@@ -66,10 +66,10 @@
       </div>
       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
         <div class="row justify-content-center my-5">
-          <div class="col-xl-4 col-10 fs-1 f-orange my-xl-auto mt-3 order-xl-1 order-2">
+          <div class="col-lg-4 col-10 fs-1 f-orange my-xl-auto mt-3 order-lg-1 order-2">
             <%= draw_rating(@whiskey.flavor_strength_before_type_cast, 5) %>
           </div>
-          <div class="col-xl-5 col-10 row text-center order-xl-2 order-1">
+          <div class="col-lg-5 col-10 row text-center order-lg-2 order-1">
             <div class="col-12 fs-5 fw-ligt">
               ー 香りの強さ ー
             </div>
@@ -79,10 +79,10 @@
           </div>
         </div>
         <div class="row justify-content-center my-5">
-          <div class="col-xl-4 col-10 fs-1 f-orange my-xl-auto mt-3 order-xl-1 order-2">
+          <div class="col-lg-4 col-10 fs-1 f-orange my-xl-auto mt-3 order-lg-1 order-2">
             <%= draw_rating(@whiskey.mouth_feel_before_type_cast, 5) %>
           </div>
-          <div class="col-xl-5 col-10 row text-center order-xl-2 order-1">
+          <div class="col-lg-5 col-10 row text-center order-lg-2 order-1">
             <div class="col-12 fs-5 fw-ligt">
               ー 口当たり ー
             </div>
@@ -92,10 +92,10 @@
           </div>
         </div>
         <div class="row justify-content-center my-5">
-          <div class="col-xl-4 col-10 fs-1 f-orange my-xl-auto mt-3 order-xl-1 order-2">
+          <div class="col-lg-4 col-10 fs-1 f-orange my-xl-auto mt-3 order-lg-1 order-2">
             <%= draw_rating(@whiskey.rarity_before_type_cast, 3) %>
           </div>
-          <div class="col-xl-5 col-10 row text-center order-xl-2 order-1">
+          <div class="col-lg-5 col-10 row text-center order-lg-2 order-1">
             <div class="col-12 fs-5 fw-ligt">
               ー 入手難易度 ー
             </div>
@@ -112,8 +112,8 @@
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center fw-bold">
-      <em class='fs-3'>- Pairing -</em><br>
-      <span>相性を楽しむ</span>
+      <em class='fs-3 fw-light'>- Pairing -</em><br>
+      相性を楽しむ
     </h1>
   </div>
   <div class="row justify-content-center mt-4">
@@ -125,7 +125,7 @@
 <!-- paring -->
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <%= link_to drink_ways_path(anchor: "#{@whiskey.drink_way.english_name}"), class: 'col-lg-9 row text-center rounded shadow bg-white p-0 transform-y-md simple-a-tag hover-target-reverse' do %>
+    <%= link_to drink_ways_path(anchor: "#{@whiskey.drink_way.english_name}"), class: 'col-xl-9 row text-center rounded shadow bg-white p-0 transform-y-md simple-a-tag hover-target-reverse' do %>
       <%= image_tag @whiskey.drink_way.image.url, class: 'img-fluid col-lg-4 p-0' if @whiskey.drink_way.image? %>
       <div class="col-lg-8 my-5">
         <h5 class="text-muted mb-3">
@@ -144,7 +144,7 @@
 
 <div class="container mt-5" id='indexTastingNote'>
   <div class="row justify-content-center">
-    <%= link_to snacks_path(anchor: "#{@whiskey.snack.english_name}"), class: 'col-lg-9 row text-center rounded shadow bg-white p-0 transform-y-md simple-a-tag hover-target-reverse' do %>
+    <%= link_to snacks_path(anchor: "#{@whiskey.snack.english_name}"), class: 'col-xl-9 row text-center rounded shadow bg-white p-0 transform-y-md simple-a-tag hover-target-reverse' do %>
       <%= image_tag @whiskey.snack.image.url, class: 'img-fluid col-lg-4 p-0' if @whiskey.snack.image? %>
       <div class="col-lg-8 my-5">
         <h5 class="text-muted mb-3">
@@ -189,9 +189,9 @@
 <!-- 投稿 -->
 <div class="container mt-15">
   <div class="row justify-content-center">
-    <h1 class="col-auto text-muted text-center">
-      <em>Tasting Notes</em><br>
-      <span class="fs-3">〜ユーザー投稿〜</span><br>
+    <h1 class="col-auto text-muted text-center fw-bold">
+      <em class="fs-3 fw-light">- Tasting Notes -</em><br>
+      <span>ユーザー投稿</span>
     </h1>
   </div>
   <div class="row justify-content-center mt-4 mb-5">
@@ -201,7 +201,7 @@
 </div>
 
 <div class="container mb-5">
-  <%= render partial: 'tasting_notes/note', collection: @tasting_notes %>
+  <%= render partial: 'tasting_notes/note', collection: @tasting_notes, locals: { width: 'xl' } %>
 </div>
 
 <!-- 投稿フォーム -->
@@ -212,14 +212,27 @@
 <!-- レコメンド-->
 <div class="container mt-15">
   <div class="row justify-content-center">
-    <h1 class="col-auto text-muted text-center">
-      <em>You may also like…</em><br>
-      <span class="fs-3">〜オススメのウイスキー〜</span><br>
-      <span class="fs-4">（実装予定！）</span>
+    <h1 class="col-auto text-muted text-center fw-bold">
+      <em class="fs-3 fw-light">- You may also like ... -</em><br>
+      <span>似ているウイスキー</span>
     </h1>
   </div>
   <div class="row justify-content-center mt-4">
     <div class="col-lg-9 col-6 ui divider border-2">
     </div>
   </div>
+</div>
+
+<div class="container pt-5">
+  <% if @recommended_whiskey.blank? %>
+    <div class="row mb-2 justify-content-center">
+      <div class="col-auto">
+        似ているウイスキーが見つかりませんでした…ウイスキーの追加登録をお待ち下さい！
+      </div>
+    </div>
+  <% else %>
+    <div class="row mb-2 gx-5 gy-4 justify-content-center">
+      <%= render @recommended_whiskey %>
+    </div>
+  <% end %>
 </div>

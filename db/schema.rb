@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_12_101638) do
+ActiveRecord::Schema.define(version: 2022_06_21_154758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2022_06_12_101638) do
   create_table "flavors", force: :cascade do |t|
     t.string "name", null: false
     t.string "detail", null: false
-    t.integer "group", default: 0, null: false
+    t.integer "category", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name", "detail"], name: "index_flavors_on_name_and_detail", unique: true

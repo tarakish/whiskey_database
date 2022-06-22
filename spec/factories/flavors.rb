@@ -3,8 +3,8 @@
 # Table name: flavors
 #
 #  id         :bigint           not null, primary key
+#  category   :integer          default(0), not null
 #  detail     :string           not null
-#  group      :integer          default("woody"), not null
 #  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -17,6 +17,6 @@ FactoryBot.define do
   factory :flavor do
     name { "MyString" }
     detail { "MyString" }
-    group { 1 }
+    category { 1 }
   end
 end

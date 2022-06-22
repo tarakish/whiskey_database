@@ -11,6 +11,6 @@
   </div>
 </div>
 
-<% Flavor.groups.keys.each do |key| %>
-  <%= render partial: 'flavors', locals: { flavors: Flavor.where(group: key).order(:id) } %>
+<% Flavor.categories.keys.each do |key| %>
+  <%= render partial: 'flavors', locals: { flavors: Flavor.where(category: key).order(:id) } %>
 <% end %>

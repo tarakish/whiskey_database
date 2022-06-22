@@ -37,7 +37,7 @@ ja:
       flavor:
         name: 名称
         detail: 詳細説明
-        group: グループ
+        category: グループ
       drink_way:
         name: 名称
         english_name: 英語名
@@ -102,7 +102,7 @@ ja:
         irish: アイリッシュ
         canadian: カナディアン
     flavor:
-      group:
+      category:
         woody: ウッディ
         winy: ワイニー
         fruity: フルーティ
