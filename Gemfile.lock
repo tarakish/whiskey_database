@@ -379,6 +379,8 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.3)
+    sitemap_generator (6.2.1)
+      builder (~> 3.0)
     solargraph (0.44.3)
       backport (~> 1.2)
       benchmark
@@ -473,6 +475,7 @@ DEPENDENCIES
   seed-fu
   semantic-ui-sass
   simplecov
+  sitemap_generator
   solargraph
   sorcery
   spring
