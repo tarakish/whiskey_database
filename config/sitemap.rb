@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "https://malt-mate.jp/"
+SitemapGenerator::Sitemap.default_host = 'https://malt-mate.jp/'
 
 SitemapGenerator::Sitemap.create do
   # Defaults: :priority => 0.5, :changefreq => 'weekly',
@@ -13,5 +13,4 @@ SitemapGenerator::Sitemap.create do
   add drink_ways_path, changefreq: 'daily'
   add snacks_path, changefreq: 'daily'
   add flavors_path, changefreq: 'daily'
-  
 end
