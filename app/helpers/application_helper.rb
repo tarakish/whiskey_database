@@ -43,14 +43,14 @@ module ApplicationHelper
       title: '',
       reverse: true,
       separator: '|',
-      description: 'ウイスキーを気軽に、身近に楽しむための情報サイトです。相性のよい飲み方やおつまみなど、独自の検索軸からあなたのウイスキー選びをサポートします。',
+      description: 'ウイスキーを気軽に、もっと身近に楽しむための情報サイトです。相性のよい飲み方やおつまみなど、独自の検索軸からあなたのウイスキー選びをサポートします。',
       keywords: 'ウイスキー,初心者,ペアリング,わかりにくい,直感,難しい,相性,フレーバー',
       canonical: request.original_url,
       noindex: !Rails.env.production?,
       icon: image_url('favicon.ico'),
       og: {
-        site_name: :site,
-        title: :title,
+        site_name: '気の置けない友人のようにウイスキーに親しもう',
+        title: :site,
         description: :description,
         type: 'website',
         url: request.original_url,
@@ -59,8 +59,7 @@ module ApplicationHelper
       },
       twitter: {
         card: 'summary_large_image',
-        creator: '@tarakish_23',
-        image: image_url('ogp.png')
+        creator: '@tarakish_23'
       }
     }
   end
