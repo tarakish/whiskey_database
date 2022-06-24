@@ -1,6 +1,10 @@
 module ApplicationHelper
   include Pagy::Frontend
 
+  def current_user_is?(user)
+    logged_in? && user = current_user
+  end
+
   def separate_header
     if controller_name == 'staticpages'
       render 'shared/headers/top_header'
