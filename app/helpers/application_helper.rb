@@ -2,7 +2,7 @@ module ApplicationHelper
   include Pagy::Frontend
 
   def current_user_is?(user)
-    logged_in? && user = current_user
+    logged_in? && user == current_user
   end
 
   def separate_header
@@ -43,7 +43,7 @@ module ApplicationHelper
       title: '',
       reverse: true,
       separator: '|',
-      description: 'ウイスキーを気軽に、身近に楽しむための情報サイトです。相性のよい飲み方やおつまみなど、独自の検索軸からウイスキー選びをサポートします。',
+      description: 'ウイスキーを気軽に、身近に楽しむための情報サイトです。相性のよい飲み方やおつまみなど、独自の検索軸からあなたのウイスキー選びをサポートします。',
       keywords: 'ウイスキー,初心者,ペアリング,わかりにくい,直感,難しい,相性,フレーバー',
       canonical: request.original_url,
       noindex: !Rails.env.production?,
@@ -64,5 +64,4 @@ module ApplicationHelper
       }
     }
   end
-
 end
