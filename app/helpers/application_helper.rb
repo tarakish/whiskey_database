@@ -40,7 +40,7 @@ module ApplicationHelper
   def default_meta_tags
     {
       site: 'Malt Mate - ウイスキーをもっと身近に -',
-      title: '',
+      title: 'Malt Mate - ウイスキーをもっと身近に -',
       reverse: true,
       separator: '|',
       description: 'ウイスキーを気軽に、もっと身近に楽しむための情報サイトです。相性のよい飲み方やおつまみなど、独自の検索軸からあなたのウイスキー選びをサポートします。',
@@ -50,7 +50,7 @@ module ApplicationHelper
       icon: image_url('favicon.ico'),
       og: {
         site_name: '気の置けない友人のようにウイスキーに親しもう',
-        title: :site,
+        title: :title,
         description: :description,
         type: 'website',
         url: request.original_url,
@@ -58,6 +58,7 @@ module ApplicationHelper
         locale: 'ja_JP'
       },
       twitter: {
+        title: :title,
         card: 'summary_large_image',
         creator: '@tarakish_23'
       }
