@@ -22,21 +22,21 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use FileUploader
+# For FileUploader
 gem 'carrierwave', '~> 2.0'
 gem 'fog-aws'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
-# Insert initial data into database
+# For Inserting initial data
 gem 'seed-fu'
 
-# Provide authentication with
+# For Authentication
 gem 'pundit'
 gem 'sorcery'
 
-# CSS-framework
+# For UI
 gem 'semantic-ui-sass'
 
 # Use Pagenation
@@ -48,11 +48,12 @@ gem 'ransack'
 # For Control Constant
 gem 'config'
 
-# i18n
+# For i18n
 gem 'enum_help'
 gem 'rails-i18n', '~> 6.0'
 
 # For SEO
+gem 'meta-tags'
 gem 'sitemap_generator'
 
 group :development, :test do
@@ -61,7 +62,7 @@ group :development, :test do
   # RSpec and related
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 5.0.0'
-  # Use language support
+  # Use ruby support
   gem 'solargraph', require: false
 end
 

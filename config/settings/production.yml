@@ -1,6 +1,6 @@
 sorcery:
-  twitter_callback_url: 'https://whiskey-database-beta.herokuapp.com/oauth/callback?provider=twitter'
-  google_callback_url: 'https://whiskey-database-beta.herokuapp.com/oauth/callback?provider=google'
-  line_callback_url: 'https://whiskey-database-beta.herokuapp.com/oauth/callback?provider=line'
+  twitter_callback_url: 'https://malt-mate.jp/oauth/callback?provider=twitter'
+  google_callback_url: 'https://malt-mate.jp/oauth/callback?provider=google'
+  line_callback_url: 'https://malt-mate.jp/oauth/callback?provider=line'
 carrierwave:
   storage: :fog
