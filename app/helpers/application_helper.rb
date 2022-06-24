@@ -32,4 +32,33 @@ module ApplicationHelper
     end
     raw(html_text)
   end
+
+  def default_meta_tags
+    {
+      site: 'Malt Mate - ウイスキーをもっと身近に -',
+      title: '',
+      reverse: true,
+      separator: '|',
+      description: 'ウイスキーを気軽に、身近に楽しむための情報サイトです。相性のよい飲み方やおつまみなど、独自の検索軸からウイスキー選びをサポートします。',
+      keywords: 'ウイスキー,初心者,ペアリング,わかりにくい,直感,難しい,相性,フレーバー',
+      canonical: request.original_url,
+      noindex: !Rails.env.production?,
+      icon: image_url('favicon.ico'),
+      og: {
+        site_name: :site,
+        title: :title,
+        description: :description,
+        type: 'website',
+        url: request.original_url,
+        image: image_url('ogp.png'),
+        locale: 'ja_JP'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        creator: '@tarakish_23',
+        image: image_url('ogp.png')
+      }
+    }
+  end
+
 end
