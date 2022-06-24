@@ -6,6 +6,18 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   before_action :set_search_instance
   before_action :require_login
+  before_action :ensure_domain, if: :production?
+
+  def ensure_domain
+    return unless /\.herokuapp.com/.match?(request.host)
+
+    port = ":#{request.port}" unless [80, 443].include?(request.port)
+    redirect_to "#{request.protocol}malt-mate.jp#{port}#{request.path}", status: :moved_permanently
+  end
+
+  def production?
+    Rails.env.production?
+  end
 
   private
 
