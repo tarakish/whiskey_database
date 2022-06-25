@@ -43,7 +43,7 @@ module ApplicationHelper
       title: 'Malt Mate - ウイスキーをもっと身近に -',
       reverse: true,
       separator: '|',
-      description: 'ウイスキーを気軽に、もっと身近に楽しむための情報サイトです。相性のよい飲み方やおつまみなど、独自の検索軸からあなたのウイスキー選びをサポートします。',
+      description: '『Malt Mate』はウイスキーを気軽に、もっと身近に楽しむための情報サイト。相性のよい飲み方やおつまみなど、独自の検索軸からあなたのウイスキー選びをサポートします。',
       keywords: 'ウイスキー,初心者,ペアリング,わかりにくい,直感,難しい,相性,フレーバー',
       canonical: request.original_url,
       noindex: !Rails.env.production?,
