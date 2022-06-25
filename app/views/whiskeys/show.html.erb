@@ -23,25 +23,24 @@
               </div>
             <% end %>
           </div>
-          <!-- #{request.url} に置き換え-->
-          <div class="col-auto mb-lg-4">
-            <%= link_to "https://twitter.com/intent/tweet?text=『#{@whiskey.name}』
-            %0A%0A相性の良い飲み方：#{@whiskey.drink_way.name}%0A相性の良いおつまみ：#{@whiskey.snack.name}%0A%0Ahttps://malt-mate.jp%0A&hashtags=MaltMate,モルトは友達怖くない", class: 'ui button circular icon', target: '_blank', rel: 'nofollow' do %>
-              <i class="share icon square"></i>
-            <% end %>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class='col-12 text-muted mt-lg-0 mt-5'>
+            このウイスキーをシェア
           </div>
-          <div class="col-auto mb-lg-4">
-            <%= link_to "https://www.facebook.com/share.php?u=https://malt-mate.jp", class: 'ui button circular icon', target: '_blank', rel: 'nofollow' do %>
-              <i class="share icon square"></i>
-            <% end %>
+          <div class="col-auto">
+            <%= render 'shared/sns_shares/twitter', whiskey: @whiskey, note: false %>
           </div>
-          <div class="col-auto mb-lg-4">
-            <%= link_to "https://line.me/R/msg/text/?https://malt-mate.jp/whiskeys/#{@whiskey.id}", class: 'ui button circular icon', target: '_blank', rel: 'nofollow' do %>
-              <i class="share icon square"></i>
-            <% end %>
+          <div class="col-auto">
+            <%= render 'shared/sns_shares/facebook', whiskey: @whiskey, note: false %>
+          </div>
+          <div class="col-auto">
+            <%= render 'shared/sns_shares/line', whiskey: @whiskey, note: false %>
           </div>
         </div>
       </div>
+
       <div class="col-lg-7 text-lg-start ms-lg-5 my-5">
         <div class="row justify-content-lg-between justify-content-center mb-3">
           <h5 class="col-lg-auto col-12 text-muted my-auto order-lg-0 order-1">
@@ -77,6 +76,7 @@
           </div>
         </h4>
       </div>
+
       <div class="row justify-content-center mb-5 mt-3">
         <a class="col-auto fs-4 border-bottom text-muted collapsed simple-a-tag hover-target" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
           もっと詳しく
