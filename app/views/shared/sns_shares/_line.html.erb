@@ -1,0 +1,13 @@
+<% if note %>
+  <%= link_to "https://line.me/R/msg/text/?#{request.url}", class: 'simple-a-tag', target: '_blank', rel: 'nofollow' do %>
+    <i class="linechat icon fs-2 f-line"></i>
+  <% end %>
+<% elsif whiskey %>
+  <%= link_to "https://line.me/R/msg/text/?#{request.url}", class: 'simple-a-tag', target: '_blank', rel: 'nofollow' do %>
+    <i class="linechat icon fs-2 f-line"></i>
+  <% end %>
+<% else %>
+  <%= link_to "https://line.me/R/msg/text/?https://malt-mate.jp", class: 'simple-a-tag', target: '_blank', rel: 'nofollow' do %>
+    <i class="linechat icon fs-2 f-line"></i>
+  <% end %>
+<% end %>

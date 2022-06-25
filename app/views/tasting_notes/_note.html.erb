@@ -8,7 +8,7 @@
   </div>
 <% end %>
 
-<div class="row justify-content-center">
+<div class="row justify-content-center" id="tastingNote<%= note.id %>">
   <div class="col-<%= width %>-9 rounded shadow bg-white pe-0 mb-5">
     <div class="row justify-content-sm-between">
       <% if note.user %>
@@ -24,10 +24,27 @@
       <% end %>
       <h5 class="col-sm-auto col-12 py-3 text-center">
         <% if logged_in? && note.written_by?(current_user) %>
-          <button type="button" class="btn bg-edit text-white rounded-pill hover-target" data-bs-toggle="modal" data-bs-target="#formEdit-<%= note.id %>">
-            　編集　
-          </button>
-          <%= link_to '　削除　', tasting_note_path(note), class:'btn bg-delete text-white rounded-pill hover-target ms-1 me-3', method: :delete, data: { confirm: '本当に削除しますか?　※この操作は取り消せません。' } %>
+          <div class='row justify-content-center me-3'>
+            <div class='col-auto'>
+              <%= render 'shared/sns_shares/twitter', whiskey: note.whiskey, note: note %>
+            </div>
+            <div class='col-auto'>
+              <%= render 'shared/sns_shares/facebook', whiskey: note.whiskey, note: note %>
+            </div>
+            <div class='col-auto'>
+              <%= render 'shared/sns_shares/line', whiskey: note.whiskey, note: note %>
+            </div>
+            <div class='col-auto'>
+              <a class="simple-a-tag text-secondary hover-target" data-bs-toggle="modal" data-bs-target="#formEdit-<%= note.id %>">
+                <i class="edit icon fs-2"></i>
+              </a>
+            </div>
+            <div class='col-auto'>
+              <%= link_to tasting_note_path(note), class:'text-danger hover-target', method: :delete, data: { confirm: '本当に削除しますか?　※この操作は取り消せません。' } do %>
+                <i class="trash alternate icon fs-2"></i>
+              <% end %>
+            </div>
+          </div>
         <% end %>
       </h5>
     </div>
