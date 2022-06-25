@@ -23,6 +23,23 @@
               </div>
             <% end %>
           </div>
+          <!-- #{request.url} に置き換え-->
+          <div class="col-auto mb-lg-4">
+            <%= link_to "https://twitter.com/intent/tweet?text=『#{@whiskey.name}』
+            %0A%0A相性の良い飲み方：#{@whiskey.drink_way.name}%0A相性の良いおつまみ：#{@whiskey.snack.name}%0A%0Ahttps://malt-mate.jp%0A&hashtags=MaltMate,モルトは友達怖くない", class: 'ui button circular icon', target: '_blank', rel: 'nofollow' do %>
+              <i class="share icon square"></i>
+            <% end %>
+          </div>
+          <div class="col-auto mb-lg-4">
+            <%= link_to "https://www.facebook.com/share.php?u=https://malt-mate.jp", class: 'ui button circular icon', target: '_blank', rel: 'nofollow' do %>
+              <i class="share icon square"></i>
+            <% end %>
+          </div>
+          <div class="col-auto mb-lg-4">
+            <%= link_to "https://line.me/R/msg/text/?https://malt-mate.jp/whiskeys/#{@whiskey.id}", class: 'ui button circular icon', target: '_blank', rel: 'nofollow' do %>
+              <i class="share icon square"></i>
+            <% end %>
+          </div>
         </div>
       </div>
       <div class="col-lg-7 text-lg-start ms-lg-5 my-5">
