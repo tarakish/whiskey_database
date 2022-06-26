@@ -1,11 +1,18 @@
 <% set_meta_tags title: 'フレーバー' %>
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
-    <h1 class="col-auto text-muted text-center">
-      Flavors<br>
-      <span class="fs-3">〜フレーバー一覧〜</span>
+    <h1 class="col-auto text-muted text-center fw-bold">
+      <em class="fs-3 fw-lighter">- Flavors -</em><br>
+      フレーバー一覧
     </h1>
   </div>
+
+  <div class="row justify-content-center mt-5">
+    <%= render 'shared/link_to_index', path: whiskeys_path, text: '&#127870; ウイスキー' %>
+    <%= render 'shared/link_to_index', path: drink_ways_path, text: '&#129347; 飲み方' %>
+    <%= render 'shared/link_to_index', path: snacks_path, text: '&#129372; おつまみ' %>
+  </div>
+
   <div class="row justify-content-center mt-4">
     <div class="col-lg-9 ui divider border-2">
     </div>

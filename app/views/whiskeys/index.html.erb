@@ -1,23 +1,31 @@
 <% set_meta_tags title: 'ウイスキーを探す' %>
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
-    <h1 class="col-auto text-muted text-center">
-      <em>Whiskeys</em><br>
-      <span class="fs-3">〜ウイスキー一覧〜</span>
+    <h1 class="col-auto text-muted text-center fw-bold">
+      <em class="fs-3 fw-lighter">- Whiskeys -</em><br>
+      ウイスキー一覧
     </h1>
   </div>
+
   <div class="row justify-content-center mt-5 mb-4">
     <%= search_form_for @q, url: whiskeys_path, class: 'col-auto' do |f| %>
       <div class="input-group">
-        <%= f.text_field :name_cont, class: 'form-control-lg border-0 rounded-left search-width', placeholder: 'ウイスキー名を入力' %>
+        <%= f.text_field :name_or_description_cont, class: 'form-control-lg border-0 rounded-left search-width', placeholder: 'ウイスキー名を入力' %>
         <%= button_tag type: :submit, class: "btn bg-white rounded-right" do %>
           <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
         <% end %>
       </div>
     <% end %>
   </div>
+
   <div class="row justify-content-center mb-5">
     <%= link_to '　細かい条件で検索　', new_search_path, class: "fs-5 ui icon button rounded-pill col-auto bg-d-cream hover-target" %>
+  </div>
+
+  <div class="row justify-content-center mt-5">
+    <%= render 'shared/link_to_index', path: drink_ways_path, text: '&#129347; 飲み方' %>
+    <%= render 'shared/link_to_index', path: snacks_path, text: '&#129372; おつまみ' %>
+    <%= render 'shared/link_to_index', path: flavors_path, text: '&#127822; フレーバー' %>
   </div>
 </div>
 

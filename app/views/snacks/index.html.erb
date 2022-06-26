@@ -1,11 +1,18 @@
 <% set_meta_tags title: 'おつまみ' %>
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
-    <h1 class="col-auto text-muted text-center">
-      <em>Snacks</em><br>
-      <span class="fs-3">〜おつまみ一覧〜</span>
+    <h1 class="col-auto text-muted text-center fw-bold">
+      <em class="fs-3 fw-lighter">- Snacks -</em><br>
+      おつまみ一覧
     </h1>
   </div>
+
+  <div class="row justify-content-center mt-5">
+    <%= render 'shared/link_to_index', path: whiskeys_path, text: '&#127870; ウイスキー' %>
+    <%= render 'shared/link_to_index', path: drink_ways_path, text: '&#129347; 飲み方' %>
+    <%= render 'shared/link_to_index', path: flavors_path, text: '&#127822; フレーバー' %>
+  </div>
+
   <div class="row justify-content-center mt-4">
     <div class="col-lg-9 col-6 ui divider border-2">
     </div>
