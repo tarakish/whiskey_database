@@ -37,6 +37,10 @@ module ApplicationHelper
     raw(html_text)
   end
 
+  def sort_by_sort_url(url, order)
+    url.gsub(/%5Bs%5D=\w+\+\w+/, "%5Bs%5D=#{order}")
+  end
+
   def default_meta_tags
     {
       site: 'Malt Mate - ウイスキーをもっと身近に -',

@@ -31,6 +31,23 @@
 
 
 <div class="container pt-5">
+  <div class='row justify-content-end mb-3'>
+    <div class="field col-auto my-auto">
+      <select class="form-select rounded-3" onChange="location.href=value;">
+        <option value="">並び替え</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :updated_at), 'updated_at+desc') %>">新着順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :price), 'price+desc') %>">価格の高い順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :price), 'price+asc') %>">価格の安い順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :rarity), 'rarity+desc') %>">入手のし易さ：安定供給</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :rarity), 'rarity+asc') %>">入手のし易さ：激レア</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :updated_at), 'mouth_feel+asc') %>">口当たり：軽い順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :updated_at), 'mouth_feel+desc') %>">口当たり：重い順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :updated_at), 'flavor_strength+asc') %>">香りの強さ：繊細な順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :updated_at), 'flavor_strength+desc') %>">香りの強さ：濃厚な順</option>
+      </select>
+    </div>
+  </div>
+
   <% if @searched_whiskeys.blank? %>
     <div class="row mb-2 justify-content-center">
       <div class="col-auto">
