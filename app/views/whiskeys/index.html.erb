@@ -9,7 +9,7 @@
 
   <div class="row justify-content-center mt-5 mb-4">
     <%= search_form_for @q, url: whiskeys_path, class: 'col-12 row justify-content-center' do |f| %>
-      <div class="ui action large input col-xl-3 col-lg-5 col-sm-8 col-auto">
+      <div class="ui action large input col-lg-4 col-md-6 col-10">
         <%= f.text_field :name_or_description_cont, class: 'rounded-left border-0', placeholder: 'ウイスキー名を入力' %>
         <%= button_tag type: :submit, class: 'ui icon button rounded-right bg-white' do %>
           <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
@@ -23,10 +23,10 @@
       <div id="flush-collapseOne" class="accordion-collapse collapse bg-gray col-auto row rounded-15p" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
         <div class="col-12 row justify-content-center mt-4">
           <div class='col-auto my-2 my-sm-0'>
-            <%= f.collection_select :drink_way_id_eq, DrinkWay.all, :id, :name, { include_blank: sanitize('&#129347;飲み方で絞る') }, { class: 'form-select' } %>
+            <%= f.collection_select :drink_way_id_eq, DrinkWay.all, :id, :name, { include_blank: sanitize('&#129347; 飲み方で絞る') }, { class: 'form-select' } %>
           </div>
           <div class='col-auto my-2 my-sm-0'>
-            <%= f.collection_select :snack_id_eq, Snack.all, :id, :name, { include_blank: sanitize('&#129372;おつまみで絞る') }, { class: 'form-select' } %>
+            <%= f.collection_select :snack_id_eq, Snack.all, :id, :name, { include_blank: sanitize('&#129372; おつまみで絞る') }, { class: 'form-select' } %>
           </div>
           <div class='col-auto my-2 my-sm-0'>
             <%= f.submit '絞り込む', class: 'ui button orange' %>
@@ -57,10 +57,10 @@
         <option value="<%= sort_by_sort_url(sort_url(@q, :price), 'price+asc') %>">価格の安い順</option>
         <option value="<%= sort_by_sort_url(sort_url(@q, :rarity), 'rarity+desc') %>">入手のし易さ：安定供給</option>
         <option value="<%= sort_by_sort_url(sort_url(@q, :rarity), 'rarity+asc') %>">入手のし易さ：激レア</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :updated_at), 'mouth_feel+asc') %>">口当たり：軽い順</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :updated_at), 'mouth_feel+desc') %>">口当たり：重い順</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :updated_at), 'flavor_strength+asc') %>">香りの強さ：繊細な順</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :updated_at), 'flavor_strength+desc') %>">香りの強さ：濃厚な順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :mouth_feel), 'mouth_feel+asc') %>">口当たり：軽い順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :mouth_feel), 'mouth_feel+desc') %>">口当たり：重い順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :flavor_strength), 'flavor_strength+asc') %>">香りの強さ：繊細な順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :flavor_strength), 'flavor_strength+desc') %>">香りの強さ：濃厚な順</option>
       </select>
     </div>
   </div>

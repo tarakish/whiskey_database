@@ -44,6 +44,7 @@ gem 'pagy', '~> 5.10'
 
 # For Search Function
 gem 'ransack'
+gem 'ransack-enum', '~> 1.0'
 
 # For Control Constant
 gem 'config'
