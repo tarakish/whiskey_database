@@ -8,18 +8,35 @@
   </div>
 
   <div class="row justify-content-center mt-5 mb-4">
-    <%= search_form_for @q, url: whiskeys_path, class: 'col-auto' do |f| %>
-      <div class="input-group">
-        <%= f.text_field :name_or_description_cont, class: 'form-control-lg border-0 rounded-left search-width', placeholder: 'ウイスキー名を入力' %>
-        <%= button_tag type: :submit, class: "btn bg-white rounded-right" do %>
+    <%= search_form_for @q, url: whiskeys_path, class: 'col-12 row justify-content-center' do |f| %>
+      <div class="ui action large input col-xl-3 col-lg-5 col-sm-8 col-auto">
+        <%= f.text_field :name_or_description_cont, class: 'rounded-left border-0', placeholder: 'ウイスキー名を入力' %>
+        <%= button_tag type: :submit, class: 'ui icon button rounded-right bg-white' do %>
           <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
         <% end %>
       </div>
-    <% end %>
-  </div>
 
-  <div class="row justify-content-center mb-5">
-    <%= link_to '　細かい条件で検索　', new_search_path, class: "fs-5 ui icon button rounded-pill col-auto bg-d-cream hover-target" %>
+      <a class="col-12 text-center text-muted collapsed simple-a-tag hover-target my-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        <i class="filter icon"></i>相性で絞り込む
+      </a>
+
+      <div id="flush-collapseOne" class="accordion-collapse collapse bg-gray col-auto row rounded-15p" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="col-12 row justify-content-center mt-4">
+          <div class='col-auto my-2 my-sm-0'>
+            <%= f.collection_select :drink_way_id_eq, DrinkWay.all, :id, :name, { include_blank: sanitize('&#129347;飲み方で絞る') }, { class: 'form-select' } %>
+          </div>
+          <div class='col-auto my-2 my-sm-0'>
+            <%= f.collection_select :snack_id_eq, Snack.all, :id, :name, { include_blank: sanitize('&#129372;おつまみで絞る') }, { class: 'form-select' } %>
+          </div>
+          <div class='col-auto my-2 my-sm-0'>
+            <%= f.submit '絞り込む', class: 'ui button orange' %>
+          </div>
+        </div>
+        <div class="col-12 row justify-content-center my-4">
+          <%= link_to '　さらに細かく絞り込む　', new_search_path, class: "simple-a-tag hover-target text-muted text-center" %>
+        </div>
+      </div>
+    <% end %>
   </div>
 
   <div class="row justify-content-center mt-5">
