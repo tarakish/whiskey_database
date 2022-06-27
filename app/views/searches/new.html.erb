@@ -20,27 +20,103 @@
 
   <div class="row">
     <div class="col-sm-6 col-12">
-      <div class="row justify-content-center mt-5 mb-2">
-        <%= f.label :processing, class: 'fs-5 fw-bold col-md-10 col-12 m-1 text-muted' %>
+      <div class="row justify-content-lg-center mt-5 mb-2">
+        <%= f.label :processing, class: 'fs-5 fw-bold col-lg-10 col-12 m-1 text-muted' %>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-10 col-auto">
-          <% Whiskey.processings_i18n.each do |t| %>
-            <%= f.label "processing_eq_any_#{t[0]}" do %>
-              <%= f.check_box :processing_eq_any, { class: 'btn-check', multiple: true, include_hidden: false }, t[0] %>
-              <span class='btn btn-secondary btn-search m-1'><%= t[1] %></span>
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-10 col-auto">
+          <% Whiskey.processings_i18n.each do |k, v| %>
+            <%= f.label "processing_eq_any_#{k}" do %>
+              <%= f.check_box :processing_eq_any, { class: 'btn-check', multiple: true, include_hidden: false }, k %>
+              <span class='btn btn-secondary btn-search m-1'><%= v %></span>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="row justify-content-lg-center mt-5 mb-2">
+        <%= f.label :region, class: 'fs-5 fw-bold col-lg-10 col-12 m-1 text-muted' %>
+      </div>
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-10 col-auto">
+          <% Whiskey.regions_i18n.each do |k, v| %>
+            <%= f.label "region_eq_any_#{k}" do %>
+              <%= f.check_box :region_eq_any, { class: 'btn-check', multiple: true, include_hidden: false }, k %>
+              <span class='btn btn-secondary btn-search m-1'><%= v %></span>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="row justify-content-lg-center mt-5 mb-2">
+        <%= f.label :price, class: 'fs-5 fw-bold col-lg-10 col-12 m-1 text-muted' %>
+      </div>
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-10 col-auto">
+          <div class="ui input mini right labeled">
+            <%= f.number_field :price_gteq, min: 0, max: 100000 %>
+            <div class="ui basic label">
+              ¥
+            </div>
+            <%= f.label :price_lteq, "　〜　", class: 'my-auto fw-bold' %>
+            <%= f.number_field :price_lteq, min: 0, max: 100000 %>
+            <div class="ui basic label">
+              ¥
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-lg-center mt-5 mb-2">
+        <%= f.label :rarity, class: 'fs-5 fw-bold col-lg-10 col-12 m-1 text-muted' %>
+      </div>
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-10 col-auto">
+          <% Whiskey.rarities_i18n.each do |k, v| %>
+            <%= f.label "rarity_eq_any_#{k}" do %>
+              <%= f.check_box :rarity_eq_any, { class: 'btn-check', multiple: true, include_hidden: false }, k %>
+              <span class='btn btn-secondary btn-search m-1'><%= v %></span>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="row justify-content-lg-center mt-5 mb-2">
+        <%= f.label :mouth_feel, class: 'fs-5 fw-bold col-lg-10 col-12 m-1 text-muted' %>
+      </div>
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-10 col-auto">
+          <% Whiskey.mouth_feels_i18n.each do |k, v| %>
+            <%= f.label "mouth_feel_eq_any_#{k}" do %>
+              <%= f.check_box :mouth_feel_eq_any, { class: 'btn-check', multiple: true, include_hidden: false }, k %>
+              <span class='btn btn-secondary btn-search m-1'><%= v %></span>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="row justify-content-lg-center mt-5 mb-2">
+        <%= f.label :flavor_strength, class: 'fs-5 fw-bold col-lg-10 col-12 m-1 text-muted' %>
+      </div>
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-10 col-auto">
+          <% Whiskey.flavor_strengths_i18n.each do |k, v| %>
+            <%= f.label "flavor_strength_eq_any_#{k}" do %>
+              <%= f.check_box :flavor_strength_eq_any, { class: 'btn-check', multiple: true, include_hidden: false }, k %>
+              <span class='btn btn-secondary btn-search m-1'><%= v %></span>
             <% end %>
           <% end %>
         </div>
       </div>
     </div>
 
+
     <div class="col-sm-6 col-12">
-      <div class="row justify-content-center mt-5 mb-2">
-        <%= f.label :drink_way_id, class: 'fs-5 fw-bold col-md-10 col-12 m-1 text-muted' %>
+      <div class="row justify-content-lg-center mt-5 mb-2">
+        <%= f.label :drink_way_id, class: 'fs-5 fw-bold col-lg-10 col-12 m-1 text-muted' %>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-10 col-auto">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-10 col-auto">
           <%= f.collection_check_boxes(:drink_way_id_eq_any, DrinkWay.all, :id, :name) do |t| %>
             <%= t.label do %>
               <%= t.check_box class: 'btn-check' %>
@@ -50,11 +126,11 @@
         </div>
       </div>
 
-      <div class="row justify-content-center mt-5 mb-2">
-        <%= f.label :snack_id, class: 'fs-5 fw-bold col-md-10 col-12 m-1 text-muted' %>
+      <div class="row justify-content-lg-center mt-5 mb-2">
+        <%= f.label :snack_id, class: 'fs-5 fw-bold col-lg-10 col-12 m-1 text-muted' %>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-10 col-auto">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-10 col-auto">
           <%= f.collection_check_boxes(:snack_id_eq_any, Snack.all, :id, :name) do |t| %>
             <%= t.label do %>
               <%= t.check_box class: 'btn-check' %>
@@ -64,11 +140,11 @@
         </div>
       </div>
 
-      <div class="row justify-content-center mt-5 mb-2">
-        <%= f.label :flavor_id, class: 'fs-5 fw-bold col-md-10 col-12 m-1 text-muted' %>
+      <div class="row justify-content-lg-center mt-5 mb-2">
+        <%= f.label :flavor_id, class: 'fs-5 fw-bold col-lg-10 col-12 m-1 text-muted' %>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-10 col-auto">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-10 col-auto">
           <%= f.collection_check_boxes(:flavors_id_eq_any, Flavor.all, :id, :name) do |t| %>
             <%= t.label do %>
               <%= t.check_box class: 'btn-check' %>
@@ -77,16 +153,10 @@
           <% end %>
         </div>
       </div>
-
     </div>
   </div>
-  
-
-
-  
   
   <div class="row justify-content-center mt-5 mb-2">
     <%= f.submit '　絞り込む　', class: 'ui button orange col-auto' %>
   </div>
-
 <% end %>
