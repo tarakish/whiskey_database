@@ -1,13 +1,13 @@
 <% if note %>
-  <%= link_to "https://twitter.com/intent/tweet?text=『#{whiskey.name}』のテイスティングノートを投稿しました！%0A%0A#{request.url}%0A&hashtags=MaltMate,モルトは友達怖くない", class: 'simple-a-tag', target: '_blank', rel: 'nofollow' do %>
+  <%= link_to "https://twitter.com/intent/tweet?text=『#{whiskey.name}』のテイスティングノートを投稿しました！%0A%0A#{request.url}%0A&hashtags=MaltMate,モルトは友達怖くない", class: 'simple-a-tag hover-target-reverse', target: '_blank', rel: 'nofollow' do %>
     <i class="twitter icon fs-2 f-twitter"></i>
   <% end %>
 <% elsif whiskey %>
-  <%= link_to "https://twitter.com/intent/tweet?text=%0A『#{whiskey.name}』%0A相性の良い飲み方：#{whiskey.drink_way.name}%0A相性の良いおつまみ：#{whiskey.snack.name}%0A%0A#{request.url}%0A&hashtags=MaltMate,モルトは友達怖くない", class: 'simple-a-tag', target: '_blank', rel: 'nofollow' do %>
+  <%= link_to "https://twitter.com/intent/tweet?text=#{whiskey.name}』%0A相性の良い飲み方：#{whiskey.drink_way.name}%0A相性の良いおつまみ：#{whiskey.snack.name}%0A%0A#{request.url}%0A&hashtags=MaltMate,モルトは友達怖くない", class: 'simple-a-tag hover-target-reverse', target: '_blank', rel: 'nofollow' do %>
     <i class="twitter icon fs-2 f-twitter"></i>
   <% end %>
 <% else %>
-  <%= link_to "https://twitter.com/intent/tweet?text=『Malt%20Mate』はウイスキーをもっと気軽に、もっと身近にする情報サイト。%0A相性のよい飲み方やおつまみなど、独自の検索軸からアナタのウイスキー選びをサポートします。%0A%0Ahttps://malt-mate.jp%0A&hashtags=MaltMate,モルトは友達怖くない", class: 'simple-a-tag', target: '_blank', rel: 'nofollow' do %>
+  <%= link_to "https://twitter.com/intent/tweet?text=『Malt%20Mate』はウイスキーをもっと気軽に、もっと身近にする情報サイト。%0A相性のよい飲み方やおつまみなど、独自の検索軸からあなたのウイスキー選びをサポートします。%0A%0Ahttps://malt-mate.jp%0A&hashtags=MaltMate,モルトは友達怖くない", class: 'simple-a-tag hover-target-reverse', target: '_blank', rel: 'nofollow' do %>
     <i class="twitter icon fs-2 f-twitter"></i>
   <% end %>
 <% end %>

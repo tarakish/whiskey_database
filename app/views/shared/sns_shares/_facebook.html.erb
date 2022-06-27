@@ -1,13 +1,13 @@
 <% if note %>
-  <%= link_to "https://www.facebook.com/share.php?u=#{request.url}", class: 'simple-a-tag', target: '_blank', rel: 'nofollow' do %>
+  <%= link_to "https://www.facebook.com/share.php?u=#{request.url}", class: 'simple-a-tag hover-target-reverse', target: '_blank', rel: 'nofollow' do %>
     <i class="facebook icon fs-2 f-facebook"></i>
   <% end %>
 <% elsif whiskey %>
-  <%= link_to "https://www.facebook.com/share.php?u=#{request.url}", class: 'simple-a-tag', target: '_blank', rel: 'nofollow' do %>
+  <%= link_to "https://www.facebook.com/share.php?u=#{request.url}", class: 'simple-a-tag hover-target-reverse', target: '_blank', rel: 'nofollow' do %>
     <i class="facebook icon fs-2 f-facebook"></i>
   <% end %>
 <% else %>
-  <%= link_to "https://www.facebook.com/share.php?u=https://malt-mate.jp", class: 'simple-a-tag', target: '_blank', rel: 'nofollow' do %>
+  <%= link_to "https://www.facebook.com/share.php?u=https://malt-mate.jp", class: 'simple-a-tag hover-target-reverse', target: '_blank', rel: 'nofollow' do %>
     <i class="facebook icon fs-2 f-facebook"></i>
   <% end %>
 <% end %>
