@@ -44,7 +44,14 @@
       <div class="col-lg-7 text-lg-start ms-lg-5 my-5">
         <div class="row justify-content-lg-between justify-content-center mb-3">
           <h5 class="col-lg-auto col-12 text-muted my-auto order-lg-0 order-1">
-            <%= @whiskey.region_i18n %>ウイスキー<span class="d-none d-sm-inline">　/　</span><span class='d-sm-inline d-block mt-sm-0 mt-3'><%= @whiskey.processing_i18n %></span>
+            <%= link_to whiskeys_path(q: { region_eq: @whiskey.region }), class: 'simple-a-tag hover-target-reverse' do %>
+              <%= @whiskey.region_i18n %>ウイスキー
+            <% end %>
+            <span class="d-none d-sm-inline">　/　</span>
+            <%= link_to whiskeys_path(q: { processing_eq: @whiskey.processing }), class: 'simple-a-tag hover-target-reverse d-sm-inline d-block mt-sm-0 mt-3' do %>
+              <%= @whiskey.processing_i18n %>
+            <% end %>
+            
           </h5>
         </div>
         <div class="row justify-content-lg-start justify-content-center">

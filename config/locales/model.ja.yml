@@ -28,7 +28,7 @@ ja:
         flavor_strength: 香りの強さ
         region: 産地
         processing: 分類
-        rarity: レア度
+        rarity: 入手難易度
         price: 希望小売価格
         flavor_id: フレーバー
         drink_way_id: 飲み方

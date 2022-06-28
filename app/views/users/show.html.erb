@@ -28,12 +28,11 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="ui labeled button col-auto mt-3">
-            <div class="ui button white basic small">
-              <i class="fa-solid fa-whiskey-glass fa-lg"></i> 投稿数
-            </div>
-            <div class="ui basic white left pointing label">
-              <%= @tasting_notes.length %>
+          <div class="col-auto mt-4">
+            <div class="ui bg-li-navy text-white image label fw-light large">
+              <%= image_tag 'icon_pen.png' %>
+              投稿数
+              <div class="detail"><%= @tasting_notes.length %></div>
             </div>
           </div>
         </div>
