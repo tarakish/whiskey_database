@@ -1,0 +1,26 @@
+<div class="container mt-5 pt-5">
+  <div class="row justify-content-center text-muted text-center fw-bold fs-5">
+    500 InternalServerError.
+  </div>
+  <div class="row justify-content-center f-orange text-center fw-bold display-3 my-3">
+    Sorry...
+  </div>
+  <div class="row justify-content-center text-muted text-center fw-bold fs-2">
+    サーバーエラーが発生した為、ページを表示できません。<br>
+  </div>
+  <div class="row justify-content-center text-muted text-center fs-6 mt-5">
+    <%= link_to root_path, class: 'col-auto ui button bg-gray hover-target text-black' do %>
+      <i class='ui home icon'></i>トップページに戻る
+    <% end %>
+  </div>
+</div>
+
+<div class="container mt-5 pt-5">
+  <div class="row justify-content-center fs-4 text-muted fw-bold">
+    Malt Mateではこんなウイスキーを紹介しています。
+  </div>
+  <div class="row mt-3 mb-2 gx-5 gy-4 justify-content-center">
+    <%= render 'whiskeys/whiskey', whiskey: @whiskey %>
+  </div>
+</div>
+

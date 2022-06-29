@@ -1,0 +1,30 @@
+<div class="container mt-5 pt-5">
+  <div class="row justify-content-center text-muted text-center fw-bold fs-5">
+    404 NotFound.
+  </div>
+  <div class="row justify-content-center f-orange text-center fw-bold display-3 my-3">
+    Oops!
+  </div>
+  <div class="row justify-content-center text-muted text-center fw-bold fs-2">
+    お探しのページを見つけられませんでした。<br>
+  </div>
+  <div class="row justify-content-center text-muted text-center fs-6 mt-5">
+    一時的にアクセスができない状況にあるか、移動もしくは削除された可能性があります。<br>
+    URLにお間違いがないか再度ご確認ください。
+  </div>
+  <div class="row justify-content-center text-muted text-center fs-6 mt-5">
+    <%= link_to root_path, class: 'col-auto ui button bg-gray hover-target text-black' do %>
+      <i class='ui home icon'></i>トップページに戻る
+    <% end %>
+  </div>
+</div>
+
+<div class="container mt-5 pt-5">
+  <div class="row justify-content-center fs-4 text-muted fw-bold">
+    Malt Mateではこんなウイスキーを紹介しています。
+  </div>
+  <div class="row mt-3 mb-2 gx-5 gy-4 justify-content-center">
+    <%= render 'whiskeys/whiskey', whiskey: @whiskey %>
+  </div>
+</div>
+

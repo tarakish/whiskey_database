@@ -29,4 +29,6 @@ Rails.application.routes.draw do
     resources :users, except: :show
     resources :tasting_notes, except: :show
   end
+
+  get '*path', controller: 'application', action: 'render404'
 end
