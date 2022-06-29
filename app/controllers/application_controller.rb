@@ -2,10 +2,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   include Pundit::Authorization
   include Pagy::Backend
-  rescue_from Pundit::NotAuthorizedError, with: :render_404
-  rescue_from ActiveRecord::RecordNotFound, with: :render_404
-  rescue_from ActionController::RoutingError, with: :render_404
-  rescue_from StandardError, with: :render_500
+  rescue_from ActiveRecord::RecordNotFound, with: :render404
+  rescue_from ActionController::RoutingError, with: :render404
+  rescue_from Pundit::NotAuthorizedError, with: :render404
+  rescue_from StandardError, with: :render500
   add_flash_types :success, :info, :warning, :danger
   before_action :set_search_instance
   before_action :require_login
@@ -22,14 +22,14 @@ class ApplicationController < ActionController::Base
     Rails.env.production?
   end
 
-  def render_404
+  def render404
     set_random_whiskey
-    render template: 'errors/404', status: 404
+    render template: 'errors/404', status: :not_found
   end
 
-  def render_500
+  def render500
     set_random_whiskey
-    render template: 'errors/500', status: 500
+    render template: 'errors/500', status: :internal_server_error
   end
 
   private
@@ -43,6 +43,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_random_whiskey
-    @whiskey = Whiskey.where( 'id >= ?', rand(Whiskey.first.id..Whiskey.last.id) ).first
+    @whiskey = Whiskey.where('id >= ?', rand(Whiskey.first.id..Whiskey.last.id)).first
   end
 end
