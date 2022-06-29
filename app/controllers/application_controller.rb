@@ -10,7 +10,6 @@ class ApplicationController < ActionController::Base
   before_action :set_search_instance
   before_action :require_login
   before_action :ensure_domain, if: :production?
-  before_action :set_random_whiskey, only: %i[render_404 render_500]
 
   def ensure_domain
     return unless /\.herokuapp.com/.match?(request.host)
@@ -24,10 +23,12 @@ class ApplicationController < ActionController::Base
   end
 
   def render_404
+    set_random_whiskey
     render template: 'errors/404', status: 404
   end
 
   def render_500
+    set_random_whiskey
     render template: 'errors/500', status: 500
   end
 
