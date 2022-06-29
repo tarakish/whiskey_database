@@ -54,12 +54,12 @@
       <div class="row justify-content-lg-center">
         <div class="col-lg-10 col-auto">
           <div class="ui input mini right labeled">
-            <%= f.number_field :price_gteq, min: 0, max: 100000 %>
+            <%= f.number_field :price_gteq, min: 0, max: 100000, placeholder: '0' %>
             <div class="ui basic label bg-gray">
               ¥
             </div>
             <%= f.label :price_lteq, "　〜　", class: 'my-auto fw-bold' %>
-            <%= f.number_field :price_lteq, min: 0, max: 100000 %>
+            <%= f.number_field :price_lteq, min: 0, max: 100000, placeholder: '50,000' %>
             <div class="ui basic label bg-gray">
               ¥
             </div>
