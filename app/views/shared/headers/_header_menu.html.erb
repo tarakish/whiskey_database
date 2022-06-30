@@ -4,12 +4,12 @@
   </li>
   <li class="nav-item dropdown my-auto">
     <a class="nav-link dropdown-toggle fs-5 fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      もっと楽しむ
+      相性から見つける
     </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <li><%= link_to '飲み方一覧', drink_ways_path, class: 'dropdown-item' %></li>
-      <li><%= link_to 'おつまみ一覧', snacks_path, class: 'dropdown-item' %></li>
-      <li><%= link_to 'フレーバー一覧', flavors_path, class: 'dropdown-item' %></li>
+      <li><%= link_to sanitize('&#129347; 飲み方を見る'), drink_ways_path, class: 'dropdown-item fw-bold text-muted' %></li>
+      <li><%= link_to sanitize('&#129372; おつまみを見る'), snacks_path, class: 'dropdown-item fw-bold text-muted' %></li>
+      <li><%= link_to sanitize('&#127822; フレーバーを見る'), flavors_path, class: 'dropdown-item fw-bold text-muted' %></li>
     </ul>
   </li>
   <li class="nav-item dropdown">
@@ -17,8 +17,8 @@
       <%= render 'shared/avatar', { user: current_user, size: 40 } %>
     </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <li><%= link_to 'マイページ', user_path(current_user), class: 'dropdown-item' %></li>
-      <li><%= link_to 'ログアウト', logout_path, method: :post, class: 'dropdown-item' %></li>
+      <li><%= link_to sanitize('&#128100; マイページ'), user_path(current_user), class: 'dropdown-item fw-bold text-muted' %></li>
+      <li><%= link_to sanitize('&#128694;&#127995; ログアウト'), logout_path, method: :post, class: 'dropdown-item fw-bold text-muted' %></li>
     </ul>
   </li>
 </ul>

@@ -1,10 +1,12 @@
 module ApplicationHelper
   include Pagy::Frontend
 
+  # general
   def current_user_is?(user)
     logged_in? && user == current_user
   end
 
+  # header
   def separate_header
     if controller_name == 'staticpages'
       render 'shared/headers/top_header'
@@ -25,6 +27,15 @@ module ApplicationHelper
     return 'mt-7' if controller_name != 'staticpages'
   end
 
+  # whiskey
+  def proper_price(price)
+    if price.zero?
+      'オープン価格（希望小売価格）'
+    else
+      "¥#{price.to_s(:delimited)}（希望小売価格）"
+    end
+  end
+
   def draw_rating(n, star)
     html_text = ''
     (n + 1).times do
@@ -41,6 +52,7 @@ module ApplicationHelper
     url.gsub(/%5Bs%5D=\w+\+\w+/, "%5Bs%5D=#{order}")
   end
 
+  # settings
   def default_meta_tags
     {
       site: 'Malt Mate - ウイスキーをもっと身近に -',
@@ -51,7 +63,10 @@ module ApplicationHelper
       keywords: 'ウイスキー,初心者,ペアリング,わかりにくい,直感,難しい,相性,フレーバー',
       canonical: request.original_url,
       noindex: !Rails.env.production?,
-      icon: image_url('favicon.ico'),
+      icon: [
+        { href: image_url('favicon.ico') },
+        { href: image_url('apple-touch-icon.png'), rel: 'apple-touch-icon' },
+      ],
       og: {
         site_name: 'Malt Mate - モルトメイト -',
         title: :title,
