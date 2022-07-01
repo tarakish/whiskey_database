@@ -7,7 +7,7 @@
       <%= link_to '/', class: 'navbar-brand d-lg-none d-inline hover-target-reverse' do %>
         <%= image_tag 'logo.webp', size: '40' %>
       <% end %>
-      <%= search_form_for @q, url: whiskeys_path, class: 'ms-lg-15' do |f| %>
+      <%= search_form_for @q, url: whiskeys_path, class: 'me-5' do |f| %>
         <%= render 'shared/headers/search_bar', f: f %>
       <% end %>
       <button class="navbar-toggler px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

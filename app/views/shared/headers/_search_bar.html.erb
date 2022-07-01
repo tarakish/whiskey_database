@@ -1,6 +1,6 @@
-<div class="input-group">
-  <%= f.text_field :name_cont, class: 'form-control-lg border-0 rounded-left search-width', placeholder: 'ウイスキー名を入力' %>
-  <%= button_tag type: :submit, class: "btn bg-white rounded-right" do %>
+<div class="ui action large input search-width">
+  <%= f.text_field :name_or_description_cont, class: 'rounded-left border-0', placeholder: 'ウイスキー名を入力' %>
+  <%= button_tag type: :submit, class: 'ui icon button rounded-right bg-white' do %>
     <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
   <% end %>
 </div>

@@ -28,7 +28,7 @@
           <div class='col-auto my-2 my-sm-0'>
             <%= f.collection_select :snack_id_eq, Snack.all, :id, :name, { include_blank: sanitize('&#129372; おつまみで絞る') }, { class: 'form-select' } %>
           </div>
-          <div class='col-auto my-2 my-sm-0'>
+          <div class='col-auto my-2 my-md-0'>
             <%= f.submit '絞り込む', class: 'ui button orange' %>
           </div>
         </div>
