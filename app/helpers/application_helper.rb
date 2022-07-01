@@ -7,6 +7,14 @@ module ApplicationHelper
   end
 
   # header
+  def exist_search_form?
+    if (controller_name == 'whiskeys') && (action_name == 'index')
+      true
+    elsif controller_name == 'searches'
+      true
+    end
+  end
+
   def separate_header
     if controller_name == 'staticpages'
       render 'shared/headers/top_header'
@@ -30,9 +38,9 @@ module ApplicationHelper
   # whiskey
   def proper_price(price)
     if price.zero?
-      'オープン価格（希望小売価格）'
+      'オープン価格'
     else
-      "¥#{price.to_s(:delimited)}（希望小売価格）"
+      "¥#{price.to_s(:delimited)}"
     end
   end
 

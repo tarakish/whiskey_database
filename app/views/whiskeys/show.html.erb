@@ -74,7 +74,7 @@
 
         <h4 class="row text-muted my-auto justify-content-center justify-content-lg-start">
           <div class="col-auto my-auto">
-            <span class="h5 mx-auto">希望小売価格 ¥</span><%= @whiskey.price.to_s(:delimited) %>
+            <span class="h5 mx-auto">希望小売価格：</span><%= proper_price(@whiskey.price) %>
           </div>
           <div class="col-auto">
             <%= link_to @whiskey.amazon_link, target: '_blank' do %>
@@ -152,16 +152,19 @@
   <div class="row justify-content-center">
     <%= link_to drink_ways_path(anchor: "#{@whiskey.drink_way.english_name}"), class: 'col-xl-9 row text-center rounded shadow bg-white p-0 transform-y-md simple-a-tag hover-target-reverse' do %>
       <%= image_tag @whiskey.drink_way.image.url, class: 'img-fluid col-lg-4 p-0' if @whiskey.drink_way.image? %>
-      <div class="col-lg-8 my-5">
+      <div class="col-lg-8 my-lg-5 my-3">
         <h5 class="text-muted mb-3">
-          相性のいい飲み方
+          相性のよい飲み方
         </h5>
-        <h1 class="my-4">
+        <h1 class="mt-4">
           <%= @whiskey.drink_way.name %>
         </h1>
-        <h4><em>
+        <h5 class='text-muted'><em>
           <%= @whiskey.drink_way.english_name %>
-        </em></h4>
+        </em></h5>
+        <div class="ui orange inverted button small d-lg-none mt-3">
+          詳しく見る
+        </div>
       </div>
     <% end %>
   </div>
@@ -171,16 +174,19 @@
   <div class="row justify-content-center">
     <%= link_to snacks_path(anchor: "#{@whiskey.snack.english_name}"), class: 'col-xl-9 row text-center rounded shadow bg-white p-0 transform-y-md simple-a-tag hover-target-reverse' do %>
       <%= image_tag @whiskey.snack.image.url, class: 'img-fluid col-lg-4 p-0' if @whiskey.snack.image? %>
-      <div class="col-lg-8 my-5">
+      <div class="col-lg-8 my-lg-5 my-3">
         <h5 class="text-muted mb-3">
-          フードペアリング
+          相性のよいおつまみ
         </h5>
-        <h1 class="my-4">
+        <h1 class="mt-4">
           <%= @whiskey.snack.name %>
         </h1>
-        <h4><em>
+        <h5 class='text-muted'><em>
           <%= @whiskey.snack.english_name %>
-        </em></h4>
+        </em></h5>
+        <div class="ui orange inverted button small d-lg-none mt-3">
+          詳しく見る
+        </div>
       </div>
     <% end %>
   </div>

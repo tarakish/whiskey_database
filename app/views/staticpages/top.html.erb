@@ -25,7 +25,25 @@
 <!-- to each index -->
 <div class="container mt-5 pt-5 mb-3">
   <div class="row justify-content-center">
-    <h1 class="col-auto text-muted text-center">
+    <h1 class="col-auto text-muted text-center fw-bold">
+      About
+    </h1>
+  </div>
+  <div class="row justify-content-center mt-4">
+    <div class="col-lg-9 col-6 ui divider border-2">
+    </div>
+  </div>
+</div>
+
+<div class="container text-center mb-5">
+  <div class='row'>
+
+  </div>
+</div>
+
+<div class="container mt-5 pt-5 mb-3">
+  <div class="row justify-content-center">
+    <h1 class="col-auto text-muted text-center fw-bold">
       こんな探し方ができます
     </h1>
   </div>
@@ -34,6 +52,7 @@
     </div>
   </div>
 </div>
+
 <div class="container text-center mb-5">
   <div class="row">
     <div class="col-lg-6 my-5">
@@ -74,25 +93,13 @@
         <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
       </svg>
       <p class="my-3">
-        〇〇(サービス名)ではユーザーの口コミも指標の一つ。<br>
+        Malt Mateではユーザーの口コミも指標の一つ。<br>
         参考にするも良し、メモとして投稿するのも良し、<br>
         ぜひ一度覗いてみてください。
       </p>
       <p><%= link_to '実装中！', '#', class: 'ui orange button rounded-3' %></p>
     </div>
-    <div class="col-lg-6 my-5">
-      <h3 class="mb-4">生産国<small>から</small></h3>
-      <svg class="bd-placeholder-img rounded-3" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#777"></rect>
-        <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-      </svg>
-      <p class="my-3">
-        今日はスモーキーなスコッチが欲しい。<br>
-        今は甘いバーボンの気分。<br>
-        そんな選び方もできちゃいます。
-      </p>
-      <p><%= link_to '実装中！', '#', class: 'ui orange button rounded-3' %></p>
-    </div>
   </div>
 </div>
+
+<%= javascript_include_tag "header.js" %>
