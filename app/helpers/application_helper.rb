@@ -73,7 +73,7 @@ module ApplicationHelper
       noindex: !Rails.env.production?,
       icon: [
         { href: image_url('favicon.ico') },
-        { href: image_url('apple-touch-icon.png'), rel: 'apple-touch-icon' },
+        { href: image_url('apple-touch-icon.png'), rel: 'apple-touch-icon' }
       ],
       og: {
         site_name: 'Malt Mate - モルトメイト -',
