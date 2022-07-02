@@ -137,7 +137,7 @@
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center fw-bold">
-      <em class='fs-3 fw-light'>- Pairing -</em><br>
+      <em class='fs-3 fw-light serif'>- Pairing -</em><br>
       相性を楽しむ
     </h1>
   </div>
@@ -159,7 +159,7 @@
         <h1 class="mt-4">
           <%= @whiskey.drink_way.name %>
         </h1>
-        <h5 class='text-muted'><em>
+        <h5 class='text-muted serif'><em>
           <%= @whiskey.drink_way.english_name %>
         </em></h5>
         <div class="ui orange inverted button small d-lg-none mt-3">
@@ -181,7 +181,7 @@
         <h1 class="mt-4">
           <%= @whiskey.snack.name %>
         </h1>
-        <h5 class='text-muted'><em>
+        <h5 class='text-muted serif'><em>
           <%= @whiskey.snack.english_name %>
         </em></h5>
         <div class="ui orange inverted button small d-lg-none mt-3">
@@ -221,8 +221,8 @@
 <div class="container mt-15">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center fw-bold">
-      <em class="fs-3 fw-light">- Tasting Notes -</em><br>
-      <span>ユーザー投稿</span>
+      <em class="fs-3 fw-light serif">- Tasting Notes -</em><br>
+      <span>投稿一覧</span>
     </h1>
   </div>
   <div class="row justify-content-center mt-4 mb-5">
@@ -232,7 +232,15 @@
 </div>
 
 <div class="container mb-5">
-  <%= render partial: 'tasting_notes/note', collection: @tasting_notes, locals: { width: 'xl' } %>
+  <% if @tasting_notes.blank? %>
+    <div class="row mb-2 justify-content-center">
+      <div class="col-auto">
+        このウイスキーに対する投稿はまだありません.。
+      </div>
+    </div>
+  <% else %>
+    <%= render partial: 'tasting_notes/note', collection: @tasting_notes, locals: { width: 'xl' } %>
+  <% end %>
 </div>
 
 <!-- 投稿フォーム -->
@@ -244,7 +252,7 @@
 <div class="container mt-15">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center fw-bold">
-      <em class="fs-3 fw-light">- You may also like ... -</em><br>
+      <em class="fs-3 fw-light serif">- You may also like ... -</em><br>
       <span>似ているウイスキー</span>
     </h1>
   </div>

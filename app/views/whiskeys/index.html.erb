@@ -53,8 +53,8 @@
       <select class="form-select rounded-3" onChange="location.href=value;">
         <option value="">並び替え</option>
         <option value="<%= sort_by_sort_url(sort_url(@q, :updated_at), 'updated_at+desc') %>">新着順</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :price), 'price+desc') %>">価格の高い順</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :price), 'price+asc') %>">価格の安い順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :price), 'price+asc') %>">価格：安い順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :price), 'price+desc') %>">価格：高い順</option>
         <option value="<%= sort_by_sort_url(sort_url(@q, :rarity), 'rarity+desc') %>">入手：し易い順</option>
         <option value="<%= sort_by_sort_url(sort_url(@q, :rarity), 'rarity+asc') %>">入手：難しい順</option>
         <option value="<%= sort_by_sort_url(sort_url(@q, :mouth_feel), 'mouth_feel+asc') %>">口当たり：軽い順</option>

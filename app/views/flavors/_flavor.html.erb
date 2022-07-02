@@ -1,9 +1,9 @@
 <tr>
-  <td class="fs-4 text-center"><%= flavor.name %></td>
-  <td class="text-start"><%= flavor.detail %></td>
   <td>
     <%= link_to whiskeys_path(q: { flavors_id_eq: flavor }), class: 'hover-target simple-a-tag' do %>
       <i class="fa-solid fa-magnifying-glass"></i>
     <% end %>
   </td>
+  <td class="fs-5 text-center fw-bold"><%= flavor.name %></td>
+  <td class="text-start"><%= flavor.detail %></td>
 </tr>
