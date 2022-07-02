@@ -9,7 +9,7 @@
 
   <div class="row justify-content-center mt-5 mb-4">
     <%= search_form_for @q, url: whiskeys_path, class: 'col-12 row justify-content-center' do |f| %>
-      <div class="ui action large input col-lg-4 col-md-6 col-10">
+      <div class="ui action large input col-xl-4 col-md-8 col-10">
         <%= f.text_field :name_or_description_cont, class: 'rounded-left border-0', placeholder: 'ウイスキー名を入力' %>
         <%= button_tag type: :submit, class: 'ui icon button rounded-right bg-white' do %>
           <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>

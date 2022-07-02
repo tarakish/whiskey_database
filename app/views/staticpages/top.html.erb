@@ -8,11 +8,16 @@
   <div class="row inner-text ms-lg-3 text-center">
     <h1 class="fw-bold col-lg-7">相性から探せる</h1>
     <h1 class="fw-bold col-lg-7">ウイスキー情報サービス</h1>
-    <div class="col-lg-7 row justify-content-center my-3">
-      <%= search_form_for @q, url: whiskeys_path, class: 'col-auto' do |f| %>
-        <%= render 'shared/headers/search_bar', f: f %>
+    
+      <%= search_form_for @q, url: whiskeys_path, class: 'col-lg-7 row justify-content-center my-3' do |f| %>
+        <div class="ui action large input col-xl-6 col-md-8 col-10">
+          <%= f.text_field :name_or_description_cont, class: 'rounded-left border-0', placeholder: 'ウイスキー名を入力' %>
+          <%= button_tag type: :submit, class: 'ui icon button rounded-right bg-white' do %>
+            <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
+          <% end %>
+        </div>
       <% end %>
-    </div>
+    
     <div class="col-lg-7 mt-3">
       <%= link_to 'さっそく見に行く', whiskeys_path, class: 'huge ui inverted button basic btn-ani btn-left rounded-pill' %>
     </div>
