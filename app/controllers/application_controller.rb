@@ -2,10 +2,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   include Pundit::Authorization
   include Pagy::Backend
-  rescue_from ActiveRecord::RecordNotFound, with: :render404
-  rescue_from ActionController::RoutingError, with: :render404
-  rescue_from Pundit::NotAuthorizedError, with: :render404
+  # rescue_fromは下から評価
   rescue_from StandardError, with: :render500
+  rescue_from Pundit::NotAuthorizedError, with: :render404
+  rescue_from ActionController::RoutingError, with: :render404
+  rescue_from ActiveRecord::RecordNotFound, with: :render404
   add_flash_types :success, :info, :warning, :danger
   before_action :set_search_instance
   before_action :require_login
