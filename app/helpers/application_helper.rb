@@ -71,10 +71,7 @@ module ApplicationHelper
       keywords: 'ウイスキー,初心者,ペアリング,わかりにくい,直感,難しい,相性,フレーバー',
       canonical: request.original_url,
       noindex: !Rails.env.production?,
-      icon: [
-        { href: image_url('favicon.ico') },
-        { href: image_url('apple-touch-icon.png'), rel: 'apple-touch-icon' }
-      ],
+      icon: image_url('favicon.ico'),
       og: {
         site_name: 'Malt Mate - モルトメイト -',
         title: :title,
