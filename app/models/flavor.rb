@@ -3,7 +3,7 @@
 # Table name: flavors
 #
 #  id         :bigint           not null, primary key
-#  category   :integer          default(0), not null
+#  category   :integer          default("woody"), not null
 #  detail     :string           not null
 #  name       :string           not null
 #  created_at :datetime         not null

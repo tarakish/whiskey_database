@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   add_flash_types :success, :info, :warning, :danger
   before_action :set_search_instance
   before_action :require_login
+  skip_before_action :require_login, only: %i[render404 render500]
   before_action :ensure_domain, if: :production?
 
   def ensure_domain

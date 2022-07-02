@@ -61,6 +61,7 @@ h3 small {
     clip-path: inset(0 100% 0 0);
     opacity: 1;
     transition: 0.4s;
+    border-radius: 30px;
   }
   &:hover::before {
     clip-path: inset(0 0 0 0);

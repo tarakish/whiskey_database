@@ -2,14 +2,14 @@
 <div class="container mt-5 pt-5">
   <div class="row justify-content-center">
     <h1 class="col-auto text-muted text-center fw-bold">
-      <em class="fs-3 fw-lighter">- Whiskeys -</em><br>
-      ウイスキー一覧
+      <em class="fs-3 fw-lighter serif">- Whiskeys -</em><br>
+      ウイスキーを探す
     </h1>
   </div>
 
   <div class="row justify-content-center mt-5 mb-4">
     <%= search_form_for @q, url: whiskeys_path, class: 'col-12 row justify-content-center' do |f| %>
-      <div class="ui action large input col-lg-4 col-md-6 col-10">
+      <div class="ui action large input col-xl-4 col-md-8 col-10">
         <%= f.text_field :name_or_description_cont, class: 'rounded-left border-0', placeholder: 'ウイスキー名を入力' %>
         <%= button_tag type: :submit, class: 'ui icon button rounded-right bg-white' do %>
           <i class="fa-solid fa-magnifying-glass fa-xl hover-target-reverse f-navy"></i>
@@ -28,7 +28,7 @@
           <div class='col-auto my-2 my-sm-0'>
             <%= f.collection_select :snack_id_eq, Snack.all, :id, :name, { include_blank: sanitize('&#129372; おつまみで絞る') }, { class: 'form-select' } %>
           </div>
-          <div class='col-auto my-2 my-sm-0'>
+          <div class='col-auto my-2 my-md-0'>
             <%= f.submit '絞り込む', class: 'ui button orange' %>
           </div>
         </div>
@@ -53,14 +53,14 @@
       <select class="form-select rounded-3" onChange="location.href=value;">
         <option value="">並び替え</option>
         <option value="<%= sort_by_sort_url(sort_url(@q, :updated_at), 'updated_at+desc') %>">新着順</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :price), 'price+desc') %>">価格の高い順</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :price), 'price+asc') %>">価格の安い順</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :rarity), 'rarity+desc') %>">入手のし易さ：安定供給</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :rarity), 'rarity+asc') %>">入手のし易さ：激レア</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :price), 'price+asc') %>">価格：安い順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :price), 'price+desc') %>">価格：高い順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :rarity), 'rarity+desc') %>">入手：し易い順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :rarity), 'rarity+asc') %>">入手：難しい順</option>
         <option value="<%= sort_by_sort_url(sort_url(@q, :mouth_feel), 'mouth_feel+asc') %>">口当たり：軽い順</option>
         <option value="<%= sort_by_sort_url(sort_url(@q, :mouth_feel), 'mouth_feel+desc') %>">口当たり：重い順</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :flavor_strength), 'flavor_strength+asc') %>">香りの強さ：繊細な順</option>
-        <option value="<%= sort_by_sort_url(sort_url(@q, :flavor_strength), 'flavor_strength+desc') %>">香りの強さ：濃厚な順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :flavor_strength), 'flavor_strength+asc') %>">香りの強さ：繊細順</option>
+        <option value="<%= sort_by_sort_url(sort_url(@q, :flavor_strength), 'flavor_strength+desc') %>">香りの強さ：濃厚順</option>
       </select>
     </div>
   </div>
@@ -87,3 +87,5 @@
     </div>
   </div>
 </div>
+
+<%= javascript_include_tag "header.js" %>

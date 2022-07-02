@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="row mt-4 text-muted">
-        ¥<%= whiskey.price.to_s(:delimited) %>（希望小売価格）
+        <%= "#{proper_price(whiskey.price)}（希望小売価格）" %>
       </div>
     </div>
     <!-- For SmartPhone(~575px)-->

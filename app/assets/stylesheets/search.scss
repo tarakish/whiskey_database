@@ -14,16 +14,16 @@ label input[type="checkbox"]:checked + span {
 }
 
 .search-width {
-  width: 24vw;
   @media screen and (min-width: 2079px) {
     width: 20vw;
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 1200px) {
+    width: 24vw;
+  }
+  @media screen and (min-width: 992px) {
     width: 19vw;
   }
-  @media screen and (max-width: 991px) {
-    width: 45vw;
-  }
+  width: 40vw;
 }
 
 .bg-d-cream {

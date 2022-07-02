@@ -101,6 +101,71 @@
     'https://www.amazon.co.jp/dp/B005EKIUOE?&linkCode=li3&tag=akirakotira-22&linkId=39cc1c8914119d35e210f46f6c802646&language=ja_JP&ref_=as_li_ss_il',
     '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B005EKIUOE&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
     'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B005EKIUOE'
+  ],
+  [
+    'ボウモア 12年', 0, 0, 3, 3, 4400, 2, 3, 10,
+    'しっかりスモーキーなベースがありつつ、どこか妖艶な甘みも併せ持つ「アイラモルトの女王」。
+    アイラ島のウイスキーの中ではバランスに優れたウイスキーと言われることが多い。',
+    'https://www.amazon.co.jp/dp/B001TP8L3S?th=1&linkCode=li3&tag=akirakotira-22&linkId=57e35fd45e70e6a80264062ab838a3f2&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TP8L3S&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TP8L3S'
+  ],
+  [
+    '知多', 1, 2, 0, 1, 4000, 2, 1, 6,
+    'シングルグレーンウイスキーならではの柔らかな味わいとほのかな甘さが心地よいウイスキー。
+    ロックや水割りでもしっかり愉しめる懐の深さも併せ持ちます。',
+    'https://www.amazon.co.jp/dp/B011WPDV70?th=1&linkCode=li3&tag=akirakotira-22&linkId=a7d903dd7c5d6ce420fff5bf886ec2bf&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B011WPDV70&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B011WPDV70'
+  ],
+  [
+    '響 ジャパニーズハーモニー', 1, 1, 3, 1, 5500, 0, 2, 2,
+    'サントリーが世界に誇るジャパニーズウイスキー響のスタンダードボトル。
+    ノンエイジ（年数表記がない）ながらアルコール感を感じることは少なく、絶妙なバランスでブレンドされているのが感じられる。
+    24節気を表現したボトルの完成度も見事。',
+    'https://www.amazon.co.jp/dp/B00WSEVQ9A?th=1&linkCode=li3&tag=akirakotira-22&linkId=6cc3ff8219bf4656dfd102af60b5336b&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00WSEVQ9A&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B00WSEVQ9A'
+  ],
+  [
+    'グレンファークラス 12年', 0, 0, 1, 3, 6400, 2, 4, 2,
+    'シェリー感をしっかり感じるリッチな飲み心地のスコッチウイスキー。
+    甘さとスパイシーさのバランスもよく、価格以上のポテンシャルを感じられる稀有な一本。',
+    'https://www.amazon.co.jp/dp/B0058LQIZ2?&linkCode=li3&tag=akirakotira-22&linkId=efd30a0f542dfb10871867401c123229&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0058LQIZ2&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0058LQIZ2'
+  ],
+  [
+    'ワイルドターキー スタンダード', 2, 0, 1, 3, 2860, 2, 1, 6,
+    '原材料の風味を最大限に生かす独自の製法からケンタッキーを代表するバーボンメーカー、ワイルドターキーのレギュラーボトル。
+    あえて微炭酸のハイボールで本来の旨味を感じるのもおすすめです。',
+    'https://www.amazon.co.jp/dp/B078HQ56WL?&linkCode=li3&tag=akirakotira-22&linkId=859c7df132454b00cc8d84a7b4b03b93&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B078HQ56WL&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B078HQ56WL'
+  ],
+  [
+    'カネマラ', 3, 0, 2, 3, 4200, 2, 1, 3,
+    '軽やかでフルーティなものが多いアイリッシュウイスキーのイメージとは対象的にスモーキーフレーバーをもつウイスキー。
+    アイラモルトとも似つかない爽やかなスモーキーさはカネマラならでは。',
+    'https://www.amazon.co.jp/dp/B00BERLBG0?&linkCode=li3&tag=akirakotira-22&linkId=eff49b8f590f585b4ccc7c2c9efeb192&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00BERLBG0&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B00BERLBG0'
+  ],
+  [
+    'ジェムソン', 3, 1, 4, 1, 0, 2, 1, 7,
+    '非常になめらかな口当たりとすっきりした味わいから、幅広く愛されるウイスキー。
+    ハイボール以外にもストレートやロック、カクテルに使用するにも万能な一本。',
+    'https://www.amazon.co.jp/dp/B000WIQLG2?&linkCode=li3&tag=akirakotira-22&linkId=e38b6ea7095fac7d560ce300cdf9339e&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B000WIQLG2&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B000WIQLG2'
+  ],
+  [
+    'フォアローゼス', 2, 1, 1, 0, 0, 2, 2, 4,
+    'フローラルフレーバー、クリアでスムースな飲み心地から「トゲのないバラ」と称されるフォアローゼズのスタンダード。
+    甘みをベースにフローラルな香りとスパイシーな味わいが特徴的なボトル。',
+    'https://www.amazon.co.jp/dp/B06W5R661Y?&linkCode=li3&tag=akirakotira-22&linkId=123c6bd233004dec1e3473c82334289c&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B06W5R661Y&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B06W5R661Y'
   ]
 ].each do |name, region, processing, mouth_feel, flavor_strength, price, rarity, drink_way_id, snack_id, description, amazon_link, amazon_image_link, amazon_impression_link|
   Whiskey.create!(

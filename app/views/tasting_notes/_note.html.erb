@@ -1,4 +1,4 @@
-<% if controller_name == 'users' %>
+<% unless controller_name == 'whiskeys' %>
   <div class="row justify-content-center">
     <div class="col-<%= width %>-9 rounded shadow text-center text-muted bg-gray pe-0 py-3">
       <%= link_to whiskey_path(note.whiskey), class: 'simple-a-tag' do %>

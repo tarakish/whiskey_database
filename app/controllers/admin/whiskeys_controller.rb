@@ -3,7 +3,7 @@ class Admin::WhiskeysController < Admin::BaseController
   before_action :set_whiskey, only: %i[show edit update destroy]
 
   def index
-    @pagy, @whiskeys = pagy(Whiskey.order(:id))
+    @pagy, @whiskeys = pagy(Whiskey.order(:id), items: 30)
   end
 
   def show; end
