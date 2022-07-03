@@ -166,6 +166,30 @@
     'https://www.amazon.co.jp/dp/B06W5R661Y?&linkCode=li3&tag=akirakotira-22&linkId=123c6bd233004dec1e3473c82334289c&language=ja_JP&ref_=as_li_ss_il',
     '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B06W5R661Y&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
     'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B06W5R661Y'
+  ],
+  [
+    'ジョニーウォーカー ブラックラベル 12年', 0, 1, 1, 4, 0, 2, 2, 2,
+    'スコットランドで作られた29の原酒を巧みな技術でブレンドしたジョニーウォーカー。「ジョニ黒」の愛称で広く親しまれている。
+    ブレンドならではの複雑な風味は、ロックにして移り変わりを楽しみたい。',
+    'https://www.amazon.co.jp/dp/B001TPAKHS?psc=1&linkCode=li3&tag=akirakotira-22&linkId=79530cf11ca675d0a5827c7eb0c93aa6&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TPAKHS&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TPAKHS'
+  ],
+  [
+    'ジョニーウォーカー グリーンラベル 15年', 0, 1, 0, 3, 4350, 2, 3, 1,
+    'キーモルト（ブレンドされたモルトウイスキーの中で割合の多いもの）の個性を感じるジョニーウォーカー。
+    口に含んで喉を過ぎるまで刻一刻と表情を変えていくこのボトルはまずはストレートで。',
+    'https://www.amazon.co.jp/dp/B01CE1NM98?&linkCode=li3&tag=akirakotira-22&linkId=a56cc87cd54d92eae11ac231376ee924&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01CE1NM98&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B01CE1NM98'
+  ],
+  [
+    '余市', 1, 0, 1, 4, 4200, 0, 1, 11,
+    '「スコッチのようなスモーキーなウイスキー」を目指して北海道余市町で製造されているウイスキー余市のノンエイジボトル。
+    チャレンジングな試みも数多く行われており目が離せない蒸溜所です。',
+    'https://www.amazon.co.jp/dp/B0119BPS7S?&linkCode=li3&tag=akirakotira-22&linkId=eb52fcbf9ca39e94884d4a450f5538dc&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0119BPS7S&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0119BPS7S'
   ]
 ].each do |name, region, processing, mouth_feel, flavor_strength, price, rarity, drink_way_id, snack_id, description, amazon_link, amazon_image_link, amazon_impression_link|
   Whiskey.create!(
