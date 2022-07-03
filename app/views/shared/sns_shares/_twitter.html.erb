@@ -3,7 +3,7 @@
     <i class="twitter icon fs-2 f-twitter"></i>
   <% end %>
 <% elsif whiskey %>
-  <%= link_to "https://twitter.com/intent/tweet?text=#{whiskey.name}』%0A相性の良い飲み方：#{whiskey.drink_way.name}%0A相性の良いおつまみ：#{whiskey.snack.name}%0A%0A#{request.url}%0A&hashtags=MaltMate,モルトは友達怖くない", class: 'simple-a-tag hover-target-reverse', target: '_blank', rel: 'nofollow' do %>
+  <%= link_to "https://twitter.com/intent/tweet?text=『#{whiskey.name}』%0A相性の良い飲み方：#{whiskey.drink_way.name}%0A相性の良いおつまみ：#{whiskey.snack.name}%0A%0A#{request.url}%0A&hashtags=MaltMate,モルトは友達怖くない", class: 'simple-a-tag hover-target-reverse', target: '_blank', rel: 'nofollow' do %>
     <i class="twitter icon fs-2 f-twitter"></i>
   <% end %>
 <% else %>
