@@ -40,7 +40,7 @@
       <div class="col-lg-9 my-auto text-center text-lg-start text-muted">
         <div class="row justify-content-between my-3 pb-3">
           <div class="col-lg-auto col-12 fs-3 my-auto">
-            <%= @user.name %>
+            ニックネーム：<%= @user.name %>
           </div>
           <% if current_user == @user %>
             <%= link_to edit_user_path(@user), class: 'circular ui icon button col-lg-auto col-12 u-set fs-2 me-3 p-3' do %>
