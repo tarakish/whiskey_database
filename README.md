@@ -1,4 +1,5 @@
-![採用タイトル](https://user-images.githubusercontent.com/71510236/177249222-1b32b079-78dd-41c5-8244-c448a60ea9fa.png)
+![タイトル](https://user-images.githubusercontent.com/71510236/177376048-8fa6c030-fc4e-469e-aa34-1963c14ce8b2.png)
+
 
 #### 「飲み方やおつまみとの相性、フレーバーや口当たりの強さ、香りの繊細さなど
 #### 独自の検索軸からウイスキーを探せる情報サービス」
