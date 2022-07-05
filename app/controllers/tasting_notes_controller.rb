@@ -3,7 +3,8 @@ class TastingNotesController < ApplicationController
   before_action :set_tasting_note, only: %i[update destroy]
 
   def index
-    notes = TastingNote.eager_load(:user, :whiskey, :drink_way, :flavors, :tasting_note_flavors).order(updated_at: :desc)
+    notes = TastingNote.eager_load(:user, :whiskey, :drink_way, :flavors, :tasting_note_flavors)
+                       .order(updated_at: :desc)
     @pagy, @tasting_notes = pagy(notes)
   end
 
