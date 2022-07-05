@@ -190,6 +190,22 @@
     'https://www.amazon.co.jp/dp/B0119BPS7S?&linkCode=li3&tag=akirakotira-22&linkId=eb52fcbf9ca39e94884d4a450f5538dc&language=ja_JP&ref_=as_li_ss_il',
     '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0119BPS7S&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
     'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0119BPS7S'
+  ],
+  [
+    'シングルモルト 宮城峡', 1, 0, 0, 2, 4200, 1, 3, 1,
+    'ニッカウヰスキーの中で余市と双璧をなすシングルモルト。
+    余市が男性的で力強いとするなら、対象的に軽やかで華やかな印象の女性的なウイスキーです。',
+    'https://www.amazon.co.jp/dp/B0119BPS7I?&linkCode=li3&tag=akirakotira-22&linkId=efb7746dbdc31256887d104a34791c24&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0119BPS7I&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0119BPS7I'
+  ],
+  [
+    'カティサーク オリジナル', 0, 1, 0, 2, 0, 2, 1, 7,
+    '爽やかでスムースな口当たり、価格の易さから万国で愛されるカティーサークのスタンダード。
+    非常に軽やかな飲み心地のため、ハイボールや水割りにして直中酒としてもぴったりの日常使いしやすいウイスキーです。',
+    'https://www.amazon.co.jp/dp/B004BE5WGS?&linkCode=li3&tag=akirakotira-22&linkId=f4433681b14e00437486be9822236ad7&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B004BE5WGS&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B004BE5WGS'
   ]
 ].each do |name, region, processing, mouth_feel, flavor_strength, price, rarity, drink_way_id, snack_id, description, amazon_link, amazon_image_link, amazon_impression_link|
   Whiskey.create!(
