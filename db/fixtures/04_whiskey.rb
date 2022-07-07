@@ -206,6 +206,23 @@
     'https://www.amazon.co.jp/dp/B004BE5WGS?&linkCode=li3&tag=akirakotira-22&linkId=f4433681b14e00437486be9822236ad7&language=ja_JP&ref_=as_li_ss_il',
     '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B004BE5WGS&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
     'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B004BE5WGS'
+  ],
+  [
+    'ブラントン', 2, 0, 4, 4, 12500, 2, 3, 2,
+    '貯蔵庫で長い眠りの時を過ごした原酒を、ひと樽ごとに厳格にテイスティングし、その中から熟成のピークを迎えたものだけが選ばれる。
+    どこまでも芳醇で濃密な味わい。時間と手間を惜しまず造りあげた至高のシングルバレルバーボンウイスキー。（公式から引用）',
+    'https://www.amazon.co.jp/dp/B001TZ1MPW?&linkCode=li3&tag=akirakotira-22&linkId=6a48385273386dc7ab2c4974d2533f3c&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TZ1MPW&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TZ1MPW'
+  ],
+  [
+    'タリスカー 10年', 0, 0, 2, 4, 5555, 2, 1, 11,
+    'スモーキーでブラックペッパーのようなスパイシーさと潮気、厚みのある甘い余韻のバランスが見事なスコッチ。
+    すべてのボトルに記されている「MADE BY THE SEA」の言葉通り、海を感じるような磯の香りも特徴的。
+    ハイボールの上にブラックペッパーを振りかけた「スパイシーハイボール」はタリスカーを飲むなら外せない飲み方です。',
+    'https://www.amazon.co.jp/dp/B002EPBL1Q?&linkCode=li3&tag=akirakotira-22&linkId=e69806a01f083bfbc8e9dd9300eaa7b8&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B002EPBL1Q&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B002EPBL1Q'
   ]
 ].each do |name, region, processing, mouth_feel, flavor_strength, price, rarity, drink_way_id, snack_id, description, amazon_link, amazon_image_link, amazon_impression_link|
   Whiskey.create!(
