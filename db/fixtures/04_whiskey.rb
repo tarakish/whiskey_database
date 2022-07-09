@@ -223,6 +223,22 @@
     'https://www.amazon.co.jp/dp/B002EPBL1Q?&linkCode=li3&tag=akirakotira-22&linkId=e69806a01f083bfbc8e9dd9300eaa7b8&language=ja_JP&ref_=as_li_ss_il',
     '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B002EPBL1Q&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
     'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B002EPBL1Q'
+  ],
+  [
+    'デュワーズ ホワイトラベル', 0, 1, 1, 2, 1582, 2, 5, 7,
+    '低価格ながらスムースな飲み心地や甘さとスパイシーさの絶妙なバランスの良さを持つデュワーズのレギュラーボトル。
+    キンキンに冷やしたグラスで氷を入れずにつくる「神戸スタイルハイボール」との相性も抜群。',
+    'https://www.amazon.co.jp/dp/B001TZ1UEA?&linkCode=li3&tag=akirakotira-22&linkId=f11affa2c24261dc15c02c21c31729f0&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TZ1UEA&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TZ1UEA'
+  ],
+  [
+    '竹鶴ピュアモルト', 1, 1, 2, 2, 4000, 0, 3, 1,
+    'ブレンデッドウイスキーの中でも珍しいモルト100%のピュアモルト（ニッカ特有の呼び名）ウイスキー。
+    宮城峡と余市という正反対のフレーバーを見事にブレンドさせている技術は見事の一言。',
+    'https://www.amazon.co.jp/dp/B0842WLDHW?&linkCode=li3&tag=akirakotira-22&linkId=9190cdfdc69ab9805647c87502711133&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0842WLDHW&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0842WLDHW'
   ]
 ].each do |name, region, processing, mouth_feel, flavor_strength, price, rarity, drink_way_id, snack_id, description, amazon_link, amazon_image_link, amazon_impression_link|
   Whiskey.create!(
