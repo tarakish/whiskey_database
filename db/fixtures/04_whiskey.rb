@@ -239,6 +239,14 @@
     'https://www.amazon.co.jp/dp/B0842WLDHW?&linkCode=li3&tag=akirakotira-22&linkId=9190cdfdc69ab9805647c87502711133&language=ja_JP&ref_=as_li_ss_il',
     '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0842WLDHW&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
     'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0842WLDHW'
+  ],
+  [
+    'キルホーマン マキヤーベイ', 0, 0, 1, 4, 6480, 2, 3, 3,
+    '2005年、実に124年ぶりにアイラ島に誕生したキルホーマン蒸溜所のスタンダードボトル。
+    アイラモルトらしいスモーキーさをベースに持ちつつ、柑橘系の爽やかさやバニラの甘みも感じる複雑さも併せ持つ、アイラ島で唯一、大麦の栽培から手掛けるこだわりの強さを感じられる素晴らしい一本です。',
+    'https://www.amazon.co.jp/dp/B00DTD7YDQ?&linkCode=li3&tag=akirakotira-22&linkId=6b743b5a816533e4da6d541a4a595bd9&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00DTD7YDQ&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B00DTD7YDQ'
   ]
 ].each do |name, region, processing, mouth_feel, flavor_strength, price, rarity, drink_way_id, snack_id, description, amazon_link, amazon_image_link, amazon_impression_link|
   Whiskey.create!(
