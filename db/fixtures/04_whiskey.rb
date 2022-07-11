@@ -247,6 +247,14 @@
     'https://www.amazon.co.jp/dp/B00DTD7YDQ?&linkCode=li3&tag=akirakotira-22&linkId=6b743b5a816533e4da6d541a4a595bd9&language=ja_JP&ref_=as_li_ss_il',
     '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00DTD7YDQ&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
     'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B00DTD7YDQ'
+  ],
+  [
+    'オーヘントッシャン 12年', 0, 1, 0, 1, 4000, 2, 3, 4,
+    'クリアでスムースな飲み心地ながら、しっかりとした余韻も併せ持つ絶妙なバランスのウイスキー。
+    昨今のアイリッシュブームから、ロンドンやNYなどで「アーバンモルト（都会のウイスキー）」として人気が高まった面白いボトルです。',
+    'https://www.amazon.co.jp/dp/B0036POGEW?&linkCode=li3&tag=akirakotira-22&linkId=2a25c2076879aedd53814eb344b117f4&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0036POGEW&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0036POGEW'
   ]
 ].each do |name, region, processing, mouth_feel, flavor_strength, price, rarity, drink_way_id, snack_id, description, amazon_link, amazon_image_link, amazon_impression_link|
   Whiskey.create!(
