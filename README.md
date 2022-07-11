@@ -85,7 +85,5 @@
 
 ### 関連リンク
 - [[Qiita]【個人開発】飲み方やおつまみの相性から直感的にウイスキーを探せるサービスを作った話🥃](https://qiita.com/tarakish/items/cfc3c5a1ae05e2a46cbe)
-- Twitter
-  - [公式アカウント](https://twitter.com/malt_mate)
-  - [開発者](https://twitter.com/tarakish_23)
+- Twitter　　[公式アカウント](https://twitter.com/malt_mate)  /  [開発者](https://twitter.com/tarakish_23)
 
