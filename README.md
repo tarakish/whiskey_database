@@ -48,10 +48,12 @@
 ---
 ### 使用技術
 ##### フロントエンド
-- html/scss/vanila JS
+- HTML/SCSS/JavaScript
 - CSS frame-work
   - Bootstrap
   - Semantic UI
+
+<br>
 
 ##### バックエンド
 - Ruby 3.0.1
@@ -71,7 +73,7 @@
   
   ・静的解析ツール　→　[RuboCop](https://github.com/rubocop/rubocop)
   </details>　
-
+  
 ##### インフラ
 - heroku
 - PostgreSQL
@@ -84,6 +86,6 @@
 ![erd](https://user-images.githubusercontent.com/71510236/177377219-400aa3b4-bf44-4366-af2a-fd256b6244f6.png)
 
 ### 関連リンク
-- [[Qiita]【個人開発】飲み方やおつまみの相性から直感的にウイスキーを探せるサービスを作った話🥃](https://qiita.com/tarakish/items/cfc3c5a1ae05e2a46cbe)
-- Twitter　　[公式アカウント](https://twitter.com/malt_mate)  /  [開発者](https://twitter.com/tarakish_23)
+- Qiita　[【個人開発】飲み方やおつまみの相性から直感的にウイスキーを探せるサービスを作った話🥃](https://qiita.com/tarakish/items/cfc3c5a1ae05e2a46cbe)
+- Twitter　[公式アカウント](https://twitter.com/malt_mate)  /  [開発者](https://twitter.com/tarakish_23)
 
