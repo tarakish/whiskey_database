@@ -263,6 +263,14 @@
     'https://www.amazon.co.jp/dp/B083W7GTB3?&linkCode=li3&tag=akirakotira-22&linkId=5b862d8f71c2754606d4c18f83a9ea90&language=ja_JP&ref_=as_li_ss_il',
     '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B083W7GTB3&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
     'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B083W7GTB3'
+  ],
+  [
+    'バランタイン ファイネスト', 0, 1, 1, 1, 1390, 2, 2, 1,
+    'ヨーロッパで飲まれているスコッチの3本に1本はこのボトル、と言われるほど絶大な人気を誇るレギュラーボトル。
+    トゲのないなめらかな風味で愛される家に一本置いて置きたい、そんなウイスキーです。',
+    'https://www.amazon.co.jp/dp/B0029Z900K?psc=1&linkCode=li3&tag=akirakotira-22&linkId=b3b64a433efb8a2937b60de0e1b77edd&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0029Z900K&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0029Z900K'
   ]
 ].each do |name, region, processing, mouth_feel, flavor_strength, price, rarity, drink_way_id, snack_id, description, amazon_link, amazon_image_link, amazon_impression_link|
   Whiskey.create!(
