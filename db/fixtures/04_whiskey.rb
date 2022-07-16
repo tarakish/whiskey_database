@@ -271,6 +271,15 @@
     'https://www.amazon.co.jp/dp/B0029Z900K?psc=1&linkCode=li3&tag=akirakotira-22&linkId=b3b64a433efb8a2937b60de0e1b77edd&language=ja_JP&ref_=as_li_ss_il',
     '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0029Z900K&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
     'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0029Z900K'
+  ],
+  [
+    'ラガヴーリン 8年', 0, 0, 0, 4, 6710, 2, 3, 3,
+    '圧倒的なスモーキーフレーバーと、非常にヘビーでオイリーなボディを持つ個性派スコッチ。
+    スモーキーなウイスキーを追い求めるなら外せないウイスキー。
+    いろんなお酒を楽しんだ後、最後の1杯として飲むのがおすすめです。',
+    'https://www.amazon.co.jp/dp/B0774YX24H?&linkCode=li3&tag=akirakotira-22&linkId=eca880fc65f749cef9bfbd1c1e8d0879&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0774YX24H&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0774YX24H'
   ]
 ].each do |name, region, processing, mouth_feel, flavor_strength, price, rarity, drink_way_id, snack_id, description, amazon_link, amazon_image_link, amazon_impression_link|
   Whiskey.create!(
