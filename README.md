@@ -5,6 +5,7 @@
 #### 独自の検索軸からウイスキーを探せる情報サービス」
 
 ##### サービスURL : https://malt-mate.jp
+##### 詳細な紹介 : [【個人開発】飲み方やおつまみの相性から直感的にウイスキーを探せるサービスを作った話🥃 Qiita](https://qiita.com/tarakish/items/cfc3c5a1ae05e2a46cbe)
 ---
 ![Ruby](https://img.shields.io/badge/Ruby-v3.0.1-red) ![rails](https://img.shields.io/badge/Rails-v6.1.4-red) ![semantic UI](https://img.shields.io/badge/semantic%20UI-2.4.4.0-green)
 
