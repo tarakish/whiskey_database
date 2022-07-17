@@ -280,6 +280,14 @@
     'https://www.amazon.co.jp/dp/B0774YX24H?&linkCode=li3&tag=akirakotira-22&linkId=eca880fc65f749cef9bfbd1c1e8d0879&language=ja_JP&ref_=as_li_ss_il',
     '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0774YX24H&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
     'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0774YX24H'
+  ],
+  [
+    'シーバスリーガル 12年', 0, 1, 1, 0, 0, 2, 6, 2,
+    'どんな飲み方でもバランスの崩れない優等生なブレンデッドスコッチウイスキー。
+    ロック、ハイボール、水割り、トゥワイスアッップなど飲み方による味わいの違いを学ぶウイスキーとしてもおすすめです。',
+    'https://www.amazon.co.jp/dp/B003845DZ2?psc=1&linkCode=li3&tag=akirakotira-22&linkId=5651db2308e9257c429cb54e2b0303ea&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B003845DZ2&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B003845DZ2'
   ]
 ].each do |name, region, processing, mouth_feel, flavor_strength, price, rarity, drink_way_id, snack_id, description, amazon_link, amazon_image_link, amazon_impression_link|
   Whiskey.create!(
