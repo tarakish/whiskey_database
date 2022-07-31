@@ -11,7 +11,7 @@ import "channels"
 // Use bootstrap5
 import "bootstrap"
 import "../stylesheets/application"
-import "../js/shared";
+// import "../js/shared";
 
 // Use font-awesome
 import '@fortawesome/fontawesome-free/js/all';
