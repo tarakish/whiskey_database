@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :snacks, only: :index
   resources :users, only: %i[index show edit update destroy]
   resources :whiskeys, only: %i[index show] do
-    resources :tasting_notes, shallow: true, except: %i[index show]
+    resources :tasting_notes, shallow: true, only: %i[create update destroy]
     resource :bookmarks, only: %i[create destroy]
   end
   resources :tasting_notes, only: :index
@@ -23,11 +23,11 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'dashboards#top'
     resources :whiskeys
-    resources :drink_ways, except: :show
-    resources :flavors, except: :show
-    resources :snacks, except: :show
-    resources :users, except: :show
-    resources :tasting_notes, except: :show
+    resources :drink_ways, only: %i[index new create edit update destroy]
+    resources :flavors, only: %i[index new create edit update destroy]
+    resources :snacks, only: %i[index new create edit update destroy]
+    resources :users, only: %i[index new create edit update destroy]
+    resources :tasting_notes, only: %i[index new create edit update destroy]
   end
 
   get '*path', controller: 'application', action: 'render404'
