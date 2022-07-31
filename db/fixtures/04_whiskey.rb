@@ -206,6 +206,88 @@
     'https://www.amazon.co.jp/dp/B004BE5WGS?&linkCode=li3&tag=akirakotira-22&linkId=f4433681b14e00437486be9822236ad7&language=ja_JP&ref_=as_li_ss_il',
     '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B004BE5WGS&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
     'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B004BE5WGS'
+  ],
+  [
+    'ブラントン', 2, 0, 4, 4, 12500, 2, 3, 2,
+    '貯蔵庫で長い眠りの時を過ごした原酒を、ひと樽ごとに厳格にテイスティングし、その中から熟成のピークを迎えたものだけが選ばれる。
+    どこまでも芳醇で濃密な味わい。時間と手間を惜しまず造りあげた至高のシングルバレルバーボンウイスキー。（公式から引用）',
+    'https://www.amazon.co.jp/dp/B001TZ1MPW?&linkCode=li3&tag=akirakotira-22&linkId=6a48385273386dc7ab2c4974d2533f3c&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TZ1MPW&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TZ1MPW'
+  ],
+  [
+    'タリスカー 10年', 0, 0, 2, 4, 5555, 2, 1, 11,
+    'スモーキーでブラックペッパーのようなスパイシーさと潮気、厚みのある甘い余韻のバランスが見事なスコッチ。
+    すべてのボトルに記されている「MADE BY THE SEA」の言葉通り、海を感じるような磯の香りも特徴的。
+    ハイボールの上にブラックペッパーを振りかけた「スパイシーハイボール」はタリスカーを飲むなら外せない飲み方です。',
+    'https://www.amazon.co.jp/dp/B002EPBL1Q?&linkCode=li3&tag=akirakotira-22&linkId=e69806a01f083bfbc8e9dd9300eaa7b8&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B002EPBL1Q&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B002EPBL1Q'
+  ],
+  [
+    'デュワーズ ホワイトラベル', 0, 1, 1, 2, 1582, 2, 5, 7,
+    '低価格ながらスムースな飲み心地や甘さとスパイシーさの絶妙なバランスの良さを持つデュワーズのレギュラーボトル。
+    キンキンに冷やしたグラスで氷を入れずにつくる「神戸スタイルハイボール」との相性も抜群。',
+    'https://www.amazon.co.jp/dp/B001TZ1UEA?&linkCode=li3&tag=akirakotira-22&linkId=f11affa2c24261dc15c02c21c31729f0&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001TZ1UEA&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B001TZ1UEA'
+  ],
+  [
+    '竹鶴ピュアモルト', 1, 1, 2, 2, 4000, 0, 3, 1,
+    'ブレンデッドウイスキーの中でも珍しいモルト100%のピュアモルト（ニッカ特有の呼び名）ウイスキー。
+    宮城峡と余市という正反対のフレーバーを見事にブレンドさせている技術は見事の一言。',
+    'https://www.amazon.co.jp/dp/B0842WLDHW?&linkCode=li3&tag=akirakotira-22&linkId=9190cdfdc69ab9805647c87502711133&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0842WLDHW&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0842WLDHW'
+  ],
+  [
+    'キルホーマン マキヤーベイ', 0, 0, 1, 4, 6480, 2, 3, 3,
+    '2005年、実に124年ぶりにアイラ島に誕生したキルホーマン蒸溜所のスタンダードボトル。
+    アイラモルトらしいスモーキーさをベースに持ちつつ、柑橘系の爽やかさやバニラの甘みも感じる複雑さも併せ持つ、アイラ島で唯一、大麦の栽培から手掛けるこだわりの強さを感じられる素晴らしい一本です。',
+    'https://www.amazon.co.jp/dp/B00DTD7YDQ?&linkCode=li3&tag=akirakotira-22&linkId=6b743b5a816533e4da6d541a4a595bd9&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00DTD7YDQ&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B00DTD7YDQ'
+  ],
+  [
+    'オーヘントッシャン 12年', 0, 0, 0, 1, 4000, 2, 3, 4,
+    'クリアでスムースな飲み心地ながら、しっかりとした余韻も併せ持つ絶妙なバランスのウイスキー。
+    昨今のアイリッシュブームから、ロンドンやNYなどで「アーバンモルト（都会のウイスキー）」として人気が高まった面白いボトルです。',
+    'https://www.amazon.co.jp/dp/B0036POGEW?&linkCode=li3&tag=akirakotira-22&linkId=2a25c2076879aedd53814eb344b117f4&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0036POGEW&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0036POGEW'
+  ],
+  [
+    'アランモルト 10年', 0, 0, 1, 1, 0, 2, 2, 2,
+    '癖の少ないライトなボディにジューシーな果実感、オークの丸い香りや麦芽の甘みと言った絶妙なバランス感のあるリッチフレーバーなウイスキー。
+    シングルモルトスコッチの入り口としてベストofベストな一本。',
+    'https://www.amazon.co.jp/dp/B083W7GTB3?&linkCode=li3&tag=akirakotira-22&linkId=5b862d8f71c2754606d4c18f83a9ea90&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B083W7GTB3&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B083W7GTB3'
+  ],
+  [
+    'バランタイン ファイネスト', 0, 1, 1, 1, 1390, 2, 2, 1,
+    'ヨーロッパで飲まれているスコッチの3本に1本はこのボトル、と言われるほど絶大な人気を誇るレギュラーボトル。
+    トゲのないなめらかな風味で愛される家に一本置いて置きたい、そんなウイスキーです。',
+    'https://www.amazon.co.jp/dp/B0029Z900K?psc=1&linkCode=li3&tag=akirakotira-22&linkId=b3b64a433efb8a2937b60de0e1b77edd&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0029Z900K&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0029Z900K'
+  ],
+  [
+    'ラガヴーリン 8年', 0, 0, 0, 4, 6710, 2, 3, 3,
+    '圧倒的なスモーキーフレーバーと、非常にヘビーでオイリーなボディを持つ個性派スコッチ。
+    スモーキーなウイスキーを追い求めるなら外せないウイスキー。
+    いろんなお酒を楽しんだ後、最後の1杯として飲むのがおすすめです。',
+    'https://www.amazon.co.jp/dp/B0774YX24H?&linkCode=li3&tag=akirakotira-22&linkId=eca880fc65f749cef9bfbd1c1e8d0879&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0774YX24H&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B0774YX24H'
+  ],
+  [
+    'シーバスリーガル 12年', 0, 1, 1, 0, 0, 2, 6, 2,
+    'どんな飲み方でもバランスの崩れない優等生なブレンデッドスコッチウイスキー。
+    ロック、ハイボール、水割り、トゥワイスアッップなど飲み方による味わいの違いを学ぶウイスキーとしてもおすすめです。',
+    'https://www.amazon.co.jp/dp/B003845DZ2?psc=1&linkCode=li3&tag=akirakotira-22&linkId=5651db2308e9257c429cb54e2b0303ea&language=ja_JP&ref_=as_li_ss_il',
+    '//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B003845DZ2&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=akirakotira-22&language=ja_JP',
+    'https://ir-jp.amazon-adsystem.com/e/ir?t=akirakotira-22&language=ja_JP&l=li3&o=9&a=B003845DZ2'
   ]
 ].each do |name, region, processing, mouth_feel, flavor_strength, price, rarity, drink_way_id, snack_id, description, amazon_link, amazon_image_link, amazon_impression_link|
   Whiskey.create!(
