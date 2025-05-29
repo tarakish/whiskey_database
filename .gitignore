@@ -68,3 +68,4 @@ config/environments/*.local.yml
 
 /config/certs/*
 /public/uploads/*
+latest.dump
